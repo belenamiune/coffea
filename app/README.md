@@ -1,4 +1,4 @@
-# coffea
+# app
 
 ## Build Setup
 
@@ -16,3 +16,5 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
+
+
