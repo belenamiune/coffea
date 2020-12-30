@@ -17,6 +17,7 @@
                 Abrir esto
               </v-btn>
 
+
           
             </template>
 
@@ -29,6 +30,15 @@
                 sm="12"
                 md="4"
               >
+
+              <v-btn
+                  icon
+                  dark
+                  @click="dialog = false"
+                  color="secondary"
+                >
+                  <v-icon>mdi-close</v-icon>
+              </v-btn>
               <v-card-title class="justify-center">
                 <span class="headline text-center" style="color: #112D2E">Registrate</span>   
               </v-card-title>
