@@ -1,7 +1,37 @@
-<template>
-<div class="justify-content-center">
-    <h3 class="text-center" style="color: #112D2E">Registrate</h3>   
-        <form>
+<template>  
+<v-row justify="center">
+    <v-dialog
+              v-model="dialog"
+              fullscreen
+              hide-overlay
+              transition="dialog-bottom-transition"
+            >
+
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn
+                color="primary"
+                dark
+                v-bind="attrs"
+                v-on="on"
+              >
+                Abrir esto
+              </v-btn>
+
+          
+            </template>
+
+            <v-card>
+
+          <v-container>
+            <v-row justify="center">
+              <v-col
+                cols="12"
+                sm="12"
+                md="4"
+              >
+              <v-card-title class="justify-center">
+                <span class="headline text-center" style="color: #112D2E">Registrate</span>   
+              </v-card-title>
             <v-text-field
                 v-model="name"
                 :error-messages="nameErrors"
@@ -66,10 +96,9 @@
                 @blur="$v.checkbox.$touch()"
             ></v-checkbox>
 
-            <v-row
-                align="center"
-                justify="center"
-            >
+           
+           <v-container>
+             <v-row justify="center">
             <v-btn
                 class="mr-4 text-center text-capitalize"
                 @click="submit"
@@ -82,10 +111,19 @@
              
                 Registrarme
             </v-btn>
+             </v-row>
+           </v-container>
             
+          </v-col>
             </v-row>
-        </form>
-        </div>
+             </v-container>
+           
+            </v-card>
+            
+</v-dialog>
+</v-row>
+
+      
 </template>
 
 
@@ -125,7 +163,7 @@
         password: '',
         value: null,
         show: false,
-        dialog: true,
+        dialog: false,
         title: 'Escriba la nueva contraseña',
         update: 'Repita la contraseña',
         isFormValid: true,
