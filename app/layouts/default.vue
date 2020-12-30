@@ -6,7 +6,7 @@
       :clipped="clipped"
       fixed
       app
-      color="#112D2E"
+      color="secondary"
     >
       <v-list >
         <v-list-item
@@ -41,13 +41,15 @@
         <nuxt />
       </v-container>
     </v-main>
-    
-    <v-footer
-      :absolute="!fixed"
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+     <!--
+        <v-footer
+          :absolute="!fixed"
+          app
+        >
+        <span>&copy; {{ new Date().getFullYear() }}</span>
+        </v-footer>
+        !--->
+
   </v-app>
 </template>
 
@@ -67,7 +69,7 @@ export default {
         {
           icon: 'mdi-account',
           title: 'Mi cuenta',
-          to: ''
+          to: '/register_form'
         },
         {
           icon: 'mdi-cart-outline',

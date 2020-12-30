@@ -1,4 +1,5 @@
-import colors from 'vuetify/es5/util/colors'
+import colors from 'vuetify/lib/util/colors'
+
 
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
@@ -44,24 +45,23 @@ export default {
   ],
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
+  buildModules: ['@nuxtjs/vuetify'],
   vuetify: {
+    treeShake: true,
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      ligth: true,
+      //ligth: true,
+      options: {customProperties: true},
       themes: {
-        ligth: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
+        light: {
+          primary: '#F8744E', //naranja
+          secondary: '#184042', //azul 
+          accent: '#112D2E', //marrón
+          info: '#FDF7F7', //blanco
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
-          /*naranja: colors.mi_naranja,
-          azul: colors.mi_azul,
-          marron: colors.mi_marron,
-          blanco: colors.mi_blanco,
-          */
+          
         }
       }
     }
