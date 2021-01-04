@@ -10,7 +10,7 @@
             <v-col class="text-right primary pr-13 pt-16">
                 <p>Prueba para ver que sale</p>
             </v-col>
-        </v-row>
+       
         
         
             <v-btn dark color="#F8744E"> Aceptar</v-btn>

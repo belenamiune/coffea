@@ -58,6 +58,7 @@ export default {
           secondary: '#184042', //azul 
           accent: '#112D2E', //marrón
           info: '#FDF7F7', //blanco
+          boton: '#EFEFEF',
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
