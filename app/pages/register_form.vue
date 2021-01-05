@@ -1,139 +1,143 @@
-<template>  
-<v-row justify="center">
-    <v-dialog
-              v-model="dialog"
-              fullscreen
-              hide-overlay
-              transition="dialog-bottom-transition"
-            >
-
-            <template v-slot:activator="{ on, attrs }">
-              <v-btn
-                color="primary"
-                dark
-                v-bind="attrs"
-                v-on="on"
-              >
-                Abrir esto
-              </v-btn>
-
-
-          
-            </template>
-
-            <v-card>
-
-          <v-container>
-            <v-row justify="center">
-              <v-col
-                cols="12"
-                sm="12"
-                md="4"
-              >
-
-              <v-btn
-                  icon
-                  dark
-                  @click="dialog = false"
-                  color="secondary"
+<template>
+  <v-app>
+    <v-container>
+      <v-row justify="center">
+        <v-col>
+              <v-dialog
+                  v-model="dialog"
+                  fullscreen
+                  hide-overlay
+                  transition="dialog-bottom-transition"
                 >
-                  <v-icon>mdi-close</v-icon>
-              </v-btn>
-              <v-card-title class="justify-center">
-                <span class="headline text-center" style="color: #112D2E">Registrate</span>   
-              </v-card-title>
-            <v-text-field
-                v-model="name"
-                :error-messages="nameErrors"
-                label="Nombre de usuario"
-                required
-                class= "mt-4"
-                outlined rounded
-                @input="$v.name.$touch()"
-                @blur="$v.name.$touch()"
-            ></v-text-field>
-            
-            <v-text-field
-                v-model="email"
-                :error-messages="emailErrors"
-                label="Correo electrónico"
-                class= "mt-4"
-                outlined rounded
-                required
-                @input="$v.email.$touch()"
-                @blur="$v.email.$touch()"
-            ></v-text-field>
 
-             <v-text-field
-                v-model="password"
-                :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
-                :error-messages="passwordErrors"
-                :type="show1 ? 'text' : 'password'"
-                label="Contraseña"
-                hint="Al menos 8 caracteres"
-                class= "mt-4"
-                outlined rounded
-                @input="$v.password.$touch()"
-                @blur="$v.password.$touch()"
-                @click:append="show1 = !show1"
-             >
-             
-            </v-text-field>
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn
+                      v-bind="attrs"
+                      v-on="on"
+                      class="mr-4 text-center text-capitalize"
+                      style="width:150px"
+                      color="primary"
+                      rounded
 
-            <v-text-field
-                v-model="passwordConfirmation"
-                :rules="passwordRules"
-                :error-messages="passwordRepitErrors"
-                :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
-                :type="show ? 'text' : 'password'"
-                label="Repita la contraseña"
-                hint="Al menos 8 caracteres"
-                class= "mt-4"
-                outlined rounded
-                @click:append="show = !show"
-             >
+                    >
+                      Registrarse
+                    </v-btn>
 
-        
-             
-            </v-text-field>
-            
-            <v-checkbox
-                v-model="checkbox"
-                :error-messages="checkboxErrors"
-                label="Acepto los términos y condiciones"
-                required
-                @change="$v.checkbox.$touch()"
-                @blur="$v.checkbox.$touch()"
-            ></v-checkbox>
+                  </template>
 
-           
-           <v-container>
-             <v-row justify="center">
-            <v-btn
-                class="mr-4 text-center text-capitalize"
-                @click="submit"
-                color="primary"
-                rounded
-                to="/inspire"
+                     <v-card>
 
-                
-            >
-             
-                Registrarme
-            </v-btn>
-             </v-row>
-           </v-container>
-            
-          </v-col>
-            </v-row>
-             </v-container>
-           
-            </v-card>
-            
-</v-dialog>
-</v-row>
+                      <v-container>
+                        <v-row justify="center">
+                          <v-col
+                            cols="12"
+                            sm="12"
+                            md="4"
+                           >
 
-      
+                              <v-btn
+                                  icon
+                                  dark
+                                  @click="dialog = false"
+                                  color="secondary"
+                                >
+                                <v-icon>mdi-close</v-icon>
+                              
+                              </v-btn>
+
+                                  <v-card-title class="justify-center">
+                                    <span class="headline text-center" style="color: #112D2E">Registrate</span>   
+                                  </v-card-title>
+
+                                    <v-text-field
+                                        v-model="name"
+                                        :error-messages="nameErrors"
+                                        label="Nombre de usuario"
+                                        required
+                                        class= "mt-4"
+                                        outlined rounded
+                                        @input="$v.name.$touch()"
+                                        @blur="$v.name.$touch()"
+                                    ></v-text-field>
+                                    
+                                    <v-text-field
+                                        v-model="email"
+                                        :error-messages="emailErrors"
+                                        label="Correo electrónico"
+                                        class= "mt-4"
+                                        outlined rounded
+                                        required
+                                        @input="$v.email.$touch()"
+                                        @blur="$v.email.$touch()"
+                                    ></v-text-field>
+
+                                    <v-text-field
+                                        v-model="password"
+                                        :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+                                        :error-messages="passwordErrors"
+                                        :type="show1 ? 'text' : 'password'"
+                                        label="Contraseña"
+                                        hint="Al menos 8 caracteres"
+                                        class= "mt-4"
+                                        outlined rounded
+                                        @input="$v.password.$touch()"
+                                        @blur="$v.password.$touch()"
+                                        @click:append="show1 = !show1"
+                                    ></v-text-field>
+
+                                    <v-text-field
+                                        v-model="passwordConfirmation"
+                                        :rules="passwordRules"
+                                        :error-messages="passwordRepitErrors"
+                                        :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
+                                        :type="show ? 'text' : 'password'"
+                                        label="Repita la contraseña"
+                                        hint="Al menos 8 caracteres"
+                                        class= "mt-4"
+                                        outlined rounded
+                                        @click:append="show = !show"
+                                    ></v-text-field>
+                                    
+                                    <v-checkbox
+                                        v-model="checkbox"
+                                        :error-messages="checkboxErrors"
+                                        label="Acepto los términos y condiciones"
+                                        required
+                                        @change="$v.checkbox.$touch()"
+                                        @blur="$v.checkbox.$touch()"
+                                    ></v-checkbox>
+
+                      
+                                      <v-container>
+                                       <v-row justify="center">
+                                         <v-col>
+                                        <v-btn
+                                            class="mr-4 text-center text-capitalize"
+                                            @click="submit"
+                                            color="primary"
+                                            rounded
+                                            to="/inspire"
+                                        >
+                                  
+                                            Registrarme
+                                         </v-btn>
+
+                                        </v-col>
+                                  </v-row>
+                                </v-container>
+                        
+                            </v-col>
+                          </v-row>
+                        </v-container>
+                      
+                    </v-card>
+                  
+              </v-dialog>
+        </v-col>
+      </v-row>
+    </v-container>
+
+</v-app>
 </template>
 
 
