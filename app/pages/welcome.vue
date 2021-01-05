@@ -43,7 +43,7 @@
                                     style="width:150px; color: #F8744E "
                                     color="white"
                                     rounded
-                                    to= "/register_form"
+                                    to= "/login"
 
                                  >
                                     Iniciar sesión

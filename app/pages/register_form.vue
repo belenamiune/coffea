@@ -1,10 +1,20 @@
     <template>
-        <div class="color_de_fondo">
-             <img src="../static/logo-circulo.svg" width="100px" class="image_resize"> 
+        <div class="background_image">
+             <img src="../static/logo-circulo.svg" width="70px" class="image_resize"> 
            <v-container fluid>
               <v-row>
-                  <v-col cols="12" :class="`rounded-t-xl`"  class="mt-5 mb-6 pa-20 text-center text-no-wrap white margin justify-center align-center" >
+                  <v-col cols="12" :class="`rounded-t-xl`"  class="mb-4 mt-4 pa-20 text-center text-no-wrap white margin justify-center align-center" >
                 
+                        <v-btn
+                            icon
+                            @click="submit"
+                            color="secondary"
+                            class="close_button"
+                            to="welcome"
+                            >
+                                <v-icon>mdi-close</v-icon>
+                            </v-btn>
+
                    <h2> Registrate </h2>
 
                             <v-text-field
@@ -74,7 +84,7 @@
                                             @click="submit"
                                             color="primary"
                                             rounded
-                                            to="/inspire"
+                                            to="/code_account"
                                         >
                                             
                                             Registrarme
@@ -192,26 +202,15 @@
 
     <style lang="scss" scoped>
 
-        .margin_img{
-            margin-top: -620px;
-        } 
-        
         .margin{
             position: absolute;
-            top: 100px;
+            top: 70px;
             left:0px;
             z-index: 2;
             bottom: 0; 
         }
-        .margin_puntos{
-            margin-top: 180px;
-        }
-
-        div.container{
-            padding: 0;
-        }
         
-        .color_de_fondo {
+        .background_image {
             background-image: url('../static/background.png');
             background-size: cover;
             padding: 2em;
@@ -225,5 +224,11 @@
             margin-top: 15px;
             font-weight: normal;
         }
+
+        .close_button {
+            justify-content: right;
+            margin-left: 100em;
+        }
+        
         
     </style>

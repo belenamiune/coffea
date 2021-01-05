@@ -4,6 +4,21 @@
            <v-container fluid>
               <v-row>  
                   <v-col :class="`rounded-t-xl`"  class="mt-5 mb-6 pa-27 text-center text-no-wrap white margin justify-center align-center" >
+                       
+                    <v-btn
+                        icon
+                        dark
+                        @click="submit"
+                        color="secondary"
+                        class="close_button"
+                        to="welcome"
+                     >
+                    
+                        <v-icon>mdi-close</v-icon>
+                    </v-btn>
+
+
+                    
                     <h2> Ingresá </h2>
                         <v-text-field
                             v-model="name"
@@ -27,7 +42,7 @@
                             @click:append="show1 = !show1"
                         ></v-text-field>
 
-                            <a href="/"> <p class="text-right" style="color: gray; font-size: 13px"> ¿Olvidaste tu contraseña? </p> </a>
+                            <a href="/forgotPassword"> <p class="text-right" style="color: gray; font-size: 13px"> ¿Olvidaste tu contraseña? </p> </a>
 
                                 <div class="text-center mb-8 mt-8">
                                     <h4> Inicia sesión con: </h4>
@@ -116,24 +131,11 @@
 },
 
     computed: {
-      checkboxErrors () {
-        const errors = []
-        if (!this.$v.checkbox.$dirty) return errors
-        !this.$v.checkbox.checked && errors.push('Debes aceptar los términos y condiciones para continuar')
-        return errors
-      },
       nameErrors () {
         const errors = []
         if (!this.$v.name.$dirty) return errors
         !this.$v.name.maxLength && errors.push('El nombre de usuario debe tener al menos 6 caracteres')
         !this.$v.name.required && errors.push('Nombre de usuario es obligatorio.')
-        return errors
-      },
-      emailErrors () {
-        const errors = []
-        if (!this.$v.email.$dirty) return errors
-        !this.$v.email.email && errors.push('Ingresa una dirección de correo electrónico válida')
-        !this.$v.email.required && errors.push('Correo electrónico es obligatorio')
         return errors
       },
 
@@ -145,13 +147,7 @@
         return errors
       },
 
-      passwordRepitErrors () {
-        const errors = []
-        if (!this.$v.passwordConfirmation.$dirty) return errors
-        !this.$v.passwordConfirmation.passwordConfirmation && errors.push('La contraseña debe tener al menos 8 caracteres')
-        !this.$v.passwordConfirmation.required && errors.push('Contraseña es obligatorio')
-        return errors
-      },
+     
     },
 
     methods: {
@@ -167,10 +163,6 @@
 
     <style lang="scss" scoped>
 
-        .margin_img{
-            margin-top: -620px;
-        } 
-        
         .margin{
             position: absolute;
             top: 100px;
@@ -178,13 +170,7 @@
             z-index: 2;
             bottom: 0; 
         }
-        .margin_puntos{
-            margin-top: 180px;
-        }
-
-        div.container{
-            padding: 0;
-        }
+        
         
         .background_image{
             background-image: url('../static/background.png');
@@ -201,9 +187,6 @@
             font-family: 'Raleway', sans-serif;;
         }
 
-        .button_close {
-            margin-left: -300px;
-        }
 
         a {
             text-decoration: none;
@@ -222,5 +205,11 @@
         h4 {
             font-weight: normal;
         }
+
+        .close_button {
+            justify-content: right;
+            margin-left: 100em;
+        }
+        
                 
     </style>
