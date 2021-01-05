@@ -1,15 +1,11 @@
-<!---<template>
-
-<v-container>
-  <v-row>
+<template>
+  <v-row class="customize_background">
     <v-col>
-      <div class="text-center customize_background">
+      <div class="text-center">
        <coffeaLogo />
       </div>
     </v-col>
   </v-row>
-</v-container>
-
 </template>
 
 <script>
@@ -30,12 +26,9 @@ export default {
 
 <style scoped>
   .customize_background {
-    width: 100%;
-    height: 100%;
-    position: absolute;
     background-size: cover;
     background-color: #F8744E;
-    transform: scale(1.1);
+    height: 100%;
   }
 
 </style>
