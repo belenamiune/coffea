@@ -1,42 +1,97 @@
 <template>
     <v-container>
-    <div id ="app">
-        <navbar />
-         <Map />
-    </div>
+        <div id ="app">
+                    <navbar />
+                    <Map />
+         </div>
     
-    <v-container fuild justify="center">
-        <v-row justify="center">
-            <v-col cols md= "12" class="margin" >
-                <v-expansion-panels 
-                        class="mb-5 pa-2 rounded-lg " 
-                        accordion 
-                        v-for="item in items"
-                        :key="item.title">
-                
-                        <v-expansion-panel>
-                              <v-expansion-panel-header> {{ item.title }} </v-expansion-panel-header>
-                                <v-expansion-panel-content>
-                                    <v-list-item>
-                                        <v-list-item-content>
-                                            <v-list-item-title> {{ item.direccion }}</v-list-item-title>
-                                            <v-list-item-title> {{ item.telefono }}</v-list-item-title>
-                                            <v-list-item-title> {{ item.horario }}</v-list-item-title>
-                                        </v-list-item-content>
-                                </v-list-item>
-                                </v-expansion-panel-content>
-                        </v-expansion-panel>
+    <v-container>
+        <v-row>
+            <v-col class="margin">
+                <v-expansion-panels>
+                        <v-expansion-panel
+                            v-for="item in items"
+                            :key="item.title"
+                            link
+                            class="mb-5 pa-2 " 
+                            :class="`rounded-lg`"
+                            >
+                            <v-expansion-panel-header >
+
+                                <template v-slot:actions>
+
+                                <v-avatar  color="primary" class="ml-2" size="19">
+                                        <span class="white--text headline font-weight-bold "><v-icon class="icon">$expand</v-icon> </span>
+                                </v-avatar> 
+
+                                </template> 
+
+                                
+                                <v-row>
+                                    
+                                        <v-col> 
+                                        <v-list-item-icon class="mr-4">
+                                            <v-img src="/images/iconos/sucursal.svg"  ></v-img>
+                                            </v-list-item-icon>    
+                                        {{ item.title }}
+                                        </v-col>
+                                </v-row>
+                                
+                            </v-expansion-panel-header>
+
+                            <v-expansion-panel-content>
                             
-                     
-    
-                
-                </v-expansion-panels>
 
-              </v-col>
-          </v-row>
+                                <v-list >
+                                    
+                                <v-list-item>
+                                            <v-list-item-icon class="mr-4">
+                                                <v-img src="/images/iconos/direccion.svg"  ></v-img>
+                                            </v-list-item-icon>
 
+                                            <v-list-item-content >
+                                                <v-list-item-subtitle>{{ item.direccion }}</v-list-item-subtitle>
+                                            </v-list-item-content>
+                                        </v-list-item>
+
+
+                                        <v-list-item>
+                                            <v-list-item-icon class="mr-4">
+                                                <v-img src="/images/iconos/telefono.svg"  ></v-img>
+                                            </v-list-item-icon>
+
+                                            <v-list-item-content >
+                                                <v-list-item-subtitle>{{ item.telefono }}</v-list-item-subtitle>
+                                            </v-list-item-content>
+                                        </v-list-item>
+
+
+                                        <v-list-item>
+                                            <v-list-item-icon class="mr-4">
+                                                <v-img src="/images/iconos/reloj.svg"  ></v-img>
+                                            </v-list-item-icon>
+
+                                            <v-list-item-content >
+                                                <v-list-item-subtitle>{{ item.horario }}</v-list-item-subtitle>
+                                            </v-list-item-content>
+                                        </v-list-item>
+                                    
+                                    
+                                    
+                                    
+                                    </v-list>
+
+
+                                </v-expansion-panel-content>
+                            </v-expansion-panel>
+                        </v-expansion-panels>
+            
+        
+            </v-col>
+        </v-row>
     </v-container>
-</v-container>
+    
+ </v-container>
 
 </template>
 
@@ -67,6 +122,10 @@ export default {
     bottom: 1px;
 }
 
+.theme--light.v-expansion-panels .v-expansion-panel-header .v-expansion-panel-header__icon .v-icon::before {
+    color:white;
+    bottom: 1px;
+}
 
 button.v-expansion-panel-header--active{
       background-color:none !important;
