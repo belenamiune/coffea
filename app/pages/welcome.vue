@@ -1,16 +1,3 @@
-<!---<template>
-<v-container>
-   <div id ="app">
-      <navbar />
-      <h1 class="text-center"> hola </h1>
-   </div>
-  
-  
-</v-container>
-
-</template>
-!--->
-
 <template>
       <v-row justify="center customize_background" align="center"> 
          <v-col cols="12" sm="12" justify ="center">

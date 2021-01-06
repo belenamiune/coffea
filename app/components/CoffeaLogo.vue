@@ -2,7 +2,7 @@
   <img
     class="coffeaLogo"
     alt="coffea Logo"
-    src="/logo.svg"
+    src="images/logo.svg"
   >
   
 </template>

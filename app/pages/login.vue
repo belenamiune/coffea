@@ -61,7 +61,7 @@
                                                 @click="submit"
                                                 color="primary"
                                                 rounded
-                                                to="/home"
+                                                to="sucursales"
                                         >
                                                 
                                                 Iniciar sesión
