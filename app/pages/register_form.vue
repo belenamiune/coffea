@@ -1,6 +1,6 @@
     <template>
         <div class="background_image">
-             <img src="../static/logo-circulo.svg" width="70px" class="image_resize"> 
+             <img src="../static/images/logo-circulo.svg" width="70px" class="image_resize"> 
            <v-container fluid>
               <v-row>
                   <v-col cols="12" :class="`rounded-t-xl`"  class="mb-4 mt-4 pa-20 text-center text-no-wrap white margin justify-center align-center" >
@@ -211,7 +211,7 @@
         }
         
         .background_image {
-            background-image: url('../static/background.png');
+            background-image: url('../static/images/background.png');
             background-size: cover;
             padding: 2em;
         }

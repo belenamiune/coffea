@@ -15,7 +15,7 @@
       <v-row justify="center customize_background" align="center"> 
          <v-col cols="12" sm="12" justify ="center">
             <header>
-               <img src="../static/logo-circulo.svg"> 
+               <img src="../static/images/logo-circulo.svg"> 
             </header>
 
                      <div class="text center">
@@ -72,7 +72,7 @@
    .customize_background {
 
       background-size: cover;
-      background-image: url('../static/background.png');
+      background-image: url('../static/images/background.png');
       height: 100%;
    }
 

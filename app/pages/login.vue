@@ -1,6 +1,6 @@
 <template>
         <div class="background_image">
-             <img src="../static/logo-circulo.svg" width="100px" class="image_resize"> 
+             <img src="../static/images/logo-circulo.svg" width="100px" class="image_resize"> 
            <v-container fluid>
               <v-row>  
                   <v-col :class="`rounded-t-xl`"  class="mt-5 mb-6 pa-27 text-center text-no-wrap white margin justify-center align-center" >
@@ -47,9 +47,9 @@
                                 <div class="text-center mb-8 mt-8">
                                     <h4> Inicia sesión con: </h4>
                                     <div class="mt-5 mb-6">
-                                            <a href="/"> <img src="../static/google_icon.png" class="mr-5"> </a>
+                                            <a href="/home"> <img src="../static/images/google_icon.png" class="mr-5"> </a>
                                         
-                                            <a href="/"> <img src="../static/facebook_icon.png"> </a>
+                                            <a href="/home"> <img src="../static/images/facebook_icon.png"> </a>
                                         </div>
                                 </div>
 
@@ -173,7 +173,7 @@
         
         
         .background_image{
-            background-image: url('../static/background.png');
+            background-image: url('../static/images/background.png');
             background-size: cover;
             padding: 2em;
         }

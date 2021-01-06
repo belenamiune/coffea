@@ -1,6 +1,6 @@
 <template>
         <div class="background_image">
-             <img src="../static/logo-circulo.svg" width="100px" class="image_resize"> 
+             <img src="../static/images/logo-circulo.svg" width="100px" class="image_resize"> 
            <v-container fluid>
               <v-row>
                   <v-col cols="12" :class="`rounded-t-xl`"  class="mt-5 mb-6 pa-20 text-center text-no-wrap white margin justify-center align-center" >
@@ -18,9 +18,19 @@
                             </v-btn>
                     
                   
-                   <h2> Recuperar contrseña </h2>
+                            <h2> Recuperar contrseña </h2>
+
+                            <v-container>
+                                    <v-row>
+                                        <v-col cols xs="6">
+                                
+                                          <p class="text-center mt-8 mb-8">Introduce tu correo electrónico para restablecer tu contraseña </p>
+                            
+                                        </v-col>
+                                    </v-row>
+                                </v-container>
                           
-                          <p class="text-center mt-8 mb-8">Introduce tu correo electrónico para restablecer tu contraseña </p>
+                         
 
 
 
@@ -80,7 +90,7 @@
         }
 
         .background_image {
-            background-image: url('../static/background.png');
+            background-image: url('../static/images/background.png');
             background-size: cover;
             padding: 2em;
         }
@@ -98,5 +108,14 @@
             justify-content: right;
             margin-left: 100em;
         }
+
+        p {
+
+            white-space:pre-wrap !important;
+        }
+
+        .v-btn {
+            font-weight: normal;
+        }  
         
     </style>
