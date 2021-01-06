@@ -2,7 +2,7 @@
 
     <v-container  fluid >
         <v-row>
-            <v-col cols="12" :class="`rounded-t-xl` "  class="pa-6 text-center text-no-wrap primary margin justify-center align-center" >
+            <v-col cols="12" :class="`rounded-t-xl` "  class="pa-16 text-center text-no-wrap primary margin justify-center align-center" >
             
                 <v-avatar  color="secondary" class="mt-16" size="62">
                     <span class="white--text headline font-weight-bold ">600 </span>
@@ -45,14 +45,19 @@ export default {
 <style lang="scss" scoped>
 
 
+.margin{
+    position:absolute;
+    top:200px;
+    left:0px;
+    z-index:1;
+    bottom: 0;
+    
+}
 
 .margin_img{
-    margin-top: -620px;
-} 
-
-.margin{
-    margin-top: 300px;
-}
+    position:relative;
+    top:80px;
+    z-index:2;}
 
 .margin_puntos{
     margin-top: 180px;
@@ -61,7 +66,6 @@ export default {
 div.container{
     padding: 0;
 }
-
 
 //.v-btn{
 //    font-size: 16px;
