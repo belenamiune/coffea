@@ -164,10 +164,6 @@
         margin-top: 5em;
     }
 
-
-
-   
-
     @media screen and (min-width: 1024px) {
     .margin_button {
         margin-top: 3em;
