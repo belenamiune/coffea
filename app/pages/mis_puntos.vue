@@ -67,7 +67,5 @@ div.container{
     padding: 0;
 }
 
-//.v-btn{
-//    font-size: 16px;
-//}
+
 </style>
