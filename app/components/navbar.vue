@@ -43,8 +43,8 @@
                     </v-list-item-action >
 
                     <v-list-item-content 
-                    color="red"
-                    >
+                      color="red"
+                      >
                       <v-list-item-title 
                       v-text="item.title" 
                       />
@@ -53,7 +53,47 @@
                   </v-list-item>
                 </v-list>
 
-              </v-navigation-drawer>
+                <v-list>
+                  <v-list-item>
+
+                    <v-list-item-action>
+
+                      <v-icon 
+                        color="#FDF7F7"> 
+                        mdi-logout
+                        </v-icon>
+
+                    </v-list-item-action>
+
+                    <v-list-item-content>
+                         <v-list-item-title class="font-weight-semibold" @click="dialog=true">  
+                               Cerrar sesión
+                         </v-list-item-title>
+
+                         <v-dialog v-model="dialog" width="500"  transition="dialog-bottom-transition"  persistent>
+                                <v-card >
+                                    <v-img  src="/images/cerrar_sesion.png" ></v-img>
+                                        <v-card-title class="font-weight-regular justify-center align-center text-center pt-0" >
+                                          ¿Estás seguro de cerrar sesión?
+                                        </v-card-title>
+                                
+                                        <v-card-actions class=" justify-center align-center pb-6 pt-0">
+                                              <v-btn  class="font-weight-semibold boton pa-4 text-capitalize"  elevation="6" rounded @click="dialog=false"> 
+                                                  Cancelar
+                                              </v-btn>
+                                              <v-btn class="font-weight-semibold primary pa-4 text-capitalize" elevation="6" rounded @click="dialog=false" to="/"> 
+                                                  Cerrar sesión
+                                              </v-btn>
+
+                                        </v-card-actions>
+                                </v-card>
+                           </v-dialog>
+
+                    </v-list-item-content>
+                  </v-list-item>
+                </v-list>
+
+            </v-navigation-drawer>
 
                 <v-app-bar
                   :clipped-left="clipped"
@@ -61,11 +101,11 @@
                   app
                 >
                 <v-app-bar-nav-icon 
-                @click.stop="drawer = !drawer" 
-                color="#F8744E"/>
+                  @click.stop="drawer = !drawer" 
+                  color="#F8744E"/>
                   
                 </v-app-bar>
-    </v-card>
+        </v-card>
 </template>
 
 <script>
@@ -101,16 +141,12 @@
           title: 'Sucursales',
           to: '/sucursales'
         },
-        {
-          icon: 'mdi-logout',
-          title: 'Cerrar sesión',
-          to: '/cerrar_sesion',
-        },
       ],
 
       miniVariant: false,
       right: true,
       rightDrawer: false,
+       dialog: false,
     }
     
     
@@ -140,6 +176,10 @@
 
     .v-list-item__content {
       color: white;
+    }
+
+    .v-card__title {
+      word-break: normal; 
     }
 
 </style>
