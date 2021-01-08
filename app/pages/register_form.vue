@@ -9,7 +9,6 @@
                             icon
                             @click="submit"
                             color="secondary"
-                            class="close_button"
                             to="welcome"
                             >
                                 <v-icon>mdi-close</v-icon>
@@ -225,10 +224,6 @@
             font-weight: normal;
         }
 
-        .close_button {
-            justify-content: right;
-            margin-left: 100em;
-        }
         
         
     </style>

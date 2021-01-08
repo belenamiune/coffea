@@ -11,7 +11,6 @@
                         dark
                         @click="submit"
                         color="secondary"
-                        class="close_button"
                         to="welcome"
                      >
                     
@@ -101,11 +100,6 @@
          h2 {
             margin-top: 15px;
             font-weight: normal;
-        }
-
-        .close_button {
-            justify-content: right;
-            margin-left: 100em;
         }
 
         p {

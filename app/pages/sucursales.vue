@@ -1,11 +1,7 @@
 <template>
-    <v-container>
-        <div id ="app">
-                    <navbar />
-                    <Map />
-         </div>
-    
-    <v-container>
+    <v-container fluid>
+        <navbar />
+           <v-img src="https://cdn.vuetifyjs.com/images/toolbar/map.jpg" height="350px" class="img_margin"></v-img>
         <v-row>
             <v-col class="margin">
                 <v-expansion-panels>
@@ -16,6 +12,7 @@
                             class="mb-5 pa-2 " 
                             :class="`rounded-lg`"
                             >
+
                             <v-expansion-panel-header >
 
                                 <template v-slot:actions>
@@ -52,10 +49,10 @@
                                             <v-list-item-content >
                                                 <v-list-item-subtitle>{{ item.direccion }}</v-list-item-subtitle>
                                             </v-list-item-content>
-                                        </v-list-item>
+                                </v-list-item>
 
 
-                                        <v-list-item>
+                                <v-list-item>
                                             <v-list-item-icon class="mr-4">
                                                 <v-img src="/images/iconos/telefono.svg"  ></v-img>
                                             </v-list-item-icon>
@@ -63,10 +60,10 @@
                                             <v-list-item-content >
                                                 <v-list-item-subtitle>{{ item.telefono }}</v-list-item-subtitle>
                                             </v-list-item-content>
-                                        </v-list-item>
+                                </v-list-item>
 
 
-                                        <v-list-item>
+                                <v-list-item>
                                             <v-list-item-icon class="mr-4">
                                                 <v-img src="/images/iconos/reloj.svg"  ></v-img>
                                             </v-list-item-icon>
@@ -74,7 +71,7 @@
                                             <v-list-item-content >
                                                 <v-list-item-subtitle>{{ item.horario }}</v-list-item-subtitle>
                                             </v-list-item-content>
-                                        </v-list-item>
+                                </v-list-item>
                                     
                                     
                                     
@@ -83,16 +80,14 @@
 
 
                                 </v-expansion-panel-content>
-                            </v-expansion-panel>
-                        </v-expansion-panels>
+                        </v-expansion-panel>
+                </v-expansion-panels>
             
         
             </v-col>
         </v-row>
     </v-container>
-    
- </v-container>
-
+ 
 </template>
 
 <script>
@@ -117,6 +112,12 @@ export default {
 
 <style lang="css">
 
+
+.img_margin {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
 .theme--light.v-expansion-panels .v-expansion-panel-header .v-expansion-panel-header__icon .v-icon {
     color:white;
     bottom: 1px;
@@ -131,7 +132,7 @@ button.v-expansion-panel-header--active{
       background-color:none !important;
       border-style: solid;
       border-color: #FFB29E;
-      margin: 0;
+      
   }
 
 .v-list-item{
@@ -147,11 +148,19 @@ button.v-expansion-panel-header--active{
 }
 
 .margin {
-    margin-top: 23em;
+    margin-top: 3em;
 }
 
 .theme--light.v-expansion-panels .v-expansion-panel-header .v-expansion-panel-header__icon .v-icon {
-    color: orange;
+    color: #FFB29E;
 }
 
+@media screen and (max-width: 320px) {
+
+
+.v-expansion-panel-content__wrap {
+    padding: 0 12px 16px !important;
+}
+
+}
 </style>

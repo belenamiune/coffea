@@ -11,7 +11,6 @@
                                 dark
                                 @click="submit"
                                 color="secondary"
-                                class="close_button"
                                 to="login"
                             >
                                 <v-icon>mdi-close</v-icon>
@@ -92,10 +91,6 @@
             font-weight: normal;
         }
 
-        .close_button {
-            justify-content: right;
-            margin-left: 100em;
-        }
 
         p {
 
