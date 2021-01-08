@@ -84,7 +84,7 @@
         {
           icon: 'mdi-account',
           title: 'Mi cuenta',
-          to: '/register_form'
+          to: '/mi_cuenta'
         },
         {
           icon: 'mdi-cart-outline',
@@ -94,17 +94,17 @@
         {
           icon: 'mdi-calendar',
           title: 'Reservas',
-          to: ''
+          to: '/mis_reservas'
         },
         {
           icon: 'mdi-store',
           title: 'Sucursales',
-          to: ''
+          to: '/sucursales'
         },
         {
           icon: 'mdi-logout',
           title: 'Cerrar sesión',
-          to: ''
+          to: '/cerrar_sesion',
         },
       ],
 
@@ -112,9 +112,10 @@
       right: true,
       rightDrawer: false,
     }
+    
+    
   }
 
-    
   }
 </script>
 
@@ -135,6 +136,10 @@
       color: #FDF7F7 !important;
       font-family:  'Montserrat', sans-serif;
       font-weight: lighter;
+    }
+
+    .v-list-item__content {
+      color: white;
     }
 
 </style>

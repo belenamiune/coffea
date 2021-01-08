@@ -1,55 +1,46 @@
 <template>
-   <v-container>
-       <v-row>
-           
-           <v-col  xs="12" sm="4">
-           
-                    <v-btn text color="orange" class="font-weight-semibold" @click="dialog=true"> 
-                        Cerrar sesión
-                    </v-btn>
-               
-        </v-col>
-            
-     
-        
-                <v-dialog v-model="dialog" width="500"  transition="dialog-bottom-transition"  persistent>
-                    <v-card >
-                        <v-img  src="/images/cerrar_sesion.png" ></v-img>
-                        <v-card-title class="font-weight-regular justify-center align-center text-center pt-0" >
-                           ¿Estás seguro de cerrar sesión?
-                        </v-card-title>
-                    
-                        <v-card-actions class=" justify-center align-center pb-6 pt-0">
-                            <v-btn  class="font-weight-semibold boton pa-4 text-capitalize"  elevation="6" rounded @click="dialog=false"> 
-                                Cancelar
-                            </v-btn>
-                            <v-btn class="font-weight-semibold primary pa-4 text-capitalize" elevation="6" rounded @click="dialog=false"> 
-                                Salir
-                            </v-btn>
+  <v-dialog width="600" v-model="dialog" persistent v-bind="$attrs" v-on="$listeners">
+    <template v-for="(_, slot) of $scopedSlots" v-slot:[slot]="scope">
+      <slot :name="slot" v-bind="scope" :open="open"/>
+    </template>
 
-                        </v-card-actions>
-                     </v-card>
-                </v-dialog>
+    <v-card>
+      <v-card-text>
+        <v-text-field v-model="data" label="Data:"></v-text-field>
+      </v-card-text>
 
+      <v-divider></v-divider>
 
-        </v-row>
-    </v-container>
+      <v-card-actions>
+        <v-spacer></v-spacer>
+        <v-btn color="red" dark text @click="dialog = false">Cancel</v-btn>
+
+        <v-btn color="primary" dark text @click="save">Save</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-dialog>
 </template>
 
 <script>
-    export default {
-         data(){
-            return{
-                dialog: false,
-            }
+export default {
+  name: "VEditor",
+  props: {
+    value: String
+  },
+  data() {
+    return {
+      dialog: false,
+      data: JSON.parse(JSON.stringify(this.value))
+    };
+  },
+  methods: {
+    save() {
+      this.$emit("input", this.data);
+      this.dialog = false;
+    },
+    open() {
+      this.dialog = true;
     }
-    }
+  }
+};
 </script>
-
-<style lang="scss" scoped>
-.v-card__title {
-    word-break: normal; 
-}
-
-
-</style>
