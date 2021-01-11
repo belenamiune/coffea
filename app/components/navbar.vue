@@ -53,7 +53,7 @@
                   </v-list-item>
                 </v-list>
 
-                <v-list>
+                <v-list class="logout">
                   <v-list-item>
 
                     <v-list-item-action>
@@ -66,9 +66,10 @@
                     </v-list-item-action>
 
                     <v-list-item-content>
-                         <v-list-item-title class="font-weight-semibold" @click="dialog=true">  
+                         <v-list-item-title class="font-weight-semibold" @click="dialog=true, overlay = !overlay">  
                                Cerrar sesión
                          </v-list-item-title>
+
 
                          <v-dialog v-model="dialog" width="500"  transition="dialog-bottom-transition"  persistent>
                                 <v-card >
@@ -146,11 +147,21 @@
       miniVariant: false,
       right: true,
       rightDrawer: false,
-       dialog: false,
+      dialog: false,
+      overlay: false,
+      
     }
     
+  },
     
-  }
+     watch: {
+      overlay (val) {
+        val && setTimeout(() => {
+          this.overlay = false
+        }, 2000)
+      },
+    },
+    
 
   }
 </script>
@@ -180,6 +191,10 @@
 
     .v-card__title {
       word-break: normal; 
+    }
+
+    .logout {
+      margin-top: -0.8em;
     }
 
 </style>

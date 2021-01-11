@@ -29,7 +29,7 @@
                                     </v-row>
                                 </v-container>
 
-                                <img src="../static/images/check.svg" width="150px"> 
+                                <img src="../static/images/iconos/check.svg" width="150px"> 
                             <v-container>
                                 <v-row>
                                     <v-col>
