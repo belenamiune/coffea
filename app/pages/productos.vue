@@ -1,76 +1,208 @@
 <template>
     <v-container>
-    
- 
+      <navbar />
+        <v-row justify="center" class="text-center">
 
-    <v-list three-line>
-      <template v-for="(item, index) in items">
-        <v-subheader
-          v-if="item.header"
-          :key="item.header"
-          v-text="item.header"
-        ></v-subheader>
+          <div class="text-left">
+              <v-chip
+                class="ma-2"
+                color="primary"
+                text-color="white"
+                :to="'/categorias'"
+              >
+        
+                  Categorías
+              </v-chip>
 
-        <v-divider
-          v-else-if="item.divider"
-          :key="index"
-          :inset="item.inset"
-        ></v-divider>
+                    <p style="color: orange; font-weigth: 800; display:inline; margin-left: 0 !important"> /  </p>
+             
+              <v-chip
+                class="ma-2"
+                color="primary"
+                text-color="white"
+                :to="'/categorias'"
+              >
+                  Productos
+              </v-chip>
+            </div>
 
-        <v-list-item
-          v-else
-          :key="item.title"
+        <v-col
+          v-for="(producto, i) in productos"
+          :key="i"
+          cols="12"
+          class="text-center"
         >
-          <v-list-item-avatar>
-            <v-img :src="item.avatar"></v-img>
-          </v-list-item-avatar>
+          
+          <v-card :to="producto.to"> 
+            <div class="d-flex flex-no-wrap">
+              <div>
 
-          <v-list-item-content>
-            <v-list-item-title v-html="item.title"></v-list-item-title>
-            <v-list-item-subtitle v-html="item.subtitle"></v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-      </template>
-    </v-list>
+                <v-avatar
+                class="ml-2 mt-2 mb-3"
+                size="160"
+                tile
+              >
+                <v-img :src="require(`../static/images/productos/cafe/${producto.image}`)" max-width="135px"></v-img>
+              </v-avatar>
+
+              </div>
+             
+              <div class="title-style">
+                <v-card-title
+                  class="headline text-left"
+                  v-text="producto.title"
+                ></v-card-title>
+
+                <v-card-subtitle>{{ producto.description }}</v-card-subtitle>
+
+              
+
+               
+                <v-rating
+                  :value="producto.star"
+                  color="primary"
+                  dense
+                  half-increments
+                  readonly
+                  size="14"
+                ></v-rating>
+
+               
+                 <p class="grey--text">{{producto.comments}} </p>
+                
+                
+                
+               </div>
+
+              
+                  
+               </div>
+
+
+               <v-row justify="end">
+                <h2><span style="color: #F8744E">$</span>{{producto.precio}}</h2>
+               </v-row>
+          </v-card>
+            
+        
+        </v-col>
+      </v-row>
     </v-container>
-  
+
 </template>
 
+
 <script>
+import Navbar from '../components/navbar.vue'
   export default {
     data: () => ({
-      items: [
-        { header: 'Categorías' },
+  
+      productos: [
         {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
-          title: 'Brunch this weekend?',
-          subtitle: `<span class="text--primary">Ali Connors</span> &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?`,
+          image: 'italiano.png',
+          title: 'Café Italiano',
+          description: 'Café negro con leche descremada',
+          star: 4,
+          comments: '(165)',
+          precio: '80',
+          to:'cafe_italiano'
+         
         },
-        { divider: true, inset: true },
         {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg',
-          title: 'Summer BBQ <span class="grey--text text--lighten-1">4</span>',
-          subtitle: `<span class="text--primary">to Alex, Scott, Jennifer</span> &mdash; Wish I could come, but I'm out of town this weekend.`,
+          image: 'capuchino.png',
+          title: 'Café Capuchino',
+          description: 'Café expreso y leche montada con vapor',
+          star: 5,
+          comments: '(1k)',
+          precio: '75',
+          to:'cafe_italiano'
         },
-        { divider: true, inset: true },
         {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
-          title: 'Oui oui',
-          subtitle: '<span class="text--primary">Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?',
+          image: 'moca.png',
+          title: 'Café Moca',
+          description: 'Café con leche montada y chocolate',
+          star: 4,
+          comments: '(325)',
+          precio: '90',
+          to:'cafe_italiano'
         },
-        { divider: true, inset: true },
         {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
-          title: 'Birthday gift',
-          subtitle: '<span class="text--primary">Trevor Hansen</span> &mdash; Have any ideas about what we should get Heidi for her birthday?',
+          image: 'helado.png',
+          title: 'Café Helado',
+          description: 'Café con leche descremada helada',
+          star: 3,
+          comments: '(180)',
+          precio: '110',
+          to:'cafe_italiano'
         },
-        { divider: true, inset: true },
         {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/5.jpg',
-          title: 'Recipe to try',
-          subtitle: '<span class="text--primary">Britta Holt</span> &mdash; We should eat this: Grate, Squash, Corn, and tomatillo Tacos.',
+          image: 'cafeconleche.png',
+          title: 'Café con leche',
+          description: 'Café clásico con leche',
+          star: 4,
+          comments: '(210)',
+          precio: '60',
+          to:'cafe_italiano'
         },
+       
       ],
     }),
   }
 </script>
+
+<style scoped>
+.v-card__title  {
+  font-size: 16px !important;
+}
+
+.v-card__subtitle {
+  text-align: center !important;
+  font-size: 13px;
+}
+
+.v-avatar {
+  justify-content: initial;
+}
+
+.v-rating, p{
+  text-align: left;
+  margin-left: 1em !important;
+ 
+}
+
+p {
+  font-size: 14px;
+}
+
+h2 {
+  margin-right: 3em;
+}
+
+
+
+
+
+ @media screen and (min-width: 320px) {
+    
+
+    .v-card__subtitle {
+      text-align: left !important;
+    }
+
+    .title-style {
+      margin-left: -1.5em !important;
+    }
+
+    h2 {
+      margin-right: 1em !important;
+      margin-top: -1em !important;
+    }
+
+    .v-rating {
+       margin-top: -1em;
+}
+
+
+ }
+
+</style>
