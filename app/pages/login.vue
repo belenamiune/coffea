@@ -46,9 +46,9 @@
                                 <div class="text-center mb-8 mt-8">
                                     <h4> Inicia sesión con: </h4>
                                     <div class="mt-5 mb-6">
-                                            <a href="/home"> <img src="../static/images/google_icon.png" class="mr-5"> </a>
+                                            <a href="/home"> <img src="../static/images/iconos/google.png" class="mr-5"> </a>
                                         
-                                            <a href="/home"> <img src="../static/images/facebook_icon.png"> </a>
+                                            <a href="/home"> <img src="../static/images/iconos/facebook.png"> </a>
                                         </div>
                                 </div>
 

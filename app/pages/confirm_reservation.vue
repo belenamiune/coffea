@@ -9,7 +9,7 @@
                      </p>
                     
                     <div class="text-center mt-15">
-                      <img src="../static/images/check.svg" width="150px"> 
+                      <img src="../static/images/iconos/check.svg" width="150px"> 
                     </div>
 
                     <template>
