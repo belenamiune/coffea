@@ -8,7 +8,7 @@
                 class="ma-2"
                 color="primary"
                 text-color="white"
-                :to="'/categorias'"
+                :to="'/categories'"
               >
         
                   Categorías
@@ -20,9 +20,9 @@
                 class="ma-2"
                 color="primary"
                 text-color="white"
-                :to="'/categorias'"
+                :to="'/categories'"
               >
-                  Productos
+                  {{ header }}
               </v-chip>
             </div>
 
@@ -42,7 +42,7 @@
                 size="160"
                 tile
               >
-                <v-img :src="require(`../static/images/productos/cafe/${producto.image}`)" max-width="135px"></v-img>
+                <v-img :src="require(`../static/images/productos/sandwiches/${producto.image}`)" max-width="135px"></v-img>
               </v-avatar>
 
               </div>
@@ -96,52 +96,52 @@
 import Navbar from '../components/navbar.vue'
   export default {
     data: () => ({
-  
+      header: 'Sándwiches',
       productos: [
         {
-          image: 'italiano.png',
-          title: 'Café Italiano',
-          description: 'Café negro con leche descremada',
-          star: 4,
-          comments: '(165)',
+          image: 'pavo.png',
+          title: 'Sándwich de pavo',
+          description: 'Pan casero con pavo caramelizado',
+          star: 3,
+          comments: '(102)',
           precio: '80',
           to:'cafe_italiano'
          
         },
         {
-          image: 'capuchino.png',
-          title: 'Café Capuchino',
-          description: 'Café expreso y leche montada con vapor',
+          image: 'veggie.png',
+          title: 'Tostado veggie',
+          description: 'Tostado con palta, tomate y queso',
           star: 5,
-          comments: '(1k)',
-          precio: '75',
+          comments: '(230)',
+          precio: '100',
           to:'cafe_italiano'
         },
         {
-          image: 'moca.png',
-          title: 'Café Moca',
-          description: 'Café con leche montada y chocolate',
+          image: 'tostado.png',
+          title: 'Tostado jamón y queso',
+          description: 'Tostado de jamón, queso y tomate (opcional)',
           star: 4,
-          comments: '(325)',
+          comments: '(300)',
           precio: '90',
           to:'cafe_italiano'
         },
         {
-          image: 'helado.png',
-          title: 'Café Helado',
-          description: 'Café con leche descremada helada',
-          star: 3,
-          comments: '(180)',
-          precio: '110',
+          image: 'bondiola.png',
+          title: 'Sándwich de bondiola',
+          description: 'Pan casero con bondiola desmenuzada y mayonesa casera',
+          star: 5,
+          comments: '(100)',
+          precio: '180',
           to:'cafe_italiano'
         },
         {
-          image: 'cafeconleche.png',
-          title: 'Café con leche',
-          description: 'Café clásico con leche',
+          image: 'ternera.png',
+          title: 'Sándwich de ternera',
+          description: 'Pan casero con ternera a la cerveza negra',
           star: 4,
-          comments: '(210)',
-          precio: '60',
+          comments: '(225)',
+          precio: '120',
           to:'cafe_italiano'
         },
        

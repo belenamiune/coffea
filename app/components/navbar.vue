@@ -125,7 +125,7 @@
         {
           icon: 'mdi-home',
           title: 'Inicio',
-          to: '/'
+          to: '/home'
         },
         {
           icon: 'mdi-account',
@@ -135,7 +135,7 @@
         {
           icon: 'mdi-cart-outline',
           title: 'Productos',
-          to: ''
+          to: '/categories'
         },
         {
           icon: 'mdi-calendar',
