@@ -1,7 +1,7 @@
 <template>
 <v-container>
      <v-row>
-            <v-col cols="12" :class="`rounded-t-xl` "  class="pa-16 text-center text-no-wrap primary margin justify-center align-center" >
+            <v-col cols="12" :class="`rounded-t-xl` "  class=" text-center text-no-wrap primary margin justify-center align-center" >
             
             </v-col>
 
@@ -9,15 +9,11 @@
                 <v-img src="/images/mis_pedidos.png" max-width="300"  height="100%" ></v-img>
             </v-row>
             
+            
+            <v-expansion-panels style="margin-top: 130px; " class="pa-3">
 
-            <v-expansion-panels style="margin-top: 130px;"   >
                 <v-expansion-panel
-                 v-for="item in items"
-          :key="item.nro_pedido"
-           link
-                class="mb-5 pa-2 " 
-                :class="`rounded-lg`"
-                >
+                 v-for="item in items"  :key="item.nro_pedido"  link    class="mb-5 pa-2 "  :class="`rounded-lg`">
                     <v-expansion-panel-header >
 
                         <template v-slot:actions>
@@ -159,7 +155,7 @@ export default {
     left:0px;
     bottom: 0;
     z-index:1;
-    
+  
 }
 
 .margin_img{
@@ -174,16 +170,14 @@ export default {
 
 
 button.v-expansion-panel-header--active{
-      background-color:none !important;
-      border-style: solid;
-     border-color: #FFB29E;
-     border-radius:10px;
-     margin: 0;
+    background-color:none !important;
+    border-style: solid;
+    border-color: #FFB29E;
+    border-radius:10px;
+    margin: 0;
   }
 
-.v-list-item{
-    padding: 0;
-}
+
 
 .v-list-item__title{
     font-size: 13px;
