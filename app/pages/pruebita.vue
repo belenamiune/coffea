@@ -115,7 +115,7 @@
             </v-row>
  
             <v-row>
-                <v-col cols="6">
+                <v-col >
                      <v-card class="pa-4 ml-0 mb-6" v-for="(item, index) in listaTareas" :key="index">
                 <v-img src=""   max-height="300"></v-img>
                 <v-chip label color="pink" text-color="white" class="ml-2">
@@ -140,7 +140,7 @@
             </v-card>
                 </v-col>
 
-            <v-col cols="6" v-if="formAgregar"> 
+            <v-col  v-if="formAgregar"> 
                 <v-card class="pa-3 mb-3 px-5">
                     <v-form @submit.prevent="agregarTarea">
                         <v-text-field label="Tarea" v-model="titulo"></v-text-field>
@@ -150,7 +150,7 @@
                 </v-card>
             </v-col>
 
-            <v-col cols="6" v-if="!formAgregar"> 
+            <v-col  v-if="!formAgregar"> 
                 <v-card class="pa-3 mb-3 px-5">
                     <v-form @submit.prevent="editarTarea">
                         <v-text-field label="Tarea" v-model="titulo"></v-text-field>

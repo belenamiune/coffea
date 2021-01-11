@@ -9,6 +9,8 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@mdi/js": "^5.8.55",
+    "@mdi/react": "^1.4.0",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
     "nuxt-gmaps": "^1.2.10",
