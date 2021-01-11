@@ -53,7 +53,7 @@
                   </v-list-item>
                 </v-list>
 
-                <v-list class="logout">
+                <v-list class="logout" exact>
                   <v-list-item>
 
                     <v-list-item-action>
@@ -116,6 +116,11 @@
       clipped: false,
       drawer: false,
       fixed: false,
+      miniVariant: false,
+      right: true,
+      rightDrawer: false,
+      dialog: false,
+      overlay: false,
       items: [
         {
           icon: 'mdi-home',
@@ -142,14 +147,8 @@
           title: 'Sucursales',
           to: '/sucursales'
         },
-      ],
-
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      dialog: false,
-      overlay: false,
-      
+      ]
+     
     }
     
   },
@@ -178,7 +177,6 @@
         color: #FDF7F7;
     }
 
-   
     .v-list-item__subtitle {
       color: #FDF7F7 !important;
       font-family:  'Montserrat', sans-serif;
