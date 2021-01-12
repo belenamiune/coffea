@@ -36,46 +36,46 @@
           <v-card :to="producto.to"> 
             <div class="d-flex flex-no-wrap">
               <div>
+                
+                <v-row>
+                  <v-col cols="4">
+                      <v-avatar
+                      class="mt-2 mb-2"
+                      size="160"
+                      tile
+                    >
+                      <v-img :src="require(`../static/images/productos/sandwiches/${producto.image}`)" max-height="120px" max-width="130px"></v-img>
+                    </v-avatar>
+                  </v-col>
 
-                <v-avatar
-                class="ml-2 mt-2 mb-3"
-                size="160"
-                tile
-              >
-                <v-img :src="require(`../static/images/productos/sandwiches/${producto.image}`)" max-width="135px"></v-img>
-              </v-avatar>
+                  <v-col cols="8">
+   
+                      <v-card-title
+                        class="headline"
+                        v-text="producto.title"
+                      ></v-card-title>
 
+                      <v-card-subtitle>{{ producto.description }}</v-card-subtitle>
+                      <v-rating
+                        :value="producto.star"
+                        color="primary"
+                        dense
+                        half-increments
+                        readonly
+                        size="10"
+                      ></v-rating>
+
+               
+                         <p class="grey--text">{{producto.comments}} </p>
+                    </v-col>
+                </v-row>
+
+                        <div>
+                 
+                
+                 </div>
               </div>
-             
-              <div class="title-style">
-                <v-card-title
-                  class="headline text-left"
-                  v-text="producto.title"
-                ></v-card-title>
-
-                <v-card-subtitle>{{ producto.description }}</v-card-subtitle>
-
-              
-
-               
-                <v-rating
-                  :value="producto.star"
-                  color="primary"
-                  dense
-                  half-increments
-                  readonly
-                  size="14"
-                ></v-rating>
-
-               
-                 <p class="grey--text">{{producto.comments}} </p>
-                
-                
-                
-               </div>
-
-              
-                  
+                 
                </div>
 
 
@@ -151,6 +151,7 @@ import Navbar from '../components/navbar.vue'
 </script>
 
 <style scoped>
+
 .v-card__title  {
   font-size: 16px !important;
 }
@@ -162,13 +163,9 @@ import Navbar from '../components/navbar.vue'
 
 .v-avatar {
   justify-content: initial;
+  margin-left: 2em !important;
 }
 
-.v-rating, p{
-  text-align: left;
-  margin-left: 1em !important;
- 
-}
 
 p {
   font-size: 14px;
@@ -178,19 +175,24 @@ h2 {
   margin-right: 3em;
 }
 
+.v-rating {
+    max-width: 65% !important;
+}
+
 
 
 
 
  @media screen and (min-width: 320px) {
     
-
+    
     .v-card__subtitle {
       text-align: left !important;
     }
 
-    .title-style {
-      margin-left: -1.5em !important;
+    .v-card__title {
+      word-break: normal;
+      text-align: left;
     }
 
     h2 {
@@ -200,8 +202,27 @@ h2 {
 
     .v-rating {
        margin-top: -1em;
-}
+       padding: 0 !important;
+       margin-left: -2.3em !important;
+    }
 
+    p {
+      text-align: left;
+      margin-left: 1em !important;
+      margin-right: 1em !important;
+    }
+
+    .col-8 {
+      padding-left: 2em !important;
+    }
+
+    .v-avatar {
+      margin-left: 0 !important;
+    }
+
+    .v-rating {
+       max-width: 100% !important;
+    }
 
  }
 
