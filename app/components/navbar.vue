@@ -232,7 +232,7 @@
     }
 
     .v-badge__badge {
-      inset: calc(80% - 4px) auto auto calc(100% - 4px);
+      inset: calc(80% - 8px) auto auto calc(100% - 4px);
     }
 
     span {
