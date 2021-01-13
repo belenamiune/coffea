@@ -171,7 +171,7 @@
         {
           icon: 'mdi-cart-outline',
           title: 'Productos',
-          to: '/categories'
+          to: '/categorias'
         },
         {
           icon: 'mdi-calendar',

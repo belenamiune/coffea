@@ -11,7 +11,7 @@
                         dark
                         @click="submit"
                         color="secondary"
-                        to="welcome"
+                        to="bienvenida"
                      >
                     
                         <v-icon>mdi-close</v-icon>
@@ -49,7 +49,7 @@
                                             @click="submit"
                                             color="primary"
                                             rounded
-                                            to="/confirm_account"
+                                            to="/confirmar_cuenta"
                                         >
                                             
                                             Confirmar cuenta

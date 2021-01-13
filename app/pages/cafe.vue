@@ -8,7 +8,7 @@
                 class="ma-2"
                 color="primary"
                 text-color="white"
-                :to="'/categories'"
+                :to="'/categorias'"
               >
         
                   Categorías
@@ -20,7 +20,7 @@
                 class="ma-2"
                 color="primary"
                 text-color="white"
-                :to="'/categories'"
+                :to="'/categorias'"
               >
                   {{ header }}
               </v-chip>

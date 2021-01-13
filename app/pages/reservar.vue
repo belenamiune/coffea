@@ -143,7 +143,7 @@
                         class="mr-4 text-center text-capitalize btn_confirm"
                         rounded
                         color="secondary"
-                        to="confirm_reservation"
+                        to="confirmar_reserva"
                       >
                       
                        Reservar
