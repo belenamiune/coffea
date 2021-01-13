@@ -1,6 +1,6 @@
 <template>
     <v-card>
-
+      
         <v-navigation-drawer
                 v-model="drawer"
                 :mini-variant="miniVariant"
@@ -103,8 +103,44 @@
                 >
                 <v-app-bar-nav-icon 
                   @click.stop="drawer = !drawer" 
-                  color="#F8744E"/>
-                  
+                  color="#F8744E"
+                />
+                <v-spacer></v-spacer>
+
+                
+        
+                          <v-tab>
+                              <v-badge
+                                color="primary"
+                                content="6"
+                                bottom
+                              
+                              >
+                                <v-icon> mdi-cart-outline </v-icon>
+                              </v-badge>
+                            </v-tab>
+                          
+
+              
+                           <v-chip 
+                              color="secondary"
+                              text-color="white"
+                              to="/mi_cuenta"
+                             >
+                              <v-avatar
+                                left
+                                class="secondary darken-4"
+                              >
+                                <v-img src="https://randomuser.me/api/portraits/women/26.jpg"></v-img>
+                              </v-avatar>
+
+                              <div>
+                                    <p> Mis puntos </p> 
+                                    <span> 800 </span> 
+                              </div>
+                              
+                            </v-chip>
+               
                 </v-app-bar>
         </v-card>
 </template>
@@ -193,6 +229,25 @@
 
     .logout {
       margin-top: -0.8em;
+    }
+
+    .v-badge__badge {
+      inset: calc(80% - 8px) auto auto calc(100% - 4px);
+    }
+
+    span {
+      font-weight: 900;
+      padding-left: 1em !important;
+      
+    }
+
+    p {
+      margin-bottom: 0 !important;
+      margin-top: 0.5em !important;
+    }
+
+    .theme--light.v-chip:not(.v-chip--active) {
+      height: 40px;
     }
 
 </style>
