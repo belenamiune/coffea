@@ -100,6 +100,8 @@
                   :clipped-left="clipped"
                   fixed
                   app
+                  dense
+                  
                 >
                 <v-app-bar-nav-icon 
                   @click.stop="drawer = !drawer" 
@@ -171,7 +173,7 @@
         {
           icon: 'mdi-cart-outline',
           title: 'Productos',
-          to: '/categories'
+          to: '/categorias'
         },
         {
           icon: 'mdi-calendar',

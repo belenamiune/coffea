@@ -10,7 +10,7 @@
                         dark
                         @click="submit"
                         color="secondary"
-                        to="welcome"
+                        to="bienvenida"
                      >
                     
                         <v-icon>mdi-close</v-icon>
@@ -41,7 +41,7 @@
                             @click:append="show1 = !show1"
                         ></v-text-field>
 
-                            <a href="/forgotPassword"> <p class="text-right" style="color: gray; font-size: 13px"> ¿Olvidaste tu contraseña? </p> </a>
+                            <a href="/olvidar_contraseña"> <p class="text-right" style="color: gray; font-size: 13px"> ¿Olvidaste tu contraseña? </p> </a>
 
                                 <div class="text-center mb-8 mt-8">
                                     <h4> Inicia sesión con: </h4>

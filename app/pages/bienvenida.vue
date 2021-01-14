@@ -14,7 +14,7 @@
                                     style="width:150px"
                                     color="primary"
                                     rounded
-                                    to="/register_form"
+                                    to="/registro"
 
                                  >
                                     Registrarse

@@ -9,7 +9,7 @@
                             icon
                             @click="submit"
                             color="secondary"
-                            to="welcome"
+                            to="bienvenida"
                             >
                                 <v-icon>mdi-close</v-icon>
                             </v-btn>
@@ -83,7 +83,7 @@
                                             @click="submit"
                                             color="primary"
                                             rounded
-                                            to="/code_account"
+                                            to="/codigo_cuenta"
                                         >
                                             
                                             Registrarme

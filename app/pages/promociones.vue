@@ -9,7 +9,7 @@
                 class="ma-2"
                 color="primary"
                 text-color="white"
-                :to="'/categories'"
+                :to="'/categorias'"
               >
                   {{ header }}
               </v-chip>
@@ -94,7 +94,7 @@ import Navbar from '../components/navbar.vue'
           star: 4,
           comments: '(165)',
           precio: '170',
-          to:'cafe_italiano'
+          to:'meriendas_completas'
          
         },
         {
@@ -104,7 +104,7 @@ import Navbar from '../components/navbar.vue'
           star: 4,
           comments: '(300)',
           precio: '200',
-          to:'cafe_italiano'
+          to:'meriendas_completas'
         },
         {
           image: 'meriendas_completas.png',
@@ -113,7 +113,7 @@ import Navbar from '../components/navbar.vue'
           star: 5,
           comments: '(1k)',
           precio: '300',
-          to:'cafe_italiano'
+          to:'meriendas_completas'
         },
         {
           image: 'bowl.png',
@@ -122,7 +122,7 @@ import Navbar from '../components/navbar.vue'
           star: 3,
           comments: '(170)',
           precio: '180',
-          to:'cafe_italiano'
+          to:'meriendas_completas'
         },
         {
           image: 'panqueques.png',
@@ -131,7 +131,7 @@ import Navbar from '../components/navbar.vue'
           star: 5,
           comments: '(317)',
           precio: '150',
-          to:'cafe_italiano'
+          to:'meriendas_completas'
         },
        
       ],

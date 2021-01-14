@@ -50,7 +50,7 @@
                                             @click="submit"
                                             color="primary"
                                             rounded
-                                            to="/code_account"
+                                            to="/codigo_cuenta"
                                         >
                                             
                                             Recuperar cuenta

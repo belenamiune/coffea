@@ -1,9 +1,9 @@
 <template>
-  <v-card flat>
+  <v-card>
     <v-container fluid>
       <v-row class="child-flex">
         <div>
-          <v-toolbar>
+          <v-toolbar dense fixed>
             <v-btn
               icon
             >
@@ -31,6 +31,7 @@
                         content="6"
                         bottom
                         class="cart_icon"
+                        to="carrito"
                       >
                         <v-icon> mdi-cart-outline </v-icon>
                       </v-badge>
@@ -75,6 +76,7 @@
 export default {
   data () {
     return  {
+      
      
     }
       }
@@ -86,7 +88,7 @@ export default {
 
 
     .v-badge__badge {
-      inset: calc(80% - 8px) auto auto calc(100% - 4px);
+      inset: calc(100% - 4px) auto auto calc(100% - 4px);
     }
 
     span {
@@ -109,6 +111,11 @@ export default {
 
     }
 
+    
+    div.container{
+        padding: 0;
+    }
+
     .search_icon {
       margin-right: 1em;
     }
@@ -126,6 +133,7 @@ export default {
     .search_icon {
       margin-right: -1em;
     }
+
 
     }
 
