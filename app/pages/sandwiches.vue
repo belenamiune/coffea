@@ -105,7 +105,7 @@ import Navbar from '../components/navbar.vue'
           star: 3,
           comments: '(102)',
           precio: '80',
-          to:'cafe_italiano'
+          to:'tostado_veggie'
          
         },
         {
@@ -115,7 +115,7 @@ import Navbar from '../components/navbar.vue'
           star: 5,
           comments: '(230)',
           precio: '100',
-          to:'cafe_italiano'
+          to:'tostado_veggie'
         },
         {
           image: 'tostado.png',
@@ -124,7 +124,7 @@ import Navbar from '../components/navbar.vue'
           star: 4,
           comments: '(300)',
           precio: '90',
-          to:'cafe_italiano'
+          to:'tostado_veggie'
         },
         {
           image: 'bondiola.png',
@@ -133,7 +133,7 @@ import Navbar from '../components/navbar.vue'
           star: 5,
           comments: '(100)',
           precio: '180',
-          to:'cafe_italiano'
+          to:'tostado_veggie'
         },
         {
           image: 'ternera.png',
@@ -142,7 +142,7 @@ import Navbar from '../components/navbar.vue'
           star: 4,
           comments: '(225)',
           precio: '120',
-          to:'cafe_italiano'
+          to:'tostado_veggie'
         },
        
       ],

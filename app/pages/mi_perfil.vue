@@ -201,18 +201,17 @@ export default {
         menu2: false,
        },
 
-         
-         watch: {
+      } 
+    },
+     watch: {
         overlay (val) {
         val && setTimeout(() => {
-             this.overlay = false;},200);
+             this.overlay = false;},2000);
        
       
 
         }
         },   
-      } 
-    }
   }
   
 

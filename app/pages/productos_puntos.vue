@@ -111,7 +111,7 @@ import Navbar from '../components/navbar.vue'
           star: 5,
           comments: '(230)',
           precio: '100',
-          to:'cafe_italiano'
+          to:'tostado_veggie'
         },
         {
           image: 'bondiola.png',
@@ -120,7 +120,7 @@ import Navbar from '../components/navbar.vue'
           star: 5,
           comments: '(100)',
           precio: '180',
-          to:'cafe_italiano'
+          to:'tostado_veggie'
         },
         {
           image: 'oreo.png',
@@ -129,7 +129,7 @@ import Navbar from '../components/navbar.vue'
           star: 5,
           comments: '(300)',
           precio: '200',
-          to:'cafe_italiano'
+          to:'torta_oreo'
         },
        
       ],

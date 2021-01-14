@@ -106,7 +106,7 @@ import Navbar from '../components/navbar.vue'
           star: 3,
           comments: '(110)',
           precio: '100',
-          to:'cafe_italiano'
+          to:'torta_oreo'
          
         },
         {
@@ -116,7 +116,7 @@ import Navbar from '../components/navbar.vue'
           star: 4,
           comments: '(385)',
           precio: '120',
-          to:'cafe_italiano'
+          to:'torta_oreo'
         },
         {
           image: 'tarta_frutilla.png',
@@ -125,7 +125,7 @@ import Navbar from '../components/navbar.vue'
           star: 5,
           comments: '(330)',
           precio: '95',
-          to:'cafe_italiano'
+          to:'torta_oreo'
         },
         {
           image: 'oreo.png',
@@ -134,7 +134,7 @@ import Navbar from '../components/navbar.vue'
           star: 5,
           comments: '(300)',
           precio: '200',
-          to:'cafe_italiano'
+          to:'torta_oreo'
         },
         {
           image: 'tiramisu.png',
@@ -143,7 +143,7 @@ import Navbar from '../components/navbar.vue'
           star: 5,
           comments: '(140)',
           precio: '190',
-          to:'cafe_italiano'
+          to:'torta_oreo'
         },
        
       ],

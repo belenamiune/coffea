@@ -100,6 +100,8 @@
                   :clipped-left="clipped"
                   fixed
                   app
+                  dense
+                  
                 >
                 <v-app-bar-nav-icon 
                   @click.stop="drawer = !drawer" 
