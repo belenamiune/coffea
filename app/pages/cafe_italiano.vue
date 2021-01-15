@@ -1,6 +1,6 @@
 <template>
 
-    <v-container>
+    <v-container fluid>
         <toolbar />
         <v-row class="sin_margin">
              <div style="margin-top: 1em; ">
@@ -57,25 +57,25 @@
                         class="text-center"
                       ></v-rating>
 
-                        <p class="white--text comentarios"> (165) </p>
+                        <p class="white--text comentarios solo-numeros"> (165) </p>
             </v-container>
                 <p class="parrafos"> Café tostado más intenso que proporciona un sabor profundo, dulce y acaramelado, con baja acidez. </p>
 
-                <p class="parrafos"> Cantidad:  300 ml </p>
+                <p class="parrafos"> Cantidad:  <span class="solo-numeros"> 300 ml </span> </p>
 
                 <p class="parrafos">Ingredientes: leche y café. </p>
 
             
                 <v-col cols="6">
                   <v-btn id="aumentar" v-on:click="aumentar" x-small>+</v-btn>
-                       <input type='text' id="cantidad" value="0" class="white--text ">                 
+                       <input type='text' id="cantidad" value="0" class="white--text solo-numeros">                 
                   <v-btn id ="disminuir" v-on:click="disminuir" x-small>-</v-btn>
 
                 </v-col>
                 
                 <v-col cols="6">
                         <div class="text-right" style="width: 80%">
-                            <p class="text-right white--text precio"> $80 </p>
+                            <p class="text-right white--text precio" style="font-family: 'Montserrat', sans-serif;"> $80 </p>
                         </div>  
                 </v-col>
 
@@ -151,6 +151,10 @@ export default {
 
 <style>
 
+ * {
+        font-family: 'Raleway', sans-serif;
+    }
+
 
 .margin {
     position: fixed;
@@ -204,6 +208,10 @@ div.container {
 
 .v-btn--icon.v-size--default {
        width: 50%;
+}
+
+.solo-numeros {
+    font-family: 'Montserrat', sans-serif;
 }
  
 

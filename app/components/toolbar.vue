@@ -86,9 +86,11 @@ export default {
 
 <style scoped>
 
-
+    * {
+      font-family: 'Montserrat', sans-serif;
+    }
     .v-badge__badge {
-      inset: calc(100% - 4px) auto auto calc(100% - 4px);
+      inset: calc(80% - 8px) auto auto calc(80% - 8px);
     }
 
     span {
@@ -120,6 +122,9 @@ export default {
       margin-right: 1em;
     }
 
+    span {
+      font-weight: normal;
+    }
      @media screen and (min-width: 320px) {
     
       .theme--light.v-chip:not(.v-chip--active) {

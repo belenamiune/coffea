@@ -162,6 +162,10 @@
 
     <style lang="scss" scoped>
 
+        * {
+            font-family: 'Raleway', sans-serif;
+        }
+
         .margin{
             position: absolute;
             top: 100px;

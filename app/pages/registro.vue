@@ -224,6 +224,10 @@
             font-weight: normal;
         }
 
+        * {
+            font-family: 'Raleway', sans-serif;
+        }
+
         
         
     </style>
