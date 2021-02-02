@@ -205,6 +205,10 @@
 
 <style lang="scss" scoped>
 
+ * {
+   font-family: 'Montserrat', sans-serif;
+ }
+
     #app {
         background-color: red;
         font-family:  'Raleway', sans-serif;
@@ -238,7 +242,7 @@
     }
 
     span {
-      font-weight: 900;
+      font-weight: normal;
       padding-left: 1em !important;
       
     }
@@ -251,5 +255,6 @@
     .theme--light.v-chip:not(.v-chip--active) {
       height: 40px;
     }
+
 
 </style>

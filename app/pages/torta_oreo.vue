@@ -1,6 +1,6 @@
 <template>
 
-    <v-container>
+    <v-container fluid>
         <toolbar />
         <v-row class="sin_margin">
              <div style="margin-top: 1em; ">
@@ -57,7 +57,7 @@
                         class="text-center"
                       ></v-rating>
 
-                        <p class="white--text comentarios"> (300) </p>
+                        <p class="white--text comentarios solo-numeros"> (300) </p>
             </v-container>
                 <p class="parrafos"> Porción de torta con dulce de leche, galletitas Oreo y mucho chocolate.  </p>
 
@@ -67,14 +67,14 @@
             
                 <v-col cols="6">
                   <v-btn id="aumentar" v-on:click="aumentar" x-small>+</v-btn>
-                       <input type='text' id="cantidad" value="0" class="white--text ">                 
+                       <input type='text' id="cantidad" value="0" class="white--text solo-numeros">                 
                   <v-btn id ="disminuir" v-on:click="disminuir" x-small>-</v-btn>
 
                 </v-col>
                 
                 <v-col cols="6">
                         <div class="text-right" style="width: 80%">
-                            <p class="text-right white--text precio"> $200 </p>
+                            <p class="text-right white--text precio solo-numeros"> $200 </p>
                         </div>  
                 </v-col>
 
@@ -151,6 +151,13 @@ export default {
 
 <style>
 
+*  {
+      font-family: 'Raleway', sans-serif ;
+    }
+
+.solo-numeros {
+    font-family: 'Montserrat', sans-serif;
+}
 
 .margin {
     position: fixed;

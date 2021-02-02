@@ -38,6 +38,10 @@
 </script>
 
 <style>
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
 img {
   max-width: 140px !important;
 }

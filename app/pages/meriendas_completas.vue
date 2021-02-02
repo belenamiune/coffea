@@ -57,7 +57,7 @@
                         class="text-center"
                       ></v-rating>
 
-                        <p class="white--text comentarios"> (1k) </p>
+                        <p class="white--text comentarios solo-numeros"> (1k) </p>
             </v-container>
                 <p class="parrafos"> Merienda completa. Para dos personas.</p>
 
@@ -66,14 +66,14 @@
                 <v-col cols="6">
                      <v-btn x-small rounded class="text-capitalize secondary--text button_election" to="promociones_eleccion"> Seleccionar gustos </v-btn>
                   <v-btn id="aumentar" v-on:click="aumentar" x-small>+</v-btn>
-                       <input type='text' id="cantidad" value="0" class="white--text ">                 
+                       <input type='text' id="cantidad" value="0" class="white--text solo-numeros">                 
                   <v-btn id ="disminuir" v-on:click="disminuir" x-small>-</v-btn>
 
                 </v-col>
                 
                 <v-col cols="6">
                         <div class="text-right" style="width: 80%">
-                            <p class="text-right white--text precio"> $300 </p>
+                            <p class="text-right white--text precio"> <span class="solo-numeros">$300 </span> </p>
                         </div>  
                 </v-col>
 
@@ -149,6 +149,11 @@ export default {
 
 <style>
 
+*  {
+          font-family: 'Raleway', sans-serif ;
+      }
+
+
 
 .margin {
     position: fixed;
@@ -208,6 +213,10 @@ div.container {
     margin-top: -2em !important;
     color: #184042;
     font-weight: bold;
+}
+
+.solo-numeros {
+    font-family: 'Montserrat', sans-serif;
 }
  
 

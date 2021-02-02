@@ -15,7 +15,7 @@
                     <h2 >PUNTOS DISPONIBLES</h2>
                 </v-row>
 
-                <v-btn class="font-weight-semibold secondary text-capitalize margin_puntos " elevation="0" rounded> 
+                <v-btn class="font-weight-semibold secondary text-capitalize margin_puntos " elevation="0" rounded to="productos_puntos"> 
                   Canjear puntos
                 </v-btn>
 

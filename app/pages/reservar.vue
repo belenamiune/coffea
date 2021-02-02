@@ -9,7 +9,7 @@
                
                       <v-col
                         cols="6"
-                        xs="12"
+                        
                         
                         
                       >
@@ -37,7 +37,6 @@
                               v-model="date"
                               label="Seleccionar fecha"
                               prepend-icon="mdi-calendar"
-                              
                               v-bind="attrs"
                               v-on="on"
                             ></v-text-field>
@@ -180,6 +179,9 @@ export default {
 
 <style>
 
+*  {
+       font-family: 'Montserrat', sans-serif !important;
+    }
 
 .btn_confirm {
   margin-top: 8em;
@@ -195,6 +197,10 @@ export default {
 }
 .v-icon {
   color: white !important;
+}
+
+.mdi-cart-outline::before {
+  color: #184042 ;
 }
 
 .theme--light.v-label {

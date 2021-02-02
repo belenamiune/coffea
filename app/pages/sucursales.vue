@@ -27,7 +27,7 @@
                                 <v-row>
                                     
                                         <v-col> 
-                                        <v-list-item-icon class="mr-4">
+                                        <v-list-item-icon class="mr-4" >
                                             <v-img src="/images/iconos/sucursal.svg"  ></v-img>
                                             </v-list-item-icon>    
                                         {{ item.title }}
@@ -47,7 +47,7 @@
                                             </v-list-item-icon>
 
                                             <v-list-item-content >
-                                                <v-list-item-subtitle>{{ item.direccion }}</v-list-item-subtitle>
+                                                <v-list-item-subtitle class="solo-numeros">{{ item.direccion }}</v-list-item-subtitle>
                                             </v-list-item-content>
                                 </v-list-item>
 
@@ -58,7 +58,7 @@
                                             </v-list-item-icon>
 
                                             <v-list-item-content >
-                                                <v-list-item-subtitle>{{ item.telefono }}</v-list-item-subtitle>
+                                                <v-list-item-subtitle class="solo-numeros">{{ item.telefono }}</v-list-item-subtitle>
                                             </v-list-item-content>
                                 </v-list-item>
 
@@ -69,7 +69,7 @@
                                             </v-list-item-icon>
 
                                             <v-list-item-content >
-                                                <v-list-item-subtitle>{{ item.horario }}</v-list-item-subtitle>
+                                                <v-list-item-subtitle class="solo-numeros">{{ item.horario }}</v-list-item-subtitle>
                                             </v-list-item-content>
                                 </v-list-item>
                                     
@@ -112,6 +112,15 @@ export default {
 
 <style lang="css">
 
+
+*  {
+      font-family: 'Raleway', sans-serif ;
+    }
+
+
+.solo-numeros {
+    font-family: 'Montserrat', sans-serif;
+}
 
 .img_margin {
     padding: 0 !important;

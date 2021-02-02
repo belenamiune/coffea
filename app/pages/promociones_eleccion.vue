@@ -57,7 +57,7 @@
                                 <v-list-item-icon>
                                     <div class="button_cantidad">
                                 <v-btn id="aumentar" v-on:click="aumentar" x-small>+</v-btn>
-                                     <input type='text' id="cantidad" value="0" >                 
+                                     <input type='text' id="cantidad" value="0" class="solo-numeros" >                 
                                  <v-btn id ="disminuir" v-on:click="disminuir" x-small>-</v-btn>
                                   </div>
                                 </v-list-item-icon>
@@ -85,7 +85,7 @@
                                 <v-list-item-icon>
                                     <div class="button_cantidad">
                                 <v-btn id="aumentar" v-on:click="aumentar" x-small>+</v-btn>
-                                     <input type='text' id="cantidad" value="0" >                 
+                                     <input type='text' id="cantidad" value="0" class="solo-numeros" >                 
                                  <v-btn id ="disminuir" v-on:click="disminuir" x-small>-</v-btn>
                                   </div>
                                 </v-list-item-icon>
@@ -200,6 +200,10 @@
 
 <style scoped>
 
+   * {
+        font-family: 'Raleway', sans-serif;
+    }
+
 .v-container {
     padding: 0;
 }
@@ -252,6 +256,11 @@
 .v-btn--icon.v-size--default {
        width: 50%;
 }
+
+.solo-numeros {
+    font-family: 'Montserrat', sans-serif;
+}
+ 
  
     
 
