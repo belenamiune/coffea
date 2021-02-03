@@ -5,16 +5,21 @@
               <v-row>  
                   <v-col :class="`rounded-t-xl`"  class="mt-5 mb-6 pa-27 text-center text-no-wrap white margin justify-center align-center" >
                        
-                    <v-btn
-                        icon
-                        dark
-                        @click="submit"
-                        color="secondary"
-                        to="bienvenida"
-                     >
-                    
-                        <v-icon>mdi-close</v-icon>
-                    </v-btn>
+                        <v-row>
+                            <v-col style="text-align: end">
+                                <v-btn
+                                    icon
+                                    dark
+                                    @click="submit"
+                                    color="secondary"
+                                    to="bienvenida"
+                                >
+                                
+                                    <v-icon>mdi-close</v-icon>
+                                </v-btn>
+
+                            </v-col>
+                        </v-row>
 
 
                     
@@ -60,7 +65,7 @@
                                                 @click="submit"
                                                 color="primary"
                                                 rounded
-                                                to="sucursales"
+                                                to="home"
                                         >
                                                 
                                                 Iniciar sesión
