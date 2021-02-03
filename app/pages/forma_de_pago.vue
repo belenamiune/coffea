@@ -4,24 +4,93 @@
             <v-row class="justify-center text-center mt-8">
                 <h3 class="text-left parrafo mt-5 mb-3"> Elegí la forma de pago </h3>
                     <v-col
-                    v-for="(producto, i) in productos"
-                    :key="i"
                     cols="12"
                     class="text-center"
                     >
                     
                     <v-card class="mt-2 card_style"> 
                         <div class="d-flex flex-no-wrap ml-7 round" style="height: 50px"> 
-                            <v-radio-group v-model="radioGroup" @change="inputChange">
-                            <v-radio
-                                :label="`${producto.title}`"
-                                color="secondary"
-                                class="checkbox-round" 
-                                :key="producto"
-                                :value="producto"
-                            ></v-radio>
-                            </v-radio-group>
+                             
+                             <label class="mt-3"><input type="radio" name="category_id" @change="onChange($event)" class="form-control" value="1"> Efectivo</label>
+                            
+                            <div id="disp" style= 
+                                "color:green; font-size:18px; font-weight:bold;"> 
+                            </div>
+                        </div>
+                        
+                    </v-card>
+                       
+                    </v-col>
 
+                    <v-col
+                    cols="12"
+                    class="text-center"
+                    >
+                    
+                    <v-card class="mt-2 card_style"> 
+                        <div class="d-flex flex-no-wrap ml-7 round" style="height: 50px"> 
+                             
+                             <label class="mt-3"><input type="radio" name="category_id" @change="onChange($event)" class="form-control" value="2"> Mercado pago</label>
+                            
+                            <div id="disp" style= 
+                                "color:green; font-size:18px; font-weight:bold;"> 
+                            </div>
+                        </div>
+                        
+                    </v-card>
+                       
+                    </v-col>
+
+                    <v-col
+                    cols="12"
+                    class="text-center"
+                    >
+                    
+                    <v-card class="mt-2 card_style"> 
+                        <div class="d-flex flex-no-wrap ml-7 round" style="height: 50px"> 
+                             
+                             <label class="mt-3"><input type="radio" name="category_id" @change="onChange($event)" class="form-control" value="3"> Tarjeta de débito</label>
+                            
+                            <div id="disp" style= 
+                                "color:green; font-size:18px; font-weight:bold;"> 
+                            </div>
+                        </div>
+                        
+                    </v-card>
+                       
+                    </v-col>
+
+                    
+                    <v-col
+                    cols="12"
+                    class="text-center"
+                    >
+                    
+                    <v-card class="mt-2 card_style"> 
+                        <div class="d-flex flex-no-wrap ml-7 round" style="height: 50px"> 
+                             
+                             <label class="mt-3"><input type="radio" name="category_id" @change="onChange($event)" class="form-control" value="3"> Tarjeta de crédito</label>
+                            
+                            <div id="disp" style= 
+                                "color:green; font-size:18px; font-weight:bold;"> 
+                            </div>
+                        </div>
+                        
+                    </v-card>
+                       
+                    </v-col>
+
+                    
+                    <v-col
+                    cols="12"
+                    class="text-center"
+                    >
+                    
+                    <v-card class="mt-2 card_style"> 
+                        <div class="d-flex flex-no-wrap ml-7 round" style="height: 50px"> 
+                             
+                             <label class="mt-3"><input type="radio" name="category_id" @change="onChange($event)" class="form-control" value="3"> Transferencia </label>
+                            
                             <div id="disp" style= 
                                 "color:green; font-size:18px; font-weight:bold;"> 
                             </div>
@@ -36,48 +105,27 @@
 
 <script>
 export default {
-    model: {
-        prop: 'values',
-        event: 'change'
-        },
     data: () => ({
         
       formulario_efectivo: '/formulario_efectivo',
       mercado_pago: '/mercado_pago',
       tarjetas: '/tarjetas',
-      radioGroup: 1,
-      
-      productos: [
-          {
-          title:'Efectivo',
-          to: 1
-         },
-         {
-          title:'Mercado Pago',
-          to: 2 
-         },
-
-         {
-          title:'Tarjeta de débito',
-          to: 3
-         },
-
-         {
-          title:'Tarjeta de crédito',
-          to: 3
-         },
-
-         {
-          title:'Transferencia',
-          to: 3
-         },
-      ],
     }),
     methods: {
-            inputChange(e) {
-            console.log(e.target.value)
-            this.$emit('change', event.target.value)
-            }
+             onChange(event) {
+              var optionText = event.target.value;
+              console.log(optionText);
+
+              if(event.target.value == 1) {
+                  location.href ="/formulario_efectivo";
+              }
+              if (optionText == 2) {
+                  location.href = "/mercado_pago";
+              }
+              if (event.target.value == 3) {
+                   location.href = "/tarjetas";
+              }
+          }
 
     }
 

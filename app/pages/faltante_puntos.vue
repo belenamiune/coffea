@@ -98,7 +98,14 @@
                         class="position2">
                             ¿Te quedaste sin puntos?
                             Podes completar tu compra con dinero. <br />
-                            Presiona <strong style="color:#F8744E ">Canjear </strong> para continuar.
+                            Presiona <v-btn 
+                            x-small
+                            rounded 
+                            to=""
+                            class="text-center primary text-capitalize font-weight-normal justify-content-right button_alert"> 
+
+                            Canjear
+                            </v-btn> para continuar.
                         </v-alert>
                   </v-overlay>
                     </v-row>
@@ -129,11 +136,9 @@ export default {
                 val2 && setTimeout(() => {
                 this.overlay2 = false
                 
-                }, 30000)
+                }, 10000)
             },
-        },
-
-         
+        },         
 
 }
 
