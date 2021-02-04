@@ -41,6 +41,10 @@ export default {
 
 <style>
 
+*  {
+          font-family: 'Raleway', sans-serif ;
+      }
+
 
 
 .btn_confirm {

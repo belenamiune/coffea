@@ -66,7 +66,7 @@
                       ></v-rating>
 
                
-                         <p class="grey--text">{{producto.comments}} </p>
+                         <p class="grey--text solo-numeros">{{producto.comments}} </p>
                     </v-col>
                 </v-row>
 
@@ -80,7 +80,7 @@
 
 
                <v-row justify="end">
-                <h2><span style="color: #F8744E">$</span>{{producto.precio}}</h2>
+                <h2 class="solo-numeros"><span style="color: #F8744E">$</span>{{producto.precio}}</h2>
                </v-row>
           </v-card>
             
@@ -152,6 +152,11 @@ import Navbar from '../components/navbar.vue'
 
 <style scoped>
 
+*  {
+      font-family: 'Raleway', sans-serif ;
+    }
+
+
 .v-card__title  {
   font-size: 16px !important;
 }
@@ -178,6 +183,11 @@ h2 {
 .v-rating {
     max-width: 65% !important;
 }
+
+.solo-numeros {
+    font-family: 'Montserrat', sans-serif;
+}
+ 
 
 
 
