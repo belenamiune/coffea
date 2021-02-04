@@ -82,7 +82,54 @@
                                 </v-expansion-panel-content>
                         </v-expansion-panel>
                 </v-expansion-panels>
-            
+                <v-row style="justify-content:center">
+                    <v-btn 
+                        class="font-weight-semibold secondary justify-center align-center pa-4 mt-5 mb-10  margin_img margin custom-transform-class text-none" 
+                        elevation="6" 
+                        rounded
+                        @click="dialog=true" 
+                        
+                        > 
+                        Seleccionar sucursal
+                        </v-btn>
+
+                        <v-dialog v-model="dialog" width="500"  transition="dialog-bottom-transition"  class="dialogo mx-0"  overflow-hidden full-screen persistent>
+                            <v-card class=" justify-center align-center text-center">
+                                 <v-col style="text-align: end">
+                                <v-btn
+                                    icon
+                                    small
+                                    color="black"
+                                    class="cerrar mt-2 mr-2"
+                                    @click="dialog=false"
+                                >
+                                        
+                                <v-icon>mdi-close</v-icon>
+                        
+                                </v-btn>
+                                 </v-col>
+                                    <v-card-title class="px-12 mb-4 mt-3">
+                                        ¿Querés canjear tus puntos por esta compra?
+                                    </v-card-title>
+                        
+                            <v-card-actions class=" justify-center align-center text-center"> 
+                                <v-btn color="secondary" class="secondary text-lowercase" to="pago_puntos"> 
+                                    <v-img src="/images/iconos/puntos_blanco.svg" class="mr-2" max-width="30"></v-img>
+                                    Si, quiero
+                                </v-btn>
+                            </v-card-actions>
+
+
+                            <v-card-actions class=" justify-center align-center text-center"> 
+                                <v-btn color="secondary" class="secondary text-lowercase"  to="forma_de_pago" > 
+                                    <v-img src="/images/iconos/en_mano.svg" class="mr-2" max-width="20"></v-img>
+                                No, pagar con dinero
+                                </v-btn>
+                            </v-card-actions>
+
+                        </v-card>
+                    </v-dialog>
+                </v-row>
         
             </v-col>
         </v-row>
@@ -96,13 +143,14 @@ export default {
    
    data () {
       return {
-        items: [
-          { title: 'Sucursal Independencia', direccion: 'Independencia 664', telefono: '035115507456', horario: 'Lunes a viernes de 9 a 21 hs' },
-          { title: 'Sucursal Blvd. San Juan', direccion: 'Boulevard San Juan 798', telefono: '0351548932', horario: 'Lunes a viernes de 9 a 21 hs'},
-          { title: 'Sucursal Catamarca', direccion: 'Catamarca 247', telefono: '0351789835', horario: 'Lunes a lunes de 9 a 21 hs' },
-          { title: 'Sucursal Isabel la Católica', direccion: 'Isabel la Católica 123', telefono: '03519873245', horario: 'Lunes a sábados de 9 a 21 hs' },
-        ],
-        right: null,
+        dialog: false,
+            items: [
+            { title: 'Sucursal Independencia', direccion: 'Independencia 664', telefono: '035115507456', horario: 'Lunes a viernes de 9 a 21 hs' },
+            { title: 'Sucursal Blvd. San Juan', direccion: 'Boulevard San Juan 798', telefono: '0351548932', horario: 'Lunes a viernes de 9 a 21 hs'},
+            { title: 'Sucursal Catamarca', direccion: 'Catamarca 247', telefono: '0351789835', horario: 'Lunes a lunes de 9 a 21 hs' },
+            { title: 'Sucursal Isabel la Católica', direccion: 'Isabel la Católica 123', telefono: '03519873245', horario: 'Lunes a sábados de 9 a 21 hs' },
+            ],
+            right: null,
       }
     },
     
@@ -110,7 +158,7 @@ export default {
 </script>
 
 
-<style lang="css">
+<style lang="css" scoped>
 
 
 *  {
@@ -172,4 +220,137 @@ button.v-expansion-panel-header--active{
 }
 
 }
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+.margin{
+    position:absolute;
+    top:200px;
+    left:0px;
+    bottom:0;
+    height: 90%;
+    padding-bottom: 0;
+    z-index:1;
+  
+}
+
+.margin_img{
+    position: relative;;
+    top:30px;
+    bottom: 0;
+    z-index:2;
+}
+
+h1{
+    font-size: 22px;
+  
+}
+
+.theme--light.v-label{
+    color: white;
+}
+
+.v-text-field {
+    border-radius:15px;
+}
+
+.v-label{
+    padding-left: 8px;
+}
+
+.v-alert:not(.v-sheet--tile) {
+     border-radius: 30px;
+}
+
+.position{
+    position: relative;
+    top: -350px;
+    right: 0;
+}
+
+.delivery { 
+    max-width: 250px !important;
+    margin-left: 0.5em;
+}
+
+.v-sheet.v-card{
+    border-radius:10px;
+}
+
+input{
+    width: 25px;
+}
+
+
+.v-card__subtitle, .v-card__text, .v-card__title{
+    padding: 8px;
+}
+
+.v-img{
+ max-height:100px;
+}
+
+.precio{
+    padding-top: 0;
+}
+.cerrar {
+   position: absolute;
+   right: 5px;
+}
+
+.v-chip.v-size--default{
+    width: 93%;
+     border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    color: black;
+}
+
+.aclaracion{
+    color: #878686;
+    font-size: 15px;
+    position: absolute;
+    right: 9%;
+}
+
+.boton_comprar{
+    position: absolute;
+}
+
+
+.v-dialog > .v-card{
+   border-radius: 30px 30px 0px 0px;
+    position: absolute;
+    left:0;
+    bottom: 0;
+    height: 60%;
+}
+.v-dialog > .v-card > .v-card__title {
+    word-break: normal; 
+    font-size: 20px;
+}
+
+.v-card__actions > .v-btn.v-btn{
+    width: 80%;
+    border-radius: 10px;
+    height: 45px;
+}
+
+
+@media screen and (min-width: 375px) {
+    .v-img{
+        max-height: 200px;
+    }
+
+    .precio{
+         padding-top: 10px;
+    }
+
+    .cerrar{
+     margin-left: 47px;
+}
+
+}
+
 </style>
