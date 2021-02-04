@@ -84,4 +84,13 @@ v-img{
     position: absolute;
     left: 50px;
 }
+
+*{
+  font-family: 'rawline', sans-serif !important; 
+  color: black;
+}
+
+.montserrat{
+  font-family: 'Montserrat', sans-serif;
+}
 </style>

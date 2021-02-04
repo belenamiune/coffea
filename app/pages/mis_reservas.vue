@@ -74,7 +74,7 @@
                                         </v-list-item-icon>
 
                                         <v-list-item-content >
-                                            <v-list-item-title>{{ item.hora }}</v-list-item-title>
+                                            <v-list-item-title >{{ item.hora }}</v-list-item-title>
                                         </v-list-item-content>
                                     </v-list-item>
 
@@ -224,6 +224,15 @@ h1{
     font-size: 18px;
 }
 
+
+*{
+  font-family: 'rawline', sans-serif !important; 
+  color: black;
+}
+
+.montserrat{
+  font-family: 'Montserrat', sans-serif;
+}
 
 .margin{
     margin-top:50px;

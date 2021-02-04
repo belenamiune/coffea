@@ -187,4 +187,12 @@ button.v-expansion-panel-header--active{
     font-size: 13px;
 }
 
+*{
+  font-family: 'rawline', sans-serif !important; 
+  color: black;
+}
+
+.montserrat{
+  font-family: 'Montserrat', sans-serif;
+}
 </style>

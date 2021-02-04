@@ -285,7 +285,7 @@
 .v-list-item__subtitle{
     font-size: 13px;
     color: black;
-     overflow: visible;
+    overflow: visible;
 }
 .padding{
    height: 100%;
