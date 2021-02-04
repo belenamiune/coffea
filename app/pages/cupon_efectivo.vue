@@ -3,68 +3,71 @@
              <img src="../static/images/logo-circulo.svg" width="100px" class="image_resize"> 
            <v-container fluid>
               <v-row>
-                  <v-col  :class="`rounded-t-xl`"  class="mt-5 mb-6 pa-20 text-center text-no-wrap white margin justify-center align-center" >
+                  <v-col  :class="`rounded-t-xl`"  class="mt-3 mb-6 pa-20 text-center text-no-wrap white margin justify-center align-center" >
+                
                         <v-row>
                             <v-col style="text-align: end">
-                                <v-btn
-                                    icon
-                                    dark
-                                    @click="submit"
-                                    color="secondary"
-                                    to="login"
-                                >
-                                    <v-icon>mdi-close</v-icon>
-                                </v-btn>
+                            <v-btn
+                                icon
+                                dark
+                                @click="submit"
+                                color="secondary"
+                                to="login"
+                            >
+                                <v-icon>mdi-close</v-icon>
+                            </v-btn>
                     
                             </v-col>
                         </v-row>
                   
-                            <h2> Cuenta confirmada </h2>
+                            <h2> Cupón de pago </h2>
+                                
                                 <v-container>
                                     <v-row>
                                         <v-col cols xs="6">
                                 
-                                         <p class="text-center mb-8 mt-8">La compra ha sido realizada exitosamente</p>
+                                         <p class="text-center mb-8 mt-4">El siguiente código QR será escaneado cuando asistas a cualquiera de nuestras sucursales por un período de<strong style="font-family:'Montserrat', sans-serif"> 24hs. </strong></p>
                             
                                         </v-col>
                                     </v-row>
                                 </v-container>
 
-                                <img src="../static/images/iconos/check.svg" width="150px"> 
+                                <img src="../static/images/qr-code.svg" width="150px"> 
                             <v-container>
                                 <v-row>
                                     <v-col>
                                         <v-btn
                                             class="mr-4 mt-6 text-center text-capitalize"
+                                            @click="submit"
                                             color="primary"
                                             rounded
-                                            to="/mis_pedidos"
+                                            to="/detalles_compra"
                                         >
                                             
-                                            Ver pedido
+                                           Confirmar compra
                                         </v-btn>
 
-                                    </v-col>
+                                        </v-col>
                                 </v-row>
                             </v-container>
                         
-                    </v-col>
-              </v-row>
-         </v-container>
+                </v-col>
+            </v-row>
+        </v-container>
                        
-          </div>
+    </div>
 
 </template>
 
 <script>
     
-    export default {
+  export default {
+    
         
-            
-    }   
+        }   
 
     
-</script>
+    </script>
 
     <style lang="scss" scoped>
 
@@ -88,11 +91,10 @@
         }
 
         .image_resize {
-            margin-top: -20px;
+            margin-top: -25px;
         }
 
          h2 {
-            margin-top: 15px;
             font-weight: normal;
         }
 

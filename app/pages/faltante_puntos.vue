@@ -90,12 +90,13 @@
                             </v-row>
                         </v-alert>
                   </v-overlay>
+                    </v-row>
 
-                   <v-overlay :value="overlay2">
+                       <v-overlay :value="overlay2">
                       <v-alert
                         light
                         elevation="2"
-                        class="position2">
+                        class="position">
                             ¿Te quedaste sin puntos?
                             Podes completar tu compra con dinero. <br />
                             Presiona <v-btn 
@@ -108,7 +109,6 @@
                             </v-btn> para continuar.
                         </v-alert>
                   </v-overlay>
-                    </v-row>
                   </template>
                
    </v-container>
@@ -251,18 +251,5 @@ export default {
     justify-content: center !important;
 }
 
-
-
-.position2{
-    margin-right: 1em;
-    margin-left: 1em;
-    height: 7em;
-    top: -220px;
-    right: 0;
-    text-align: left;
-    justify-content: right;
-    font-size: 12px;
-    font-weight: 600
-}
 
 </style>
