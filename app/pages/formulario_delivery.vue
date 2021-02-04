@@ -69,12 +69,50 @@
                 elevation="6" 
                 rounded
                 to=""
+                @click="dialog=true" 
                 > 
                         Confirmar
                 </v-btn>
                     
             
             </v-row>
+
+             <v-dialog v-model="dialog" width="500"  transition="dialog-bottom-transition"  class="dialogo mx-0"  overflow-hidden full-screen persistent>
+                <v-card class=" justify-center align-center text-center">
+                    <v-btn
+                                icon
+                                small
+                                color="black"
+                                class="cerrar mt-2 mr-2"
+                                
+                                @click="dialog=false"
+                            >
+                            
+                                <v-icon>mdi-close</v-icon>
+                                
+                         </v-btn>
+                <v-card-title class="px-12 mb-4 mt-3">
+                    ¿Querés canjear tus puntos por esta compra?
+                </v-card-title>
+                
+
+                <v-card-actions class=" justify-center align-center text-center"> 
+                    <v-btn color="secondary" class="secondary text-lowercase" to="pago_puntos"> 
+                        <v-img src="/images/iconos/puntos_blanco.svg" class="mr-2" max-width="30"></v-img>
+                        Si, quiero
+                    </v-btn>
+                </v-card-actions>
+
+
+                <v-card-actions class=" justify-center align-center text-center"> 
+                    <v-btn color="secondary" class="secondary text-lowercase"  to="forma_de_pago" > 
+                         <v-img src="/images/iconos/en_mano.svg" class="mr-2" max-width="20"></v-img>
+                       No, pagar con dinero
+                    </v-btn>
+                </v-card-actions>
+
+            </v-card>
+            </v-dialog>
            
         
 
@@ -90,6 +128,7 @@ export default {
         overlay: false,
         alert: true,
         show1: false,
+        dialog: false, 
         password: 'sofiabenza12345',
         select: { state: 'Rosedal'},
         items: [
@@ -181,6 +220,86 @@ h1{
 .delivery { 
     max-width: 250px !important;
     margin-left: 0.5em;
+}
+
+.v-sheet.v-card{
+    border-radius:10px;
+}
+
+input{
+    width: 25px;
+}
+
+
+.v-card__subtitle, .v-card__text, .v-card__title{
+    padding: 8px;
+}
+
+.v-img{
+ max-height:100px;
+}
+
+.precio{
+    padding-top: 0;
+}
+.cerrar{
+   // margin-left: 17px;
+   position: absolute;
+   right: 5px;
+}
+
+.v-chip.v-size--default{
+    width: 93%;
+     border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    color: black;
+}
+
+.aclaracion{
+    color: #878686;
+    font-size: 15px;
+    position: absolute;
+    right: 9%;
+}
+
+.boton_comprar{
+    position: absolute;
+}
+
+
+.v-dialog > .v-card{
+   border-radius: 30px 30px 0px 0px;
+    position: absolute;
+    left:0;
+    bottom: 0;
+    height: 60%;
+}
+.v-dialog > .v-card > .v-card__title {
+    word-break: normal; 
+    font-size: 20px;
+}
+
+.v-card__actions > .v-btn.v-btn{
+    width: 80%;
+    border-radius: 10px;
+    height: 45px;
+}
+
+
+@media screen and (min-width: 375px) {
+    .v-img{
+        max-height: 200px;
+    }
+
+    .precio{
+         padding-top: 10px;
+    }
+
+    .cerrar{
+     margin-left: 47px;
+}
+
 }
 
 </style>
