@@ -5,7 +5,8 @@
               <v-row>
                   <v-col  :class="`rounded-t-xl`"  class="mt-5 mb-6 pa-20 text-center text-no-wrap white margin justify-center align-center" >
                 
-
+                       <v-row>
+                            <v-col style="text-align: end">
                             <v-btn
                                 icon
                                 dark
@@ -15,6 +16,9 @@
                             >
                                 <v-icon>mdi-close</v-icon>
                             </v-btn>
+                            
+                            </v-col>
+                       </v-row>
                     
                   
                             <h2> Cuenta confirmada </h2>

@@ -106,10 +106,6 @@
 <script>
 export default {
     data: () => ({
-        
-      formulario_efectivo: '/formulario_efectivo',
-      mercado_pago: '/mercado_pago',
-      tarjetas: '/tarjetas',
     }),
     methods: {
              onChange(event) {

@@ -44,6 +44,7 @@
 }
 img {
   max-width: 140px !important;
+  margin-left: 0 !important;
 }
 
 .col-6 {

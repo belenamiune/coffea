@@ -90,7 +90,7 @@ export default {
       font-family: 'Montserrat', sans-serif;
     }
     .v-badge__badge {
-      inset: calc(80% - 8px) auto auto calc(80% - 8px);
+      inset: calc(80% - 8px) auto  calc(80% - 8px) !important;
     }
 
     span {
@@ -112,7 +112,7 @@ export default {
       padding: 0 !important
 
     }
-
+ 
     
     div.container{
         padding: 0;
