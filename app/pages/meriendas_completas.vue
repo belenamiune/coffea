@@ -2,8 +2,8 @@
 
     <v-container>
         <toolbar />
-        <v-row class="sin_margin">
-             <div style="margin-top: 1em; ">
+        <v-row class="sin_margin justify-center align-center text-center">
+             <div style="margin-top: 2em; ">
               <v-chip
                 class="ma-2"
                 color="primary"
@@ -53,31 +53,35 @@
                         hover
                         half-increments
                         background-color="white"
-                        size="10"
+                        size="15"
                         class="text-center"
                       ></v-rating>
 
                         <p class="white--text comentarios solo-numeros"> (1k) </p>
             </v-container>
-                <p class="parrafos"> Merienda completa. Para dos personas.</p>
 
-                <p class="parrafos"> La promoción incluye dos licuados y dos porciones torta.</p>
+                <div class="">
+                    <p class="parrafos font-weight-semibold " style="">  Merienda completa. Para dos personas. <br><br> La promoción incluye dos licuados y dos porciones torta.</p>
+                </div>
+               
 
                 <v-col cols="6">
-                     <v-btn x-small rounded class="text-capitalize secondary--text button_election" to="promociones_eleccion"> Seleccionar gustos </v-btn>
-                  <v-btn id="aumentar" v-on:click="aumentar" x-small>+</v-btn>
-                       <input type='text' id="cantidad" value="0" class="white--text solo-numeros">                 
-                  <v-btn id ="disminuir" v-on:click="disminuir" x-small>-</v-btn>
+                     <v-btn x-small rounded class="text-capitalize secondary--text button_election mt-1" to="promociones_eleccion"> Seleccionar gustos </v-btn>
 
+                        <div class="mt-3 ml-1">
+                            <v-btn id ="disminuir" v-on:click="value--" outlined color="white" x-small style="font-size:25px;" class="pb-1">-</v-btn>
+                            <input type='text' id="cantidad" :value="Math.abs(value)" class="solo-numeros white--text" >
+                            <v-btn id="aumentar" v-on:click="value++" x-small color="white" style="font-size:25px;color:#184042"  elevation="0">+</v-btn>
+                        </div>
                 </v-col>
                 
                 <v-col cols="6">
-                        <div class="text-right" style="width: 80%">
+                        <div class="text-right mt-8" style="width: 80%">
                             <p class="text-right white--text precio"> <span class="solo-numeros">$300 </span> </p>
                         </div>  
                 </v-col>
 
-                 <v-btn class="font-weight-semibold primary text-capitalize margin_puntos " elevation="0" rounded @click="overlay = !overlay" > 
+                 <v-btn class="font-weight-semibold primary text-capitalize margin_puntos mt-3" elevation="0" rounded @click="overlay = !overlay" > 
                   Agregar al carrito
                 </v-btn>
 
@@ -120,7 +124,7 @@
 export default {
     data: () => ({
       overlay: false,
-      inicio: 0,
+      value: 0,
     }),
         watch: {
             overlay (val) {
@@ -180,11 +184,11 @@ div.container {
 
 .parrafos {
     color: white;
-    font-weight: 200;
+    font-size:14px;
     text-align: left;
     margin-top: 1em;
-    width: 90%;
-
+    margin-left: 25px ;
+    
 }
 
 .v-alert:not(.v-sheet--tile) {
@@ -216,7 +220,8 @@ div.container {
 }
 
 .solo-numeros {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'rawline', sans-serif !important;  
+
 }
  
 
@@ -237,7 +242,7 @@ div.container {
 
     .precio {
         font-size: 24px;
-        font-weight: 600;
+        font-weight: 500;
     }
 
     #cantidad {
@@ -272,6 +277,9 @@ div.container {
         font-size: 14 px !important;
     }
 
+.parrafos {
+    margin-right: 25px;
+}
  }
 
 
