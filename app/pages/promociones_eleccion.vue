@@ -3,7 +3,7 @@
       <toolbar />
             <v-row justify="center" class="text-center">
 
-                <div class="text-left " style="margin-top: 1em; ">
+                <div class="text-left " style="margin-top: 2em; ">
                     <v-chip
                         class="ma-2"
                         color="primary"
@@ -40,8 +40,8 @@
                     </v-chip>
                 </div>
                 
-                <v-row justify="center" class="text-center mt-2">
-                    <v-col cols="12">
+                <v-row justify="center" class="text-center mt-2 ma-5">
+                    
                         <v-list subheader>
                             <v-subheader>Licuados </v-subheader>
 
@@ -50,26 +50,29 @@
                                 :key="chat.title"
                             >
 
+                            <v-col cols="6">
                                 <v-list-item-content class="text-align-left">
                                 <v-list-item-title v-text="chat.title"></v-list-item-title>
                                 </v-list-item-content>
+                             </v-col>
 
+                             <v-col cols="6">
                                 <v-list-item-icon>
                                     <div class="button_cantidad">
-                                <v-btn id="aumentar" v-on:click="aumentar" x-small>+</v-btn>
-                                     <input type='text' id="cantidad" value="0" class="solo-numeros" >                 
-                                 <v-btn id ="disminuir" v-on:click="disminuir" x-small>-</v-btn>
+                                        <v-btn id ="disminuir" v-on:click="chat.value--" outlined color="secondary" x-small style="font-size:25px;" class="pb-1">-</v-btn>
+                                             <input type='text' id="cantidad" :value="Math.abs(chat.value)" class="solo-numeros" >
+                                        <v-btn id="aumentar" v-on:click="chat.value++" x-small color="secondary" style="font-size:25px;"  elevation="0">+</v-btn>
                                   </div>
                                 </v-list-item-icon>
-                                   
+                             </v-col> 
                             </v-list-item>
                         </v-list>
-
+                </v-row>
                    
                    
-                    </v-col>
-
-                    <v-col cols="12" >
+                    
+                 <v-row justify="center" class="text-center mt-2 ma-5">
+                    
                         <v-list subheader>
                             <v-subheader> Tortas </v-subheader>
 
@@ -78,25 +81,30 @@
                                 :key="chat.title"
                             >
 
-                                <v-list-item-content class="text-align-left">
-                                <v-list-item-title v-text="chat.title"></v-list-item-title>
-                                </v-list-item-content>
+                                <v-col cols="6">
+                                    <v-list-item-content class="text-align-left">
+                                    <v-list-item-title v-text="chat.title"></v-list-item-title>
+                                    </v-list-item-content>
+                                </v-col> 
 
-                                <v-list-item-icon>
-                                    <div class="button_cantidad">
-                                <v-btn id="aumentar" v-on:click="aumentar" x-small>+</v-btn>
-                                     <input type='text' id="cantidad" value="0" class="solo-numeros" >                 
-                                 <v-btn id ="disminuir" v-on:click="disminuir" x-small>-</v-btn>
-                                  </div>
-                                </v-list-item-icon>
-                                   
+                                <v-col cols="6">
+                                    <v-list-item-icon>
+                                        <div class="button_cantidad">
+                                            <v-btn id ="disminuir" v-on:click="chat.value--" outlined color="secondary" x-small style="font-size:25px;" class="pb-1">-</v-btn>
+                                                 <input type='text' id="cantidad" :value="Math.abs(chat.value)" class="solo-numeros" >
+                                            <v-btn id="aumentar" v-on:click="chat.value++" x-small color="secondary" style="font-size:25px;"  elevation="0">+</v-btn>
+                                    </div>
+                                    </v-list-item-icon>
+                                </v-col> 
+
                             </v-list-item>
                         </v-list>
-                    </v-col>
+                    
                 </v-row>
 
             
-                </v-row>
+            </v-row>
+
             <v-row justify="center" class="text-center mt-8">
                     <v-col>
 
@@ -138,14 +146,17 @@
         {
         
           title: 'Banana',
+          value:0,
         },
         {
          
           title: 'Frutilla',
+          value:0,
         },
         {
          
           title: 'Duranzo',
+          value:0,
         },
         
       ],
@@ -153,18 +164,22 @@
         {
          
           title: 'Selva negra',
+          value:0,
         },
         {
         
           title: 'Marquise',
+          value:0,
         },
         {
          
-          title: 'Lemon Pie',
+          title: 'Lemon pie',
+          value:0,
         },
         {
          
           title: 'Carrot cake',
+          value:0,
         },
         
       ],
@@ -182,19 +197,7 @@
                 }, 30000)
             },
         },
-    methods: {
-         aumentar: function() {
-             var cantidad = document.getElementById('cantidad').value = ++this.inicio;
-          
-         },
-
-         disminuir: function() {
-             var cantidad = document.getElementById('cantidad').value = --this.inicio;
-
-         }
-
-         
-     }
+    
   }
 </script>
 
@@ -203,6 +206,11 @@
    * {
         font-family: 'Raleway', sans-serif;
     }
+
+
+.col{
+    padding: 0;
+}
 
 .v-container {
     padding: 0;
@@ -258,7 +266,7 @@
 }
 
 .solo-numeros {
-    font-family: 'Montserrat', sans-serif;
+     font-family: 'rawline', sans-serif !important;
 }
  
  

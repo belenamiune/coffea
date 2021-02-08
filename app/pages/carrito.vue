@@ -44,13 +44,13 @@
                      <v-col class="d-flex flex-row pb-0 pl-0 pt-1 ">
                                    
                         <v-btn id ="disminuir" v-on:click="productos.value--; productos.precio-=productos.precio_suma;total-=productos.precio_suma; puntos-=productos.puntos; " x-small outlined color="white" style="font-size:25px;" class="pb-2" >-</v-btn>
-                             <input type='number' id="cantidad" :value="Math.abs(productos.value)" class="font-weight-semibold white--text ml-4">   
-                        <v-btn id="aumentar" v-on:click="productos.value++;  productos.precio+=productos.precio_suma; total+=productos.precio_suma; puntos+=productos.puntos;"  x-small outlined color="white" style="font-size:25px;" class="pb-1">+</v-btn>
+                             <input type='number' id="cantidad" :value="Math.abs(productos.value)" class="font-weight-semibold white--text ml-4 mt-n1">   
+                        <v-btn id="aumentar" v-on:click="productos.value++;  productos.precio+=productos.precio_suma; total+=productos.precio_suma; puntos+=productos.puntos;"  x-small  color="white" style="font-size:25px;color:#f8744e;"  class="pb-1" elevation="0">+</v-btn>
                      </v-col>
 
                     </v-card-actions>
 
-                    <v-card-text class="font-weight-medium white--text text-right precio" style="font-size:24px;" >$
+                    <v-card-text class="font-weight-medium white--text text-right precio mt-1" style="font-size:24px;" >$
                     {{Math.abs(productos.precio)}}
                     </v-card-text>
                 </v-col>
@@ -155,7 +155,7 @@ export default {
         },
         ],
         total: 265,
-        puntos: 9,
+        puntos: 8,
     }
 
     
@@ -168,8 +168,6 @@ export default {
                 
                 if(this.productos==0){
                     window.location.href = 'carrito_vacio';
-                    this.puntos=this.puntos-1;
-                    return this.puntos;
                 }
             },
      }
@@ -199,7 +197,6 @@ input{
     padding-top: 0;
 }
 .cerrar{
-   // margin-left: 17px;
    position: absolute;
    right: 5px;
 }
