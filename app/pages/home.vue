@@ -135,11 +135,31 @@
  import 'vue-slick-carousel/dist/vue-slick-carousel.css'
   // optional style for arrows & dots
  import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+ import * as firebase from 'firebase/app'
+  import 'firebase/auth'
+import { getUserFromCookie, getUserFromSession } from '@/helpers'
  
 
     export default {
-           name: 'MyComponent',
+      name: 'MyComponent',
         components: { VueSlickCarousel },
+        asyncData({ req, redirect }) {
+    if (process.server) {
+      console.log('server', req.headers)
+      const user = getUserFromCookie(req)
+      //   console.log('b', getUserFromCookie(req))
+      if (!user) {
+        console.log('redirecting server')
+        redirect('/login')
+      }
+    } else {
+      var user = firebase.auth().currentUser
+      if (!user) {
+        redirect('/login')
+      }
+      //   console.log($nuxt.$router)
+    }
+  },
 
         data () { 
       return {
