@@ -102,7 +102,7 @@
                     class="font-weight-semibold primary justify-center align-center pa-4 mt-5 mb-10  margin_img margin custom-transform-class text-none" 
                     elevation="6" 
                     rounded
-                    to="confirmar_compra"> 
+                    to="detalle_compra_tradicional"> 
                          Confirmar compra
                     </v-btn>
                  </v-row>

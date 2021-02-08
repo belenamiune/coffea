@@ -19,14 +19,16 @@
                         icon
                         color="secondary"
                         class="search_icon"
-                        @click="dialog=true"
+                        @click="dialog = true"
                       >
                         <v-icon>mdi-magnify</v-icon>
                       </v-btn>
 
-                       <v-dialog v-model="dialog" width="500"  transition="dialog-top-transition"  class="dialogo mx-0"  overflow-hidden full-screen persistent>
+                   <!--  <template v-slot:activator="{ on, attrs } ">-->
+                       <v-dialog v-model="dialog" width="500"  transition="dialog-top-transition"  class="dialogo mx-0"  overflow-hidden full-screen >
+                             
                               <v-card class=" justify-center align-center text-center">
-                          
+
                                   <div class="row">
                                       <div class="search-wrapper panel-heading col-sm-12 mr-5 ml-5 mt-5 mb-3">
                                               <input class="form-control input_busqueda" type="text" v-model="searchQuery" placeholder="Búsqueda" />
@@ -58,6 +60,7 @@
                               </v-card>
 
                             </v-dialog>  
+           <!--   </template> -->
 
                   <div> 
                     <v-tab>
