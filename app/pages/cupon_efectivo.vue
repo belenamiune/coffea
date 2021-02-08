@@ -41,7 +41,7 @@
                                             @click="submit"
                                             color="primary"
                                             rounded
-                                            to="/detalles_compra"
+                                            to="/detalles_tradicional_sucursal"
                                         >
                                             
                                            Confirmar compra

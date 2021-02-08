@@ -53,7 +53,7 @@
                     class="font-weight-semibold primary justify-center align-center pa-4 mt-5 mb-10  margin_img margin custom-transform-class text-none" 
                     elevation="6" 
                     rounded
-                    to="cupon"> 
+                    to="cupon_efectivo"> 
                          Generar cupón
                     </v-btn>
                  </v-row>
