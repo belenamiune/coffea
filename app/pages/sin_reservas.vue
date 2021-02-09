@@ -1,7 +1,7 @@
 <template>
    <v-container>
-
-       <v-row class="justify-center align-center mt-3">
+        <toolbar />
+       <v-row class="justify-center align-center mt-3 mb-5">
            <v-avatar size="205" color="#EFEFEF">
             <v-avatar size="190" color="primary">
                 <v-avatar size="180" color="#EFEFEF">

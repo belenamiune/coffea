@@ -1,5 +1,6 @@
 <template>
 <v-container>
+  <navbar />
     <v-row>
         <v-carousel
             cycle

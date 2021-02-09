@@ -2,6 +2,7 @@
         <div class="background_image">
              <img src="../static/images/logo-circulo.svg" width="100px" class="image_resize"> 
            <v-container fluid>
+                 <toolbar />
               <v-row>
                   <v-col  :class="`rounded-t-xl`"  class="mt-3 mb-6 pa-20 text-center text-no-wrap white margin justify-center align-center" >
                 

@@ -6,6 +6,7 @@
           <v-toolbar dense fixed>
             <v-btn
               icon
+               onClick="history.go(-1);"
             >
               <v-icon color="accent">mdi-arrow-left</v-icon>
             </v-btn>

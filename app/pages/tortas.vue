@@ -1,6 +1,6 @@
 <template>
     <v-container>
-      <navbar />
+      <toolbar />
         <v-row justify="center" class="text-center">
 
           <div class="text-left">

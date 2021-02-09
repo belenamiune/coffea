@@ -1,5 +1,6 @@
 <template >
-<v-container>
+<v-container fluid>
+    <navbar />
     
             <v-col cols="12" :class="`rounded-t-xl` "  class=" text-center text-no-wrap primary margin " >
             

@@ -82,7 +82,7 @@
                                               <v-btn  class="font-weight-semibold boton pa-4 text-capitalize"  elevation="6" rounded @click="dialog=false"> 
                                                   Cancelar
                                               </v-btn>
-                                              <v-btn class="font-weight-semibold primary pa-4 text-capitalize" elevation="6" rounded @click="dialog=false" to="/"> 
+                                              <v-btn class="font-weight-semibold primary pa-4 text-capitalize" elevation="6" rounded @click="dialog=false" to="/login"> 
                                                   Cerrar sesión
                                               </v-btn>
 
@@ -118,7 +118,7 @@
                                 bottom
                               
                               >
-                                <v-icon> mdi-cart-outline </v-icon>
+                                <v-icon style="color: #184042 !important" class="color_cart_outside"> mdi-cart-outline </v-icon>
                               </v-badge>
                             </v-tab>
                           
@@ -183,7 +183,7 @@
         {
           icon: 'mdi-store',
           title: 'Sucursales',
-          to: '/sucursales'
+          to: '/sucursales_menu'
         },
       ]
      
@@ -255,6 +255,8 @@
     .theme--light.v-chip:not(.v-chip--active) {
       height: 40px;
     }
+
+   
 
 
 </style>

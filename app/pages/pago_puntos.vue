@@ -49,7 +49,7 @@
                         class="mr-4 text-center text-capitalize btn_confirm mb-2"
                         rounded
                         color="primary"
-                        to="confirmar_reserva"
+                        to="detalle_puntos"
                         style="height: 36px !important; width: 160px"
                       >
                       

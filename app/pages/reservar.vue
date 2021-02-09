@@ -1,6 +1,6 @@
 <template>
     <v-container fluid >
-        <navbar />
+        <toolbar />
          <v-row>
         <v-col cols="12" :class="`rounded-t-xl` "  class="pa-16 text-center text-no-wrap primary margin justify-center align-center">
             <v-form v-model ="valid" class="text--white">

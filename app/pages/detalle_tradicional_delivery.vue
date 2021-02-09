@@ -1,5 +1,6 @@
 <template>
    <v-container>
+       <toolbar />
        <v-card 
             v-for="productos in productos"
             :key="productos.nombre" 
