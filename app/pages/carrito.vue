@@ -1,5 +1,6 @@
 <template>
     <v-container>
+         <toolbar />
         <v-card 
             v-for="productos in productos"
             :key="productos.nombre" 
@@ -119,7 +120,9 @@
 </template>
 
 <script>
+import toolbar from '../components/toolbar.vue';
 export default {
+  components: { toolbar },
     data: () => ({
       inicio: 1,
       dialog: false,
