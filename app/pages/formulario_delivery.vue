@@ -97,7 +97,7 @@
                 
 
                 <v-card-actions class=" justify-center align-center text-center"> 
-                    <v-btn color="secondary" class="secondary text-lowercase" to="pago_puntos"> 
+                    <v-btn color="secondary" class="secondary custom-transform-class text-none" to="pago_puntos"> 
                         <v-img src="/images/iconos/puntos_blanco.svg" class="mr-2" max-width="30"></v-img>
                         Si, quiero
                     </v-btn>
@@ -105,7 +105,7 @@
 
 
                 <v-card-actions class=" justify-center align-center text-center"> 
-                    <v-btn color="secondary" class="secondary text-lowercase"  to="forma_de_pago" > 
+                    <v-btn color="secondary" class="secondary custom-transform-class text-none"  to="forma_de_pago" > 
                          <v-img src="/images/iconos/en_mano.svg" class="mr-2" max-width="20"></v-img>
                        No, pagar con dinero
                     </v-btn>

@@ -38,7 +38,7 @@
                                 <v-row>
                                     <v-col>
                                         <v-btn
-                                            class="mr-4 mt-6 text-center text-capitalize"
+                                            class="mr-4 mt-6 text-center custom-transform-class text-none"
                                             @click="submit"
                                             color="primary"
                                             rounded

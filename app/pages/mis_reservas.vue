@@ -1,7 +1,7 @@
 <template>
    <v-container>
-
-       <v-row class="justify-center align-center mt-3">
+        <toolbar />
+       <v-row class="justify-center align-center mt-8 ">
            <v-avatar size="205" color="#EFEFEF">
             <v-avatar size="190" color="primary">
                 <v-avatar size="180" color="#EFEFEF">
@@ -90,7 +90,7 @@
                                     </v-list-item>
                                 
 
-                                <v-list-item @click="dialog=true">
+                                <v-list-item @click="dialog=true" >
                                     <v-list-item-icon class="mr-4 mb-0 mt-3">
                                     <v-img  src="/images/iconos/delete.svg"></v-img>
                                     </v-list-item-icon>
@@ -109,32 +109,27 @@
                 </v-expansion-panels>
             
 
-            <v-dialog v-model="dialog" width="500"  transition="dialog-bottom-transition"  >
-                    <v-card   persistent  >
+            <v-dialog v-model="dialog" width="500"  transition="dialog-bottom-transition" >
+                    <v-card persistent>
                         
                         <v-card-title class="font-weight-regular justify-center align-center text-center pt-8" >
                                 ¿Estás seguro de cancelar esta reserva?
                         </v-card-title>
                     
-                        <v-card-actions class=" justify-center align-center pb-6 pt-5"  v-for="item in items" :key="item.nro_pedido" >
-                            <v-btn  class="font-weight-semibold boton pa-4 text-capitalize"  elevation="6" rounded @click="dialog=false"> 
+                        <v-card-actions class=" justify-center align-center pb-6 pt-5" >
+                            <v-btn class="font-weight-semibold boton pa-4 custom-transform-class text-none"  elevation="6" rounded @click="dialog=false"> 
                                 No
                             </v-btn>
-                            <v-btn class="font-weight-semibold primary pa-4 text-capitalize" elevation="6" rounded @click="eliminarTarea(item.nro_pedido)"> 
-                                Cancelar reserva
+                            <v-btn class="font-weight-semibold primary pa-4 custom-transform-class text-none" elevation="6" rounded @click="eliminarTarea(index)"> 
+                               Si
                             </v-btn>
 
                         </v-card-actions>
                      </v-card>
                 </v-dialog>
 
-                <v-row  class="justify-center align-center text-center ma-5" >
-                    <v-alert text color="secondary" class=" margin">
-                         <p>Todavía no se ha registrado ninguna reserva</p>
-                    </v-alert>
-                </v-row>
-                <v-row  class="justify-center align-center text-center  margin" >
-                    <v-btn class="font-weight-semibold primary justify-center align-center pa-4 mt-12 text-capitalize " elevation="6" rounded > 
+                <v-row  class="justify-center align-center text-center" >
+                    <v-btn class="font-weight-semibold primary justify-center align-center pa-4 mt-12 custom-transform-class text-none " elevation="6" rounded to="reservas"> 
                          Reservar
                     </v-btn>
 
@@ -149,37 +144,42 @@ export default {
     
      data () {
          // v-for="items in 1" :key="items"
-        return {items: [
-        {
-          nro_pedido: '03',
-          personas:'3',
-          fecha: '25 de marzo del 2021',
-          hora: '16:30',
-          sucursal: 'Independencia  664',
-        },
-        {
-          nro_pedido: '02',
-          personas:'8',
-          fecha: '6 de enero del 2021',
-          hora: '18:30',
-          sucursal: 'Isabel la católica 123',
-        },
-        {
-          nro_pedido: '01',
-          personas:'6',
-          fecha: '28 de diciembre del 2020',
-          hora: '10:00',
-          sucursal: 'Independencia  664',
-        },
+        return {
+        items: [
+            {
+            nro_pedido: '03',
+            personas:'3',
+            fecha: '25 de marzo del 2021',
+            hora: '16:30',
+            sucursal: 'Independencia  664',
+            },
+            {
+            nro_pedido: '02',
+            personas:'8',
+            fecha: '6 de enero del 2021',
+            hora: '18:30',
+            sucursal: 'Isabel la católica 123',
+            },
+            {
+            nro_pedido: '01',
+            personas:'6',
+            fecha: '28 de diciembre del 2020',
+            hora: '10:00',
+            sucursal: 'Independencia  664',
+            },
 
         ],
          dialog: false,}
     },
 
     methods:{
-         eliminarTarea(nro_pedido){
-                this.items= this.items.filter(e => e.nro_pedido != nro_pedido) 
-            },
+         eliminarTarea(index){
+                 this.items.splice(index, 1);
+
+            if(this.items == 0) {
+                   window.location.href = 'sin_reservas';
+            }     
+        },
     }
 }
 </script>

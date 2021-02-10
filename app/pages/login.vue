@@ -22,58 +22,66 @@
                         </v-row>
 
 
-                    
+                <div class="login">
                     <h2> Ingresá </h2>
-                        <v-text-field
-                            v-model="name"
-                            label="Nombre de usuario"
-                            required
-                            class= "mt-4"
-                            outlined rounded
-                            @input="$v.name.$touch()"
-                            @blur="$v.name.$touch()"
-                        ></v-text-field>
-
-                        <v-text-field
-                            v-model="password"
-                            :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
-                            :type="show1 ? 'text' : 'password'"
-                            label="Contraseña"
-                            class= "mt-4"
-                            outlined rounded
-                            @input="$v.password.$touch()"
-                            @blur="$v.password.$touch()"
-                            @click:append="show1 = !show1"
-                        ></v-text-field>
+                    <v-form  @submit.prevent="pressed">
+                         <div class="login">
+                                 <v-text-field
+                                    v-model="email"
+                                    label="Nombre de usuario"
+                                    type="email"
+                                    required
+                                    class= "mt-4"
+                                    outlined rounded
+                                    @input="$v.name.$touch()"
+                                    @blur="$v.name.$touch()"
+                                ></v-text-field>
+                            </div>
+                            <div class="password">
+                               <v-text-field
+                                    v-model="password"
+                                    :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+                                    :type="show1 ? 'text' : 'password'"
+                                    label="Contraseña"
+                                    class= "mt-4"
+                                    outlined rounded
+                                    @input="$v.password.$touch()"
+                                    @blur="$v.password.$touch()"
+                                    @click:append="show1 = !show1"
+                                ></v-text-field>
+                            </div>
+                    
+            
 
                             <a href="/olvidar_contraseña"> <p class="text-right" style="color: gray; font-size: 13px"> ¿Olvidaste tu contraseña? </p> </a>
 
                                 <div class="text-center mb-8 mt-8">
                                     <h4> Inicia sesión con: </h4>
                                     <div class="mt-5 mb-6">
-                                            <a href="/home"> <img src="../static/images/iconos/google.png" class="mr-5"> </a>
+                                            <a @click="googleSignIn"> <img src="../static/images/iconos/google.png" class="mr-5"> </a>
                                         
                                             <a href="/home"> <img src="../static/images/iconos/facebook.png"> </a>
                                         </div>
                                 </div>
-
-                            <v-container>
-                                <v-row justify="center">
-                                    <v-col>
-                                        <v-btn
-                                            class="mr-4 text-center text-capitalize"
-                                                @click="submit"
+                            <button>
+                               <v-btn
+                                            class="mr-4 text-center custom-transform-class text-none"
                                                 color="primary"
                                                 rounded
-                                                to="home"
                                         >
                                                 
                                                 Iniciar sesión
-                                        </v-btn>
+                                </v-btn>
 
-                                    </v-col>
-                                </v-row>
-                            </v-container>   
+                            </button>
+
+            
+                     </v-form>
+
+                     
+                            <div class="error" v-if="error">{{error.message}}</div>
+                        </div>
+                
                               
                              
                         
@@ -88,21 +96,15 @@
 <script>
     import { validationMixin } from 'vuelidate'
     import { required, maxLength, minLength,  email, sameAs } from 'vuelidate/lib/validators'
+    import * as firebase from 'firebase/app'
+    import 'firebase/auth'
 
   export default {
     mixins: [validationMixin],
 
     validations: {
-      name: { required },
       email: { required, email },
       password: { required },
-      passwordConfirmation: { required }, 
-      select: { required },
-      checkbox: {
-        checked (val) {
-          return val
-        },
-      },
     },
 
     data() {
@@ -110,55 +112,34 @@
         name: '',
         email: '',
         password: '',
-        passwordConfirmation: '',
-        checkbox: false,
-        show1: false,
-        show2: true,
-        show3: false,
-        show4: false,
-        password: '',
-        value: null,
-        show: false,
-        dialog1: false,
-        dialog2: false,
-        title: 'Escriba la nueva contraseña',
-        update: 'Repita la contraseña',
-        isFormValid: true,
-        passwordRules: [
-        password => !!password || 'Contraseña es obligatorio.',
-        password => password.length >= 8 || 'Al menos 8 caracteres',
-        confirmation => confirmation === this.password || 'Las contraseñas ingresadas no coinciden'
-        ]
-
-
+        error: '',
     }
 },
 
-    computed: {
-      nameErrors () {
-        const errors = []
-        if (!this.$v.name.$dirty) return errors
-        !this.$v.name.maxLength && errors.push('El nombre de usuario debe tener al menos 6 caracteres')
-        !this.$v.name.required && errors.push('Nombre de usuario es obligatorio.')
-        return errors
-      },
-
-       passwordErrors () {
-        const errors = []
-        if (!this.$v.password.$dirty) return errors
-        !this.$v.password.password && errors.push('La contraseña debe tener al menos 8 caracteres')
-        !this.$v.password.required && errors.push('Contraseña es obligatorio')
-        return errors
-      },
-
-     
-    },
 
     methods: {
-      submit () {
-        this.$v.$touch()
-        
-      },
+      pressed() {
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(this.email, this.password)
+        .then(data => {
+          console.log(data)
+          this.$router.replace({ name: 'home' })
+        })
+        .catch(error => {
+          this.error = error
+        })
+    }, 
+     googleSignIn () {
+        this.provider = new firebase.auth.GoogleAuthProvider()
+        firebase.auth().signInWithPopup(this.provider).then(result => {
+          // store the user ore wathever
+          this.$router.push('/home')
+        }).catch(e => {
+          this.$snotify.error(e.message)
+          console.log(e)
+        })
+      }
     },
 
     

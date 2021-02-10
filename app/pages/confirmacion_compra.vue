@@ -20,7 +20,7 @@
                             </v-col>
                         </v-row>
                   
-                            <h2> Cuenta confirmada </h2>
+                            <h2> Compra confirmada </h2>
                                 <v-container>
                                     <v-row>
                                         <v-col cols xs="6">
@@ -36,7 +36,7 @@
                                 <v-row>
                                     <v-col>
                                         <v-btn
-                                            class="mr-4 mt-6 text-center text-capitalize"
+                                            class="mr-4 mt-6 text-center custom-transform-class text-none"
                                             color="primary"
                                             rounded
                                            

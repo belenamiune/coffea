@@ -1,5 +1,6 @@
 <template>
    <v-container>
+         <toolbar />
        <v-card 
             v-for="productos in productos"
             :key="productos.nombre" 
@@ -48,7 +49,7 @@
         </v-chip>
 
     <v-row class=" justify-center align-center text-center mt-15">
-        <v-btn class="font-weight-semibold secondary text-capitalize"  rounded  elevation="0"  @click="dialog=true" > 
+        <v-btn class="font-weight-semibold secondary custom-transform-class text-none"  rounded  elevation="0"  @click="dialog=true" > 
                   Continuar
         </v-btn>
         </v-row>

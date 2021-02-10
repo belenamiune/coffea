@@ -83,7 +83,7 @@
                                 <v-row justify="center">
                                     <v-col>
                                         <v-btn
-                                            class="mr-4 text-center text-capitalize"
+                                            class="mr-4 text-center custom-transform-class text-none"
                                             @click="submit"
                                             color="primary"
                                             rounded

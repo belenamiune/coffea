@@ -48,7 +48,7 @@
                       class="margin_img justify-center align-center mt-14"
                     >
                       <v-btn
-                        class="mr-4 text-center text-capitalize btn_confirm mb-2"
+                        class="mr-4 text-center custom-transform-class text-none btn_confirm mb-2"
                         rounded
                         color="primary"
                         to="confirmar_reserva"
@@ -59,7 +59,7 @@
                       </v-btn>
 
                        <v-btn
-                        class="mr-4 text-center text-capitalize btn_cancel"
+                        class="mr-4 text-center custom-transform-class text-none btn_cancel"
                         rounded
                         @click="overlay = !overlay"
                       >
@@ -82,13 +82,13 @@
                                    normal
                                     rounded 
                                      @click="overlay = false"
-                                     class="text-center text-capitalize font-weight-normal cancel_button ma-1"> 
+                                     class="text-center custom-transform-class text-none font-weight-normal cancel_button ma-1"> 
                                         No
                                 </v-btn>
                                 <v-btn 
                                     normal
                                     rounded 
-                                    class="text-center primary text-capitalize font-weight-normal  ma-1"> 
+                                    class="text-center primary custom-transform-class text-none font-weight-normal  ma-1"> 
                                          Si
                                 </v-btn>
                             </v-row>

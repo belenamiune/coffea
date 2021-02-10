@@ -2,6 +2,7 @@
         <div class="background_image">
              <img src="../static/images/logo-circulo.svg" width="100px" class="image_resize"> 
            <v-container fluid>
+                 <toolbar />
               <v-row>
                   <v-col  :class="`rounded-t-xl`"  class="mt-3 mb-6 pa-20 text-center text-no-wrap white margin justify-center align-center" >
                 
@@ -37,11 +38,11 @@
                                 <v-row>
                                     <v-col>
                                         <v-btn
-                                            class="mr-4 mt-6 text-center text-capitalize"
+                                            class="mr-4 mt-6 text-center custom-transform-class text-none"
                                             @click="submit"
                                             color="primary"
                                             rounded
-                                            to="/detalles_compra"
+                                            to="/detalles_tradicional_sucursal"
                                         >
                                             
                                            Confirmar compra

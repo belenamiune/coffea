@@ -1,5 +1,6 @@
 <template >
-<v-container>
+<v-container fluid>
+    <navbar />
     
             <v-col cols="12" :class="`rounded-t-xl` "  class=" text-center text-no-wrap primary margin " >
             
@@ -131,13 +132,6 @@
                                     scrollable
                                     >
                                     <v-spacer></v-spacer>
-                                   <!--  <v-btn
-                                        text
-                                        color="primary"
-                                        @click="modal = false"
-                                    >
-                                        Cancelar
-                                    </v-btn>-->
                                     <v-btn
                                         text
                                         color="primary"

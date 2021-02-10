@@ -13,7 +13,7 @@
                             :class="`rounded-lg`"
                             >
 
-                            <v-expansion-panel-header>
+                            <v-expansion-panel-header >
 
                                 <template v-slot:actions>
 
@@ -82,54 +82,6 @@
                                 </v-expansion-panel-content>
                         </v-expansion-panel>
                 </v-expansion-panels>
-                <v-row style="justify-content:center">
-                    <v-btn 
-                        class="font-weight-semibold secondary justify-center align-center pa-4 mt-5 mb-10  margin_img margin custom-transform-class text-none" 
-                        elevation="6" 
-                        rounded
-                        @click="dialog=true" 
-                        
-                        > 
-                        Seleccionar sucursal
-                        </v-btn>
-
-                        <v-dialog v-model="dialog" width="500"  transition="dialog-bottom-transition"  class="dialogo mx-0"  overflow-hidden full-screen persistent>
-                            <v-card class=" justify-center align-center text-center">
-                                 <v-col style="text-align: end">
-                                <v-btn
-                                    icon
-                                    small
-                                    color="black"
-                                    class="cerrar mt-2 mr-2"
-                                    @click="dialog=false"
-                                >
-                                        
-                                <v-icon>mdi-close</v-icon>
-                        
-                                </v-btn>
-                                 </v-col>
-                                    <v-card-title class="px-12 mb-4 mt-3">
-                                        ¿Querés canjear tus puntos por esta compra?
-                                    </v-card-title>
-                        
-                            <v-card-actions class=" justify-center align-center text-center"> 
-                                <v-btn color="secondary" class="secondary custom-transform-class text-none" to="pago_puntos"> 
-                                    <v-img src="/images/iconos/puntos_blanco.svg" class="mr-2" max-width="30"></v-img>
-                                    Si, quiero
-                                </v-btn>
-                            </v-card-actions>
-
-
-                            <v-card-actions class=" justify-center align-center text-center"> 
-                                <v-btn color="secondary" class="secondary custom-transform-class text-none"  to="forma_de_pago" > 
-                                    <v-img src="/images/iconos/en_mano.svg" class="mr-2" max-width="20"></v-img>
-                                No, pagar con dinero
-                                </v-btn>
-                            </v-card-actions>
-
-                        </v-card>
-                    </v-dialog>
-                </v-row>
         
             </v-col>
         </v-row>
@@ -143,7 +95,6 @@ export default {
    
    data () {
       return {
-        dialog: false,
             items: [
             { title: 'Sucursal Independencia', direccion: 'Independencia 664', telefono: '035115507456', horario: 'Lunes a viernes de 9 a 21 hs' },
             { title: 'Sucursal Blvd. San Juan', direccion: 'Boulevard San Juan 798', telefono: '0351548932', horario: 'Lunes a viernes de 9 a 21 hs'},
@@ -152,9 +103,7 @@ export default {
             ],
             right: null,
       }
-      
     },
-
     
 }
 </script>

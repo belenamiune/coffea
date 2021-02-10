@@ -60,9 +60,9 @@
         </v-row>   
                 <v-row justify="center">
                     <v-btn 
-                    class="font-weight-semibold secondary text-capitalize text-center margin_button" 
+                    class="font-weight-semibold secondary custom-transform-class text-none text-center margin_button" 
                     rounded
-                    to="/sucursales"> 
+                    to="/sucursales_reservas"> 
                         Reservá tu mesa
                     </v-btn>
                 </v-row>

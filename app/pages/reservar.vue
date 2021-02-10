@@ -1,6 +1,6 @@
 <template>
     <v-container fluid >
-        <navbar />
+        <toolbar />
          <v-row>
         <v-col cols="12" :class="`rounded-t-xl` "  class="pa-16 text-center text-no-wrap primary margin justify-center align-center">
             <v-form v-model ="valid" class="text--white">
@@ -139,7 +139,7 @@
                       justify="space-around"
                     >
                       <v-btn
-                        class="mr-4 text-center text-capitalize btn_confirm"
+                        class="mr-4 text-center custom-transform-class text-none btn_confirm"
                         rounded
                         color="secondary"
                         to="confirmar_reserva"

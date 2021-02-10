@@ -10,7 +10,7 @@
                                  <v-btn
                                     v-bind="attrs"
                                     v-on="on"
-                                    class="text-center text-capitalize my-2"
+                                    class="text-center custom-transform-class text-none my-2"
                                     style="width:150px"
                                     color="primary"
                                     rounded
@@ -26,7 +26,7 @@
                                  <v-btn
                                     v-bind="attrs"
                                     v-on="on"
-                                    class="text-center text-capitalize my-2"
+                                    class="text-center custom-transform-class text-none my-2"
                                     style="width:150px; color: #F8744E "
                                     color="white"
                                     rounded
