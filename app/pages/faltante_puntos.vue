@@ -46,7 +46,7 @@
                       class="margin_img justify-center align-center mt-14"
                     >
                       <v-btn
-                        class="mr-4 text-center text-capitalize btn_confirm mb-2"
+                        class="mr-4 text-center custom-transform-class text-none btn_confirm mb-2"
                         rounded
                         color="primary"
                         @click="overlay2 = !overlay2"
@@ -57,7 +57,7 @@
                       </v-btn>
 
                        <v-btn
-                        class="mr-4 text-center text-capitalize btn_cancel"
+                        class="mr-4 text-center custom-transform-class text-none btn_cancel"
                         rounded
                         @click="overlay = !overlay"
                       
@@ -78,13 +78,13 @@
                                    normal
                                     rounded 
                                      @click="overlay = false"
-                                     class="text-center text-capitalize font-weight-normal cancel_button ma-1"> 
+                                     class="text-center custom-transform-class text-none font-weight-normal cancel_button ma-1"> 
                                         No
                                 </v-btn>
                                 <v-btn 
                                     normal
                                     rounded 
-                                    class="text-center primary text-capitalize font-weight-normal  ma-1"> 
+                                    class="text-center primary custom-transform-class text-none font-weight-normal  ma-1"> 
                                          Si
                                 </v-btn>
                             </v-row>
@@ -103,7 +103,7 @@
                             x-small
                             rounded
                              @click="dialog=true"
-                            class="text-center primary text-capitalize font-weight-normal justify-content-right button_alert"> 
+                            class="text-center primary custom-transform-class text-none font-weight-normal justify-content-right button_alert"> 
 
                             Canjear
                             </v-btn> para continuar.
@@ -133,7 +133,7 @@
                                 
                                  
                                     <v-card-actions class=" justify-center align-center text-center"> 
-                                        <v-btn color="secondary" class="secondary text-lowercase" to="detalles_puntos"> 
+                                        <v-btn color="secondary" class="secondary custom-transform-class text-none" to="detalles_puntos"> 
                                             <v-img src="/images/iconos/en_mano.svg" class="mr-2" max-width="20"></v-img>
                                            Si, quiero completar
                                         </v-btn>
@@ -141,7 +141,7 @@
 
                               
                                 <v-card-actions class=" justify-center align-center text-center"> 
-                                    <v-btn color="secondary" class="secondary text-lowercase"  to="home" > 
+                                    <v-btn color="secondary" class="secondary custom-transform-class text-none"  to="home" > 
                                         <v-img src="/images/iconos/errorr.svg" class="mr-2" max-width="20"></v-img>
                                         No, cancelar compra
                                     </v-btn>

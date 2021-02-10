@@ -66,7 +66,7 @@
                
 
                 <v-col cols="6">
-                     <v-btn x-small rounded class="text-capitalize secondary--text button_election mt-1" to="promociones_eleccion"> Seleccionar gustos </v-btn>
+                     <v-btn x-small rounded class="custom-transform-class text-none secondary--text button_election mt-1" to="promociones_eleccion"> Seleccionar gustos </v-btn>
 
                         <div class="mt-3 ml-1">
                             <v-btn id ="disminuir" v-on:click="value--" outlined color="white" x-small style="font-size:25px;" class="pb-1">-</v-btn>
@@ -81,7 +81,7 @@
                         </div>  
                 </v-col>
 
-                 <v-btn class="font-weight-semibold primary text-capitalize margin_puntos mt-3" elevation="0" rounded @click="overlay = !overlay" > 
+                 <v-btn class="font-weight-semibold primary custom-transform-class text-none margin_puntos mt-3" elevation="0" rounded @click="overlay = !overlay" > 
                   Agregar al carrito
                 </v-btn>
 
@@ -97,7 +97,7 @@
                             small
                             rounded 
                             to="carrito"
-                            class="text-center primary text-capitalize font-weight-normal justify-content-right button_alert"> 
+                            class="text-center primary custom-transform-class text-none font-weight-normal justify-content-right button_alert"> 
                             <v-icon> mdi-cart-outline </v-icon>
                             Ver carrito 
                             </v-btn>

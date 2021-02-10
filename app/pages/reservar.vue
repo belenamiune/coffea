@@ -139,7 +139,7 @@
                       justify="space-around"
                     >
                       <v-btn
-                        class="mr-4 text-center text-capitalize btn_confirm"
+                        class="mr-4 text-center custom-transform-class text-none btn_confirm"
                         rounded
                         color="secondary"
                         to="confirmar_reserva"

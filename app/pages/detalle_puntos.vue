@@ -57,7 +57,7 @@
         </v-chip>
 
     <v-row class=" justify-center align-center text-center mt-15">
-        <v-btn class="font-weight-semibold secondary text-capitalize"  rounded  elevation="0"  @click="dialog=true" to="confirmacion_compra"> 
+        <v-btn class="font-weight-semibold secondary custom-transform-class text-none"  rounded  elevation="0"  @click="dialog=true" to="confirmacion_compra"> 
                   Continuar
         </v-btn>
         </v-row>

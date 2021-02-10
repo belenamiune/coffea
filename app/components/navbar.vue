@@ -79,10 +79,10 @@
                                         </v-card-title>
                                 
                                         <v-card-actions class=" justify-center align-center pb-6 pt-0">
-                                              <v-btn  class="font-weight-semibold boton pa-4 text-capitalize"  elevation="6" rounded @click="dialog=false"> 
+                                              <v-btn  class="font-weight-semibold boton pa-4 custom-transform-class text-none"  elevation="6" rounded @click="dialog=false"> 
                                                   Cancelar
                                               </v-btn>
-                                              <v-btn class="font-weight-semibold primary pa-4 text-capitalize" elevation="6" rounded @click="dialog=false" to="/login"> 
+                                              <v-btn class="font-weight-semibold primary pa-4 custom-transform-class text-none" elevation="6" rounded @click="dialog=false" to="/login"> 
                                                   Cerrar sesión
                                               </v-btn>
 

@@ -65,7 +65,7 @@
                                 </div>
                             <button>
                                <v-btn
-                                            class="mr-4 text-center text-capitalize"
+                                            class="mr-4 text-center custom-transform-class text-none"
                                                 color="primary"
                                                 rounded
                                         >

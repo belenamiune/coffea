@@ -72,7 +72,7 @@
         <p class="aclaracion">Total en puntos:  {{puntos}}</p>
 
         <v-row class=" justify-center align-center text-center mt-15">
-        <v-btn class="font-weight-semibold secondary text-capitalize"  rounded  elevation="0"  @click="dialog=true" > 
+        <v-btn class="font-weight-semibold secondary custom-transform-class text-none"  rounded  elevation="0"  @click="dialog=true" > 
                   Comprar
         </v-btn>
         </v-row>
@@ -99,7 +99,7 @@
                 <p class="mb-0">Lo espero en casa</p>
 
                 <v-card-actions class=" justify-center align-center text-center"> 
-                    <v-btn color="secondary" class="secondary text-capitalize" to="formulario_delivery"> 
+                    <v-btn color="secondary" class="secondary custom-transform-class text-none" to="formulario_delivery"> 
                         <v-img src="/images/iconos/delivery.svg" class="mr-2" max-width="30"></v-img>
                         Delivery
                     </v-btn>
@@ -108,7 +108,7 @@
                   <p class="mt-4 mb-0">Lo paso a buscar</p>
 
                 <v-card-actions class=" justify-center align-center text-center"> 
-                    <v-btn color="secondary" class="secondary text-capitalize"  to="sucursales" > 
+                    <v-btn color="secondary" class="secondary custom-transform-class text-none"  to="sucursales" > 
                          <v-img src="/images/iconos/sucursal_blanco.svg" class="mr-2" max-width="30"></v-img>
                         Retiro en sucursal
                     </v-btn>

@@ -22,7 +22,7 @@
                     </v-alert>
                 </v-row>
                 <v-row  class="justify-center align-center text-center" >
-                    <v-btn class="font-weight-semibold primary justify-center align-center pa-4 mt-12 text-capitalize " elevation="6" rounded to="reservas"> 
+                    <v-btn class="font-weight-semibold primary justify-center align-center pa-4 mt-12 custom-transform-class text-none " elevation="6" rounded to="reservas"> 
                          Reservar
                     </v-btn>
 

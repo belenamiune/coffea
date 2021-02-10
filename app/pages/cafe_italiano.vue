@@ -79,7 +79,7 @@
                         </div>  
                 </v-col>
 
-                 <v-btn class="font-weight-semibold primary text-capitalize margin_puntos " elevation="0" rounded @click="overlay = !overlay" > 
+                 <v-btn class="font-weight-semibold primary custom-transform-class text-none margin_puntos " elevation="0" rounded @click="overlay = !overlay" > 
                   Agregar al carrito
                 </v-btn>
 
@@ -95,7 +95,7 @@
                             small
                             rounded 
                             to="carrito"
-                            class="text-center primary text-capitalize font-weight-normal justify-content-right button_alert"> 
+                            class="text-center primary custom-transform-class text-none font-weight-normal justify-content-right button_alert custom-transform-class text-none"> 
                             <v-icon> mdi-cart-outline </v-icon>
                             Ver carrito 
                             </v-btn>

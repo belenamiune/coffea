@@ -132,13 +132,6 @@
                                     scrollable
                                     >
                                     <v-spacer></v-spacer>
-                                   <!--  <v-btn
-                                        text
-                                        color="primary"
-                                        @click="modal = false"
-                                    >
-                                        Cancelar
-                                    </v-btn>-->
                                     <v-btn
                                         text
                                         color="primary"

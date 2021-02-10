@@ -117,10 +117,10 @@
                         </v-card-title>
                     
                         <v-card-actions class=" justify-center align-center pb-6 pt-5" >
-                            <v-btn class="font-weight-semibold boton pa-4 text-capitalize"  elevation="6" rounded @click="dialog=false"> 
+                            <v-btn class="font-weight-semibold boton pa-4 custom-transform-class text-none"  elevation="6" rounded @click="dialog=false"> 
                                 No
                             </v-btn>
-                            <v-btn class="font-weight-semibold primary pa-4 text-capitalize" elevation="6" rounded @click="eliminarTarea(index)"> 
+                            <v-btn class="font-weight-semibold primary pa-4 custom-transform-class text-none" elevation="6" rounded @click="eliminarTarea(index)"> 
                                Si
                             </v-btn>
 
@@ -129,7 +129,7 @@
                 </v-dialog>
 
                 <v-row  class="justify-center align-center text-center" >
-                    <v-btn class="font-weight-semibold primary justify-center align-center pa-4 mt-12 text-capitalize " elevation="6" rounded to="reservas"> 
+                    <v-btn class="font-weight-semibold primary justify-center align-center pa-4 mt-12 custom-transform-class text-none " elevation="6" rounded to="reservas"> 
                          Reservar
                     </v-btn>
 
