@@ -44,24 +44,24 @@
              
                 <v-img src="/images/productos/promociones/meriendas_completas.png" max-width="200"  height="200" ></v-img>
             
-            <v-container>
-                <h3 class="text-center white--text mt-3"> 2 Meriendas completas </h3>
-                 <v-rating
-                        :value="5"
-                        color="white"
-                        dense
-                        hover
-                        half-increments
-                        background-color="white"
-                        size="15"
-                        class="text-center"
-                      ></v-rating>
+                <v-container>
+                    <h3 class="text-center white--text mt-3"> 2 Meriendas completas </h3>
+                    <v-rating
+                            :value="5"
+                            color="white"
+                            dense
+                            hover
+                            half-increments
+                            background-color="white"
+                            size="15"
+                            class="text-center"
+                        ></v-rating>
 
-                        <p class="white--text comentarios solo-numeros"> (1k) </p>
-            </v-container>
+                            <p class="white--text comentarios solo-numeros"> (1k) </p>
+                </v-container>
 
-                <div class="">
-                    <p class="parrafos font-weight-semibold " style="">  Merienda completa. Para dos personas. <br><br> La promoción incluye dos licuados y dos porciones torta.</p>
+                <div >
+                    <p class="parrafos font-weight-semibold" style="">  Merienda completa. Para dos personas. <br><br> La promoción incluye dos licuados y dos porciones torta.</p>
                 </div>
                
 
@@ -81,7 +81,7 @@
                         </div>  
                 </v-col>
 
-                 <v-btn class="font-weight-semibold primary text-capitalize margin_puntos mt-3" elevation="0" rounded @click="overlay = !overlay" > 
+                 <v-btn class="font-weight-semibold primary custom-transform-class text-none margin_puntos mt-3" elevation="0" rounded @click="overlay = !overlay" > 
                   Agregar al carrito
                 </v-btn>
 
@@ -91,14 +91,14 @@
                         light
                         elevation="2"
                         class="position">
-                        <v-icon color="green" x-small>mdi-check-circle</v-icon>
+                        <v-icon color="green" dense >mdi-check-circle</v-icon>
                             El producto ha sido agregado al carrito
                             <v-btn 
                             small
                             rounded 
                             to="carrito"
-                            class="text-center primary text-capitalize font-weight-normal justify-content-right button_alert"> 
-                            <v-icon> mdi-cart-outline </v-icon>
+                            class="text-center primary custom-transform-class text-none font-weight-normal justify-content-center button_alert mt-2 "> 
+                            <v-icon dense class="mr-1"> mdi-cart-outline </v-icon>
                             Ver carrito 
                             </v-btn>
                         </v-alert>
@@ -131,22 +131,10 @@ export default {
                 val && setTimeout(() => {
                 this.overlay = false
                 
-                }, 30000)
+                }, 4000)
             },
         },
-     methods: {
-         aumentar: function() {
-             var cantidad = document.getElementById('cantidad').value = ++this.inicio;
-          
-         },
-
-         disminuir: function() {
-             var cantidad = document.getElementById('cantidad').value = --this.inicio;
-
-         }
-
-         
-     }
+     
 }
 
 </script>
@@ -192,12 +180,12 @@ div.container {
 }
 
 .v-alert:not(.v-sheet--tile) {
-     border-radius: 30px;
+     border-radius: 30px !important;
 }
 
 .position{
     top: -220px;
-    right: 0;
+    right: 7.5%;
     text-align: left;
     justify-content: right;
     font-size: 13px;
@@ -205,7 +193,7 @@ div.container {
 
 .button_alert {
     margin-left: 10em;
- 
+    margin-top: 2em;
    
 }
 
@@ -274,12 +262,13 @@ div.container {
 
     .v-alert {
         margin-left: 3em !important;
-        font-size: 14 px !important;
+        font-size: 14px !important;
     }
 
-.parrafos {
-    margin-right: 25px;
-}
+    .parrafos {
+        margin-right: 25px;
+    }
+
  }
 
 
