@@ -100,7 +100,7 @@
                             to="carrito"
 
                             class="text-center primary custom-transform-class text-none font-weight-normal justify-content-right button_alert custom-transform-class text-none"> 
-                            <v-icon> mdi-cart-outline </v-icon>
+                            <v-icon dense> mdi-cart-outline </v-icon>
                             Ver carrito 
                             </v-btn>
                         </v-alert>
