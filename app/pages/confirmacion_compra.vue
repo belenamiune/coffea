@@ -1,9 +1,10 @@
 <template>
-        <div class="background_image">
+        <div class="background_image" >
              <img src="../static/images/logo-circulo.svg" width="100px" class="image_resize"> 
-           <v-container fluid>
+           <v-container fluid >
               <v-row>
                   <v-col  :class="`rounded-t-xl`"  class="mt-5 mb-6 pa-20 text-center text-no-wrap white margin justify-center align-center" >
+
                         <v-row>
                             <v-col style="text-align: end">
                                 <v-btn
@@ -38,7 +39,8 @@
                                             class="mr-4 mt-6 text-center custom-transform-class text-none"
                                             color="primary"
                                             rounded
-                                            to="/mis_pedidos"
+                                           
+                                            @click="overlay = !overlay; mandarPedidos ()"
                                         >
                                             
                                             Ver pedido
@@ -48,25 +50,81 @@
                                 </v-row>
                             </v-container>
                         
+
+                            
                     </v-col>
               </v-row>
-         </v-container>
+
+              <v-overlay :value="overlay">
+                                <v-alert
+                                    v-model="alert"
+                                    light
+                                    elevation="2"
+                                    class="position">
+                                     <img src="../static/images/iconos/puntos_naranja.svg" width="20px" class="mb-n1 mr-2"> 
+
+                                       Se acreditaron <strong> 4 </strong> puntos en tu cuenta con tu última compra
+                                        <v-btn 
+                                        small
+                                        rounded 
+                                        to="mis_puntos"
+                                        class="text-center primary text-capitalize font-weight-normal justify-content-right button_alert mt-4"> 
+                                         <img src="../static/images/iconos/puntos_blanco.svg" width="20px" class="mr-1"> 
+                                        Ver puntos
+                                        </v-btn>
+                                    </v-alert>
+                            </v-overlay>
                        
+         </v-container>
+         
           </div>
+
+          
 
 </template>
 
 <script>
     
     export default {
-        
-            
-    }   
+        data() {
+          return {
+            overlay:false,
+         }
+      },
+
+         watch: {
+        overlay (val) {
+        val && setTimeout(() => {
+             this.overlay = false;
+            },8000);
+        }
+        },   
+
+      methods:{
+    
+       mandarPedidos () {
+            setTimeout(function(){
+                 window.location.href = 'mis_pedidos';     
+                    }, 3000);
+        },
+    }
+    }
+
+    
 
     
 </script>
 
     <style lang="scss" scoped>
+
+   .fade-enter-active, .fade-leave-active {
+  transition: opacity .1000s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+
 
     *  {
           font-family: 'Raleway', sans-serif ;
@@ -104,5 +162,28 @@
 
         .v-btn {
             font-weight: normal;
-        }        
+        }   
+
+        .v-alert:not(.v-sheet--tile) {
+            border-radius: 30px;
+        }
+
+        .position{
+            width: 80%;
+            top: -220px;
+            left: 10%;
+            text-align: left;
+            justify-content: right;
+            font-size: 13px;
+        }
+
+        .button_alert {
+            margin-left: 10em;
+        
+        
+        }
+
+.v-btn--icon.v-size--default {
+       width: 50%;
+} 
     </style>

@@ -253,7 +253,7 @@ h1{
 
 .position{
     position: relative;
-    top: -350px;
+    top: -300px;
     right: 0;
 }
 

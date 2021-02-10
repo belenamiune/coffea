@@ -2,8 +2,8 @@
 
     <v-container fluid>
         <toolbar />
-        <v-row class="sin_margin">
-             <div style="margin-top: 1em; ">
+        <v-row class="sin_margin justify-center align-center text-center">
+             <div style="margin-top: 2em; ">
               <v-chip
                 class="ma-2"
                 color="primary"
@@ -38,63 +38,67 @@
                   Café italiano
               </v-chip>
             </div>
+            
             <v-col cols="12" :class="`rounded-t-xl` "  class="text-center text-no-wrap secondary margin justify-center align-center"></v-col>
             
             <v-row class="margin_img justify-center" >
              
                 <v-img src="/images/productos/cafe/italiano.png" max-width="200"  height="200" ></v-img>
             
-            <v-container>
-                <h3 class="text-center white--text mt-3"> Café italiano </h3>
-                 <v-rating
-                        :value="4"
-                        color="white"
-                        dense
-                        hover
-                        half-increments
-                        background-color="white"
-                        size="10"
-                        class="text-center"
-                      ></v-rating>
+                <v-container>
+                    <h3 class="text-center white--text mt-3"> Café italiano </h3>
+                    <v-rating
+                            :value="4"
+                            color="white"
+                            dense
+                            hover
+                            half-increments
+                            background-color="white"
+                            size="15"
+                            class="text-center"
+                        ></v-rating>
 
-                        <p class="white--text comentarios solo-numeros"> (165) </p>
-            </v-container>
-                <p class="parrafos"> Café tostado más intenso que proporciona un sabor profundo, dulce y acaramelado, con baja acidez. </p>
+                            <p class="white--text comentarios solo-numeros"> (165) </p>
+                </v-container>
 
-                <p class="parrafos"> Cantidad:  <span class="solo-numeros"> 300 ml </span> </p>
+                <p class="parrafos font-weight-semibold"> Café tostado más intenso que proporciona un sabor profundo, dulce y acaramelado, con baja acidez. </p>
 
-                <p class="parrafos">Ingredientes: leche y café. </p>
+                <p class="parrafos font-weight-semibold"> Cantidad:  <span class="solo-numeros"> 300 ml </span> </p>
+
+                <p class="parrafos font-weight-semibold">Ingredientes: leche y café. </p>
 
             
-                <v-col cols="6">
-                  <v-btn id="aumentar" v-on:click="aumentar" x-small>+</v-btn>
-                       <input type='text' id="cantidad" value="0" class="white--text solo-numeros">                 
-                  <v-btn id ="disminuir" v-on:click="disminuir" x-small>-</v-btn>
-
+                <v-col cols="6"  class="pl-3">
+                   <v-btn id ="disminuir" v-on:click="value--" outlined color="white" x-small style="font-size:25px;" class="pb-1">-</v-btn>
+                        <input type='text' id="cantidad" :value="Math.abs(value)" class="solo-numeros white--text" >
+                    <v-btn id="aumentar" v-on:click="value++" x-small color="white" style="font-size:25px;color:#184042"  elevation="0">+</v-btn>
                 </v-col>
                 
                 <v-col cols="6">
                         <div class="text-right" style="width: 80%">
-                            <p class="text-right white--text precio" style="font-family: 'Montserrat', sans-serif;"> $80 </p>
+                            <p class="text-right white--text precio solo-numeros"> $80 </p>
                         </div>  
                 </v-col>
 
                  <v-btn class="font-weight-semibold primary custom-transform-class text-none margin_puntos " elevation="0" rounded @click="overlay = !overlay" > 
                   Agregar al carrito
                 </v-btn>
+                </v-row>
 
+                
                   <v-overlay :value="overlay">
                       <v-alert
                         v-model="alert"
                         light
                         elevation="2"
                         class="position">
-                        <v-icon color="green" x-small>mdi-check-circle</v-icon>
+                        <v-icon color="green" dense>mdi-check-circle</v-icon>
                             El producto ha sido agregado al carrito
                             <v-btn 
                             small
                             rounded 
                             to="carrito"
+
                             class="text-center primary custom-transform-class text-none font-weight-normal justify-content-right button_alert custom-transform-class text-none"> 
                             <v-icon> mdi-cart-outline </v-icon>
                             Ver carrito 
@@ -104,7 +108,7 @@
 
             
             
-            </v-row>
+            
 
             
             
@@ -122,30 +126,19 @@
 export default {
     data: () => ({
       overlay: false,
-      inicio: 0,
+       value: 0,
     }),
         watch: {
             overlay (val) {
                 val && setTimeout(() => {
                 this.overlay = false
                 
-                }, 30000)
+                }, 4000)
             },
         },
-     methods: {
-         aumentar: function() {
-             var cantidad = document.getElementById('cantidad').value = ++this.inicio;
-          
-         },
-
-         disminuir: function() {
-             var cantidad = document.getElementById('cantidad').value = --this.inicio;
-
-         }
-
          
      }
-}
+
 
 </script>
 
@@ -181,28 +174,28 @@ div.container {
 
 .parrafos {
     color: white;
-    font-weight: 200;
+    font-size:14px;
     text-align: left;
     margin-top: 1em;
-    width: 90%;
+    width: 85%;
 
 }
 
 .v-alert:not(.v-sheet--tile) {
-     border-radius: 30px;
+     border-radius: 30px !important;
 }
 
 .position{
     top: -220px;
-    right: 0;
+    right: 7.5%;
     text-align: left;
     justify-content: right;
     font-size: 13px;
 }
 
 .button_alert {
-    margin-left: 10em;
- 
+     margin-left: 10em;
+     margin-top: 2em;
    
 }
 
@@ -211,9 +204,8 @@ div.container {
 }
 
 .solo-numeros {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'rawline', sans-serif !important; 
 }
- 
 
  @media screen and (min-width: 320px) {
     
@@ -232,7 +224,7 @@ div.container {
 
     .precio {
         font-size: 24px;
-        font-weight: 600;
+        font-weight: 500;
     }
 
     #cantidad {
@@ -264,7 +256,7 @@ div.container {
 
     .v-alert {
         margin-left: 3em !important;
-        font-size: 14 px !important;
+        font-size: 14px !important;
     }
 
  }

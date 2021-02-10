@@ -2,10 +2,10 @@
 
     <v-container fluid>
         <toolbar />
-        <v-row class="sin_margin">
-             <div style="margin-top: 1em; ">
+        <v-row class="sin_margin justify-center align-center text-center">
+             <div style="margin-top: 2em; ">
               <v-chip
-                class="ma-2"
+                class="ma-1"
                 color="primary"
                 text-color="white"
                 :to="'/categorias'"
@@ -53,23 +53,22 @@
                         hover
                         half-increments
                         background-color="white"
-                        size="10"
+                        size="15"
                         class="text-center"
                       ></v-rating>
 
                         <p class="white--text comentarios solo-numeros"> (230) </p>
             </v-container>
-                <p class="parrafos"> Tostado con palta, queso, pepinos y tomates cherrys. Perfecta combinación de sabores.Para compartir.</p>
+                <p class="parrafos"> Tostado con palta, queso, pepinos y tomates cherrys. Perfecta combinación de sabores. Para compartir.</p>
 
                 <p class="parrafos"> Ingredientes:  palta, queso, pepinos y tomates cherrys, pan y jamón. </p>
 
 
             
-                <v-col cols="6">
-                  <v-btn id="aumentar" v-on:click="aumentar" x-small>+</v-btn>
-                       <input type='text' id="cantidad" value="0" class="white--text solo-numeros">                 
-                  <v-btn id ="disminuir" v-on:click="disminuir" x-small>-</v-btn>
-
+                <v-col cols="6"  class="pl-3">
+                   <v-btn id ="disminuir" v-on:click="value--" outlined color="white" x-small style="font-size:25px;" class="pb-1">-</v-btn>
+                        <input type='text' id="cantidad" :value="Math.abs(value)" class="solo-numeros white--text" >
+                    <v-btn id="aumentar" v-on:click="value++" x-small color="white" style="font-size:25px;color:#184042"  elevation="0">+</v-btn>
                 </v-col>
                 
                 <v-col cols="6">
@@ -88,14 +87,16 @@
                         light
                         elevation="2"
                         class="position">
-                        <v-icon color="green" x-small>mdi-check-circle</v-icon>
+                        <v-icon color="green" dense>mdi-check-circle</v-icon>
                             El producto ha sido agregado al carrito
                             <v-btn 
                             small
                             rounded 
                             to="carrito"
                             class="text-center primary custom-transform-class text-none font-weight-normal justify-content-right button_alert"> 
-                            <v-icon> mdi-cart-outline </v-icon>
+
+                            <v-icon dense> mdi-cart-outline </v-icon>
+
                             Ver carrito 
                             </v-btn>
                         </v-alert>
@@ -121,29 +122,17 @@
 export default {
     data: () => ({
       overlay: false,
-      inicio: 0,
+      value: 0,
     }),
         watch: {
             overlay (val) {
                 val && setTimeout(() => {
                 this.overlay = false
                 
-                }, 30000)
+                }, 4000)
             },
         },
-     methods: {
-         aumentar: function() {
-             var cantidad = document.getElementById('cantidad').value = ++this.inicio;
-          
-         },
-
-         disminuir: function() {
-             var cantidad = document.getElementById('cantidad').value = --this.inicio;
-
-         }
-
-         
-     }
+     
 }
 
 </script>
@@ -155,7 +144,7 @@ export default {
     }
 
 .solo-numeros {
-    font-family: 'Montserrat', sans-serif;
+     font-family: 'rawline', sans-serif !important;  
 }
 
 
@@ -184,20 +173,20 @@ div.container {
 
 .parrafos {
     color: white;
-    font-weight: 200;
+    font-size: 14px;
     text-align: left;
     margin-top: 1em;
-    width: 90%;
+    width: 85%;
 
 }
 
 .v-alert:not(.v-sheet--tile) {
-     border-radius: 30px;
+     border-radius: 30px !important;
 }
 
 .position{
     top: -220px;
-    right: 0;
+    right: 7.5%;
     text-align: left;
     justify-content: right;
     font-size: 13px;
@@ -205,6 +194,7 @@ div.container {
 
 .button_alert {
     margin-left: 10em;
+    margin-top: 2em;
  
    
 }
@@ -213,6 +203,8 @@ div.container {
        width: 50%;
 }
  
+
+
 
  @media screen and (min-width: 320px) {
     
@@ -231,7 +223,7 @@ div.container {
 
     .precio {
         font-size: 24px;
-        font-weight: 600;
+        font-weight: 500;
     }
 
     #cantidad {
@@ -263,7 +255,7 @@ div.container {
 
     .v-alert {
         margin-left: 3em !important;
-        font-size: 14 px !important;
+        font-size: 14px !important;
     }
 
  }
