@@ -155,7 +155,7 @@
         },
         {
          
-          title: 'Duranzo',
+          title: 'Durazno',
           value:0,
         },
         
@@ -194,7 +194,7 @@
                 val && setTimeout(() => {
                 this.overlay = false
                 
-                }, 30000)
+                }, 4000)
             },
         },
     

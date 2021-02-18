@@ -2,7 +2,7 @@
     <v-container fluid >
         <toolbar />
          <v-row>
-        <v-col cols="12" :class="`rounded-t-xl` "  class="pa-16 text-center text-no-wrap primary margin justify-center align-center">
+        <v-col cols="12" :class="`rounded-t-xl` "  class="pa-8 mt-16 pt-16 text-center text-no-wrap primary margin justify-center align-center">
             <v-form v-model ="valid" class="text--white">
                 <v-container fluid>
                     <v-row justify="center">
@@ -46,6 +46,7 @@
                           <v-date-picker
                             v-model="date"
                             @input="menu = false"
+                            :return-value.sync="date"
                             color="secondary"
                            
                           >
@@ -119,6 +120,7 @@
                           label="Cantidad de personas"
                           prepend-icon="mdi-account"
                           
+                          
                          
                         ></v-select>
 
@@ -180,7 +182,7 @@ export default {
 <style>
 
 *  {
-       font-family: 'Montserrat', sans-serif !important;
+        font-family: 'rawline', sans-serif !important; 
     }
 
 .btn_confirm {
@@ -231,6 +233,14 @@ div[role="listbox"] {
 
 .theme--light.v-select .v-select__selection--comma {
   color: white !important;
+}
+
+.v-input__slot::before{
+  border-color: white !important;
+}
+
+.v-list-item__title{
+  color: white;
 }
 
 @media screen and (max-width: 425px) {

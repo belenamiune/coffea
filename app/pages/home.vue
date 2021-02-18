@@ -46,15 +46,15 @@
             </v-list>
         </v-col>
         <v-col  class="mt-7 mr-0">
-            <v-btn class="font-weight-semibold primary justify-center align-center  custom-transform-class text-none"  elevation="0" small rounded > 
+            <v-btn class="font-weight-semibold primary justify-center align-center  custom-transform-class text-none"  elevation="0" small rounded to="promociones" > 
                          Ver más
                     </v-btn>
                     
         </v-col>
     </v-row>
-        <VueSlickCarousel :arrows="true" :dots="true" v-bind="settings" class="mt-0">
+        <VueSlickCarousel :arrows="true" :dots="true" v-bind="settings" class="mt-0" >
       
-      <v-col  cols="11" class="padding"  v-for="(promos,i) in promos"  :key="i"><v-img  :src="promos.src" max-height="100%"> 
+      <v-col  cols="11" class="padding" v-for="(promos,i) in promos"  :key="i" ><v-img  :src="promos.src" max-height="100%" > 
             <div class="informacion"> <div class="white--text font-weight-medium rawline largo" >{{ promos.nombre }}</div> 
             <v-chip class="montserrat"  color="primary">
                 {{ promos.precio }}
@@ -79,7 +79,7 @@
             </v-list>
         </v-col>
         <v-col  class="mt-10 mr-0">
-            <v-btn class="font-weight-semibold primary justify-center align-center  custom-transform-class text-none"  elevation="0" small rounded > 
+            <v-btn class="font-weight-semibold primary justify-center align-center  custom-transform-class text-none"  elevation="0" small rounded to="productos_puntos"> 
                          Ver más
                     </v-btn>
                     
@@ -111,7 +111,7 @@
             </v-list>
         </v-col>
         <v-col  class="mt-7">
-            <v-btn class="font-weight-semibold primary justify-center align-center custom-transform-class text-none"  elevation="0" small rounded > 
+            <v-btn class="font-weight-semibold primary justify-center align-center custom-transform-class text-none"  elevation="0" small rounded to="categorias"> 
                          Ver más
                     </v-btn>
                     
@@ -354,7 +354,7 @@ import { getUserFromCookie, getUserFromSession } from '@/helpers'
 }
 
 .montserrat{
-  font-family: 'Montserrat', sans-serif;
+   font-family: 'rawline', sans-serif !important;  
 }
 
 

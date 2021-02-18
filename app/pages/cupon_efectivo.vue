@@ -6,22 +6,9 @@
               <v-row>
                   <v-col  :class="`rounded-t-xl`"  class="mt-3 mb-6 pa-20 text-center text-no-wrap white margin justify-center align-center" >
                 
-                        <v-row>
-                            <v-col style="text-align: end">
-                            <v-btn
-                                icon
-                                dark
-                                @click="submit"
-                                color="secondary"
-                                to="login"
-                            >
-                                <v-icon>mdi-close</v-icon>
-                            </v-btn>
-                    
-                            </v-col>
-                        </v-row>
+                        
                   
-                            <h2> Cupón de pago </h2>
+                            <h2 class="mt-8"> Cupón de pago </h2>
                                 
                                 <v-container>
                                     <v-row>

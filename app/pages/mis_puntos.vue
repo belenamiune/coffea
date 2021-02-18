@@ -6,7 +6,7 @@
             <v-col cols="12" :class="`rounded-t-xl` "  class="pa-16 text-center text-no-wrap primary margin justify-center align-center" >
             
                 <v-avatar  color="secondary" class="mt-16 montserrat" size="62">
-                    <span class="white--text headline font-weight-bold ">600 </span>
+                    <span class="white--text headline font-weight-bold ">200 </span>
                 </v-avatar>
         
 

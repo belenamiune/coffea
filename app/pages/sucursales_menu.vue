@@ -25,11 +25,12 @@
 
                                 
                                 <v-row>
-                                    
-                                        <v-col> 
+                                    <v-col cols="2"> 
                                         <v-list-item-icon class="mr-4" >
                                             <v-img src="/images/iconos/sucursal.svg"  ></v-img>
-                                            </v-list-item-icon>    
+                                        </v-list-item-icon> 
+                                        </v-col>  
+                                        <v-col cols="10" class="mt-5"> 
                                         {{ item.title }}
                                         </v-col>
                                 </v-row>
@@ -43,33 +44,33 @@
                                     
                                 <v-list-item>
                                             <v-list-item-icon class="mr-4">
-                                                <v-img src="/images/iconos/direccion.svg"  ></v-img>
+                                                <v-img src="/images/iconos/direccion.svg" max-width="20" ></v-img>
                                             </v-list-item-icon>
 
                                             <v-list-item-content >
-                                                <v-list-item-subtitle class="solo-numeros">{{ item.direccion }}</v-list-item-subtitle>
+                                                <v-list-item-title class="solo-numeros">{{ item.direccion }}</v-list-item-title>
                                             </v-list-item-content>
                                 </v-list-item>
 
 
                                 <v-list-item>
                                             <v-list-item-icon class="mr-4">
-                                                <v-img src="/images/iconos/telefono.svg"  ></v-img>
+                                                <v-img src="/images/iconos/telefono.svg" max-width="20" ></v-img>
                                             </v-list-item-icon>
 
                                             <v-list-item-content >
-                                                <v-list-item-subtitle class="solo-numeros">{{ item.telefono }}</v-list-item-subtitle>
+                                                <v-list-item-title class="solo-numeros">{{ item.telefono }}</v-list-item-title>
                                             </v-list-item-content>
                                 </v-list-item>
 
 
                                 <v-list-item>
                                             <v-list-item-icon class="mr-4">
-                                                <v-img src="/images/iconos/reloj.svg"  ></v-img>
+                                                <v-img src="/images/iconos/reloj.svg" max-width="20" ></v-img>
                                             </v-list-item-icon>
 
                                             <v-list-item-content >
-                                                <v-list-item-subtitle class="solo-numeros">{{ item.horario }}</v-list-item-subtitle>
+                                                <v-list-item-title class="solo-numeros">{{ item.horario }}</v-list-item-title>
                                             </v-list-item-content>
                                 </v-list-item>
                                     
@@ -118,7 +119,9 @@ export default {
 
 
 .solo-numeros {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'rawline', sans-serif !important; 
+     font-size: 13px;
+     color: black;
 }
 
 .img_margin {

@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <navbar />
-            <v-row class="mt-8">
+            <v-row style="margin-top:100px;">
                 <v-col cols="12" justify="center">
                      <h2 class="text-center  mb-15"> Reserva confirmada </h2>
                      <p class="text-center mb-5"> Tu reserva ha sido 

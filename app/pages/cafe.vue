@@ -2,30 +2,34 @@
     <v-container>
       <toolbar />
         <v-row justify="center" class="text-center">
+          <v-row class="sin_margin justify-center align-center text-center">
+            <div style="margin-top: 3em; margin-bottom: 1em">
+              <div class="text-left">
+                  <v-chip
+                    class="ma-2"
+                    color="primary"
+                    text-color="white"
+                    :to="'/categorias'"
+                    small
+                  >
+            
+                      Categorías
+                  </v-chip>
 
-          <div class="text-left">
-              <v-chip
-                class="ma-2"
-                color="primary"
-                text-color="white"
-                :to="'/categorias'"
-              >
-        
-                  Categorías
-              </v-chip>
-
-                    <p style="color: orange; font-weigth: 800; display:inline; margin-left: 0 !important"> /  </p>
-             
-              <v-chip
-                class="ma-2"
-                color="primary"
-                text-color="white"
-                :to="'/categorias'"
-              >
-                  {{ header }}
-              </v-chip>
-            </div>
-
+                        <p style="color: orange; font-weigth: 800; display:inline; margin-left: 0 !important"> /  </p>
+                
+                  <v-chip
+                    class="ma-2 ml-n1"
+                    color="primary"
+                    text-color="white"
+                    :to="'/categorias'"
+                    small
+                  >
+                      {{ header }}
+                  </v-chip>
+                </div>
+           </div>
+          </v-row>
         <v-col
           v-for="(producto, i) in productos"
           :key="i"
@@ -33,7 +37,7 @@
           class="text-center"
         >
           
-          <v-card :to="producto.to"> 
+          <v-card :to="producto.to" class="ma-1 color_card" elevation="0"> 
             <div class="d-flex flex-no-wrap">
               <div>
                 
@@ -44,44 +48,50 @@
                       size="160"
                       tile
                     >
-                      <v-img :src="require(`../static/images/productos/cafe/${producto.image}`)" max-height="120px" max-width="130px"></v-img>
+                      <v-img :src="require(`../static/images/productos/cafe/${producto.image}`)"  class="imagen_promo"></v-img>
                     </v-avatar>
                   </v-col>
 
                   <v-col cols="8">
    
                       <v-card-title
-                        class="headline"
+                        class="headline black--text"
                         v-text="producto.title"
                       ></v-card-title>
 
-                      <v-card-subtitle>{{ producto.description }}</v-card-subtitle>
-                      <v-rating
-                        :value="producto.star"
-                        color="primary"
-                        dense
-                        half-increments
-                        readonly
-                        size="10"
-                      ></v-rating>
+                      <v-card-subtitle class="black--text">{{ producto.description }}</v-card-subtitle>
+                      <v-row>
+                        <v-col cols="6">
+                            <v-rating
+                              :value="producto.star"
+                              color="primary"
+                              dense
+                              half-increments
+                              readonly
+                              size="12"
+                            ></v-rating>
+                          </v-col>
 
-               
-                         <p class="grey--text solo-numeros" >{{producto.comments}} </p>
-                    </v-col>
+                          <v-col cols="6">
+                            <p class="black--text solo-numeros">{{producto.comments}} </p>
+                          </v-col>
+
+                      </v-row>
+
+                      <v-card-text class="justify-end">
+                            <h2 class="text-right" style="font-size:24px;"><span style="color: #F8744E">$</span>{{producto.precio}}</h2>
+                     </v-card-text>
+                  </v-col>
+                    
                 </v-row>
 
-                        <div>
-                 
-                
-                 </div>
+                        
               </div>
                  
                </div>
 
 
-               <v-row justify="end">
-                <h2 class="solo-numeros"><span style="color: #F8744E" class="solo-numeros">$</span>{{producto.precio}}</h2>
-               </v-row>
+               
           </v-card>
             
         
@@ -105,7 +115,7 @@ import Navbar from '../components/navbar.vue'
           star: 4,
           comments: '(165)',
           precio: '80',
-          to:'cafe_italiano'
+          to:'/cafe_italiano'
          
         },
         {
@@ -115,7 +125,7 @@ import Navbar from '../components/navbar.vue'
           star: 5,
           comments: '(1k)',
           precio: '75',
-          to:'cafe_italiano'
+          to:'/cafe_italiano'
         },
         {
           image: 'moca.png',
@@ -124,7 +134,7 @@ import Navbar from '../components/navbar.vue'
           star: 4,
           comments: '(325)',
           precio: '90',
-          to:'cafe_italiano'
+          to:'/cafe_italiano'
         },
         {
           image: 'helado.png',
@@ -133,7 +143,7 @@ import Navbar from '../components/navbar.vue'
           star: 3,
           comments: '(180)',
           precio: '110',
-          to:'cafe_italiano'
+          to:'/cafe_italiano'
         },
         {
           image: 'cafeconleche.png',
@@ -142,7 +152,7 @@ import Navbar from '../components/navbar.vue'
           star: 4,
           comments: '(210)',
           precio: '60',
-          to:'cafe_italiano'
+          to:'/cafe_italiano'
         },
        
       ],
@@ -152,9 +162,10 @@ import Navbar from '../components/navbar.vue'
 
 <style scoped>
 
-* {
-  font-family: 'Raleway', sans-serif;
-}
+*  {
+     font-family: 'rawline', sans-serif !important;  
+    }
+
 
 .v-card__title  {
   font-size: 16px !important;
@@ -173,22 +184,30 @@ import Navbar from '../components/navbar.vue'
 
 p {
   font-size: 14px;
+  margin-left: -1em !important;
 }
 
 h2 {
-  margin-right: 3em;
+  margin-right: 0em !important;
+   margin-top: -0.5em !important;
 }
 
 .v-rating {
     max-width: 65% !important;
+    margin-left: 1em !important;
+}
+
+.color_card{
+    background-color:#EFEFEF !important;  
+}
+
+.v-sheet.v-card{
+    border-radius:10px;
 }
 
 .solo-numeros {
-    font-family: 'Montserrat', sans-serif !important;
+     margin-top: -10px;
 }
-
-
-
 
 
  @media screen and (min-width: 320px) {
@@ -204,19 +223,19 @@ h2 {
     }
 
     h2 {
-      margin-right: 1em !important;
-      margin-top: -1em !important;
+      margin-right: 0em !important;
+      margin-top: -0.5em !important;
     }
 
     .v-rating {
        margin-top: -1em;
        padding: 0 !important;
-       margin-left: -2.3em !important;
+       
     }
 
     p {
       text-align: left;
-      margin-left: 1em !important;
+      margin-left: 0em !important;
       margin-right: 1em !important;
     }
 
@@ -232,6 +251,11 @@ h2 {
        max-width: 100% !important;
     }
 
- }
+  .imagen_promo{
+    max-height: 120px !important;
+    max-width: 120px !important;
+    margin-left: 10px !important;
+  }
 
+ }
 </style>

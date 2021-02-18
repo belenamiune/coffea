@@ -16,24 +16,35 @@
                 </v-col>
             </v-row>
             <v-row class="margin_img justify-center align-center delivery" style="color:white">
-               <v-col cols="10">
-                    <p class="mb-4">Mis puntos disponibles</p>
+                
+               <v-col cols="10" class="pb-1">
+                    <p >Mis puntos disponibles</p>
+                   
+               </v-col>
+
+                <v-col cols="2" class="mt-n4">
+                   <img  src="../static/images/iconos/puntos_blanco.svg" class="puntos_img"> <p style=" font-family: 'rawline', sans-serif !important; font-weight: bold; " >200</p>
+               </v-col>
+
+               <v-col cols="10" class="mt-n10">
                     <p class="mt-8">Mi compra</p>
                </v-col>
-                <v-col cols="2">
-                    <p style="font-family:'Montserrat', sans-serif" class="p_style ml-3"><img  src="../static/images/iconos/puntos_blanco.svg" class="puntos_img">600</p>
-                    <p style="font-family:'Montserrat', sans-serif;  font-weight: bold;" class="ml-3"><img  src="../static/images/iconos/puntos_blanco.svg" class="puntos_img">300</p>
+
+                <v-col cols="2" class="mt-n10">
+                    <img  src="../static/images/iconos/puntos_blanco.svg" class="puntos_img1"> <p style=" font-family: 'rawline', sans-serif !important;  font-weight: bold;" >8</p>
                </v-col>
+
+               
                <v-col cols="12"  style="margin-top: -1em" >
                     <hr />
                </v-col>
-               <v-row  class="margin_img justify-center align-center delivery mb-3" style="color:white;">
-                <v-col cols="10">
+               <v-row  class="margin_img justify-center align-center mb-3" style="color:white;">
+                <v-col cols="10" class="ml-1">
                     <p>Puntos finales</p>
-                    <p style="font-weight: 100; font-size:10px">*Puntos que quedarán disponibles en tu cuenta una vez confirmada la compra </p>
+                    <p style="font-weight: 300; font-size:10px">*Puntos que quedarán disponibles en tu cuenta una vez confirmada la compra </p>
                </v-col>
-                <v-col cols="2" class="puntos_finales">
-                    <p style="font-family:'Montserrat', sans-serif;  font-weight: bold;" class=""><img  src="../static/images/iconos/puntos_blanco.svg" class="puntos_img">300</p>
+                <v-col cols="2" class="puntos_finales ml-n3">
+                    <img  src="../static/images/iconos/puntos_blanco.svg" class="puntos_img"><p style="font-family: 'rawline', sans-serif !important;  font-weight: bold;" class="">192</p>
                </v-col>
                
                </v-row>
@@ -46,11 +57,12 @@
                       class="margin_img justify-center align-center mt-14"
                     >
                       <v-btn
-                        class="mr-4 text-center custom-transform-class text-none btn_confirm mb-2"
+                        class="mr-4 text-center custom-transform-class text-none mb-2 btn_confirm "
                         rounded
                         color="primary"
                         to="detalle_puntos"
                         style="height: 36px !important; width: 160px"
+                         elevation="0"
                       >
                       
                        Canjear
@@ -60,6 +72,7 @@
                         class="mr-4 text-center custom-transform-class text-none btn_cancel"
                         rounded
                         @click="overlay = !overlay"
+                        elevation="0"
                       >
                       
                        Cancelar compra
@@ -72,18 +85,21 @@
                         class="position">
                             ¿Estás seguro de cancelar esta compra?
                             
-                            <v-row class="justify-content-center mt-5">
+                            <v-row class="justify-content-center  justify-center align-center mt-5 ">
                                 <v-btn 
                                    normal
                                     rounded 
                                      @click="overlay = false"
-                                     class="text-center custom-transform-class text-none font-weight-normal cancel_button ma-1"> 
+                                     elevation="0"
+                                     class="text-center custom-transform-class text-none font-weight-normal cancel_button ma-1 mb-2"> 
                                         No
                                 </v-btn>
                                 <v-btn 
+                                
                                     normal
                                     rounded 
-                                    class="text-center primary custom-transform-class text-none font-weight-normal  ma-1"> 
+                                    elevation="0"
+                                    class="text-center primary custom-transform-class text-none font-weight-normal  ma-1 "> 
                                          Si
                                 </v-btn>
                             </v-row>
@@ -108,7 +124,7 @@ export default {
                 val && setTimeout(() => {
                 this.overlay = false
                 
-                }, 30000)
+                }, 4000)
             },
         }
 }
@@ -137,8 +153,14 @@ export default {
     bottom: 0;
     z-index:2;
 }
-
+.hr{
+    width: 80% !important;
+}
+.btn_confirm{
+     width: 60% !important;
+}
 .btn_cancel {
+    width: 60%;
     color: #F8744E !important;
     background-color: transparent !important;
     border: 1px solid #F8744E;
@@ -157,8 +179,8 @@ export default {
 }
 
 .delivery { 
-    max-width: 250px !important;
-    margin-left: 0.5em;
+    max-width: 95% !important;
+    margin-left: 2.5%;
 }
 
 .puntos_img {
@@ -166,6 +188,12 @@ export default {
   margin-left: -2em;
   margin-bottom: -2em;
 }
+.puntos_img1 {
+  max-width: 30px;
+  margin-bottom:-2em;
+  margin-left:-2em;
+}
+
 
 .p_style {
   margin-top: -1.5em;

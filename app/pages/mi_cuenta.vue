@@ -2,7 +2,7 @@
     <v-container fluid>
         <toolbar />
 
-       <v-row class="justify-center align-center mt-3">
+       <v-row class="justify-center align-center mt-16">
            <v-avatar size="205" color="#EFEFEF">
             <v-avatar size="190" color="primary">
                 <v-avatar size="180" color="#EFEFEF">
@@ -18,7 +18,7 @@
 
         <v-row class=" justify-center align-center mt-7 ">
 
-             <v-btn class="font-weight-regular  custom-transform-class text-none black--text" elevation="6" x-large to="mis_puntos"> 
+             <v-btn class="font-weight-regular  custom-transform-class text-none black--text" elevation="4" x-large to="mis_puntos"> 
                  
                   <v-img src="/images/iconos/puntos.svg" max-width="27" class="mr-3 ml-n2" ></v-img>   
                    Mis puntos                                
@@ -28,7 +28,7 @@
 
          <v-row class=" justify-center  mt-7 ">
 
-             <v-btn class="font-weight-regular  custom-transform-class text-none black--text" elevation="6" x-large to="mis_pedidos"> 
+             <v-btn class="font-weight-regular  custom-transform-class text-none black--text" elevation="4" x-large to="mis_pedidos"> 
                   <v-img src="/images/iconos/carrito-pedidos.svg" max-width="25" class="mr-4 " ></v-img>   
                    Mis pedidos                                
              </v-btn>
@@ -38,7 +38,7 @@
 
         <v-row class=" justify-center mt-7 ">
 
-             <v-btn class="font-weight-regular custom-transform-class text-none black--text" elevation="6" x-large to="mis_reservas"> 
+             <v-btn class="font-weight-regular custom-transform-class text-none black--text" elevation="4" x-large to="mis_reservas"> 
                   <v-img src="/images/iconos/reserva.svg" max-width="25" class="mr-3  ml-3" ></v-img>   
                    Mis reservas                             
              </v-btn>
@@ -49,7 +49,7 @@
         
         <v-row class=" justify-center  mt-7 ">
 
-             <v-btn class="font-weight-regular custom-transform-class text-none black--text" elevation="6" x-large to="mi_perfil"> 
+             <v-btn class="font-weight-regular custom-transform-class text-none black--text" elevation="4" x-large to="mi_perfil"> 
                   <v-img src="/images/iconos/personas.svg" max-width="25"  class="mr-3 ml-n7" ></v-img>   
                    Mi perfil                             
              </v-btn>
