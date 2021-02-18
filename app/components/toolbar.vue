@@ -1,9 +1,9 @@
 <template>
-  <v-card>
+ 
     <v-container fluid>
       <v-row class="child-flex">
         <div>
-          <v-toolbar dense fixed>
+          <v-toolbar  dense fixed >
             <v-btn
               icon
                onClick="history.go(-1);"
@@ -11,9 +11,7 @@
               <v-icon color="accent">mdi-arrow-left</v-icon>
             </v-btn>
 
-            <v-toolbar-title>
-
-            </v-toolbar-title>
+           
 
             <v-spacer></v-spacer>
                     <v-btn
@@ -51,7 +49,7 @@
                                                         </v-img>
                                                         
                                                       </v-avatar>
-                                                        <a v-bind:href="item.uri"  target="_self">{{item.title}}</a></td>
+                                                        <a class="pt-1" v-bind:href="item.uri"  target="_self">{{item.title}}</a></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -63,53 +61,58 @@
                             </v-dialog>  
            <!--   </template> -->
 
-                  <div> 
-                    <v-tab>
+                  
+                    <v-tab to="carrito" class="carrito">
 
                       <v-badge
                         color="primary"
-                        content="6"
+                        content="3"
+                        overlap
                         bottom
-                        class="cart_icon"
-                        to="carrito"
+                        class="cart_icon font-weight-bold" 
                       >
-                        <v-icon> mdi-cart-outline </v-icon>
+                        <v-icon style="color: #184042 !important" class="color_cart_outside"> mdi-cart-outline </v-icon>
                       </v-badge>
-
                     </v-tab>
+                  
 
-                  </div>
-                
-                    <v-chip
-                              
-                      color="secondary"
+                  <v-card elevation="0" color="secondary" class="puntos mr-n3">
+                    <v-row class="mt-1">
+                    <v-div
                       text-color="white"
                       to="/mi_cuenta"
-                             
                     >
-                      
-                      <v-avatar
-                        left
-                        class="secondary darken-4"
-                      >
-                      
-                      <v-img src="https://randomuser.me/api/portraits/women/26.jpg"></v-img>
+                        <v-avatar
+                          left
+                          class="secondary darken-4  "
+                          size="44"
+                          color="white"
+                          style="margin-right:5px; margin-top:-4px;"
+                        >
+                        
+                        <v-img src="https://randomuser.me/api/portraits/women/26.jpg"></v-img>
 
-                      </v-avatar>
+                        </v-avatar>
+                      </v-div>
 
-                        <div style="color:white">
-                          <p> Mis puntos </p> 
-                          <span> 800 </span> 
-                        </div>
-                              
-                    </v-chip>
+                        <v-div class="text-center white--text" >
+                          <v-col cols="12" style="padding:0;" >
+                            <h6 style="margin-top:2px; font-weight: 400;"> Mis puntos </h6> 
+                          </v-col>
+                          <v-col cols="12" style="padding:0;" >
+                            <h4 class="mt-n1" style=" font-weight: 600;"> 200 </h4> 
+                          </v-col>
+                        </v-div>
+                        </v-row>
+                      </v-card> 
+                    
                
           
              </v-toolbar>
            </div>
          </v-row>
       </v-container>
-  </v-card>
+ 
 </template>
 
 <script>
@@ -149,7 +152,11 @@ data() {
 <style scoped>
 
     * {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'rawline', sans-serif !important; 
+    }
+
+  .v-toolbar__content {
+      padding-left: 0px !important; 
     }
     .v-badge__badge {
       inset: calc(80% - 8px) auto  calc(80% - 8px) !important;
@@ -171,10 +178,13 @@ data() {
     }
 
     .v-tab.v-tab {
-      padding: 0 !important
-
+      padding: 0 !important;
+      
     }
  
+    .carrito{
+      min-width: 70px !important;
+    }
     
     div.container{
         padding: 0;
@@ -187,6 +197,8 @@ data() {
     span {
       font-weight: normal;
     }
+
+    
      @media screen and (min-width: 320px) {
     
       .theme--light.v-chip:not(.v-chip--active) {
@@ -201,15 +213,25 @@ data() {
       margin-right: -1em;
     }
 
-
     }
+
+    
+    .puntos{
+        border-radius: 20px 10px 10px 20px ;
+        width: 35%;
+        height: 90%;
+        margin-right: 1px !important;
+    }
+
+
 
     .v-dialog > .v-card{
         border-radius: 0px 0px 30px 30px;
         position: absolute;
         left:0;
         top: 0;
-        height: 80%;
+        right: 0;
+        height: 65%;
     }
 
     .v-dialog > .v-card > .v-card__title {
@@ -232,10 +254,11 @@ data() {
 
     td {
       text-align: left;
-      width: 230px;
+      width: 250px;
       border-radius: 20px;
       height: 40px;
-      border: 1px solid #184042;
+      padding-top: 8px;
+      /*border: 1px solid #184042;*/
     }
 
     table {
@@ -256,16 +279,34 @@ data() {
      width: 230px;
      border-radius: 8px;
      background-color: #eeecec;
+     
    }
 
    .v-application a {
-     color:black !important
+     color:black !important;
+     
    }
 
    .miavatar {
      margin-left: 0.5em !important;
    }
 
+@media screen and (min-width: 375px){
+td {
+      width: 300px !important;
+      padding-top: 8px;
+    }
+
+    
+    
+    .puntos{
+        border-radius: 20px 10px 10px 20px ;
+        width: 30%;
+        height: 90%;
+        margin-right: 1px !important;
+    }
+
+}
 </style>
 
 

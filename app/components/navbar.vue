@@ -18,7 +18,7 @@
 
                     <v-list-item-content>
                       <v-list-item-title>Sofía Benza</v-list-item-title>
-                      <v-list-item-subtitle>800 puntos</v-list-item-subtitle>
+                      <v-list-item-subtitle>200 puntos</v-list-item-subtitle>
                     </v-list-item-content>
                   </v-list-item>
                 </template>
@@ -111,10 +111,12 @@
 
                 
         
-                          <v-tab>
+                          <v-tab to="carrito">
                               <v-badge
                                 color="primary"
-                                content="6"
+                                content="3"
+                                class="font-weight-bold "
+                                overlap
                                 bottom
                               
                               >
@@ -124,24 +126,38 @@
                           
 
               
-                           <v-chip 
-                              color="secondary"
+                       <v-card elevation="0" color="secondary" class="puntos mr-n3">
+                          <v-row class="mt-1">
+                            <v-div
                               text-color="white"
                               to="/mi_cuenta"
-                             >
+                            >
                               <v-avatar
                                 left
-                                class="secondary darken-4"
+                                class="secondary darken-4  "
+                                size="44"
+                                color="white"
+                                style="margin-right:5px; margin-top:-4px;"
                               >
-                                <v-img src="https://randomuser.me/api/portraits/women/26.jpg"></v-img>
-                              </v-avatar>
-
-                              <div>
-                                    <p> Mis puntos </p> 
-                                    <span> 800 </span> 
-                              </div>
                               
-                            </v-chip>
+                              <v-img src="https://randomuser.me/api/portraits/women/26.jpg"></v-img>
+
+                              </v-avatar>
+                           </v-div>
+
+                            <v-div class="text-center white--text" >
+
+                              <v-col cols="12" style="padding:0;" >
+                                <h6 style="margin-top:2px; font-weight: 400;"> Mis puntos </h6> 
+                              </v-col>
+
+                              <v-col cols="12" style="padding:0;" >
+                                <h4 class="mt-n1" style=" font-weight: 600;"> 200 </h4> 
+                              </v-col>
+
+                            </v-div>
+                        </v-row>
+                      </v-card> 
                
                 </v-app-bar>
         </v-card>
@@ -178,7 +194,7 @@
         {
           icon: 'mdi-calendar',
           title: 'Reservas',
-          to: '/mis_reservas'
+          to: '/reservas'
         },
         {
           icon: 'mdi-store',
@@ -206,13 +222,15 @@
 <style lang="scss" scoped>
 
  * {
+    font-family: 'rawline', sans-serif !important; 
+ }
+
+ .numeros{
    font-family: 'Montserrat', sans-serif;
  }
 
     #app {
         background-color: red;
-        font-family:  'Raleway', sans-serif;
-
     }
 
     .v-list-item__title {
@@ -221,7 +239,6 @@
 
     .v-list-item__subtitle {
       color: #FDF7F7 !important;
-      font-family:  'Montserrat', sans-serif;
       font-weight: lighter;
     }
 
@@ -256,7 +273,28 @@
       height: 40px;
     }
 
-   
+@media screen and (min-width: 320px) {
+    
+    
 
+    
+    .puntos{
+        border-radius: 20px 10px 10px 20px !important;
+        width: 35%;
+        height: 90%;
+        margin-right: 1px !important;
+    }
 
+}
+
+@media screen and (min-width: 375px){
+
+    .puntos{
+        border-radius: 20px 10px 10px 20px ;
+        width: 30%;
+        height: 90%;
+        margin-right: 1px !important;
+    }
+
+}
 </style>

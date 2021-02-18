@@ -21,10 +21,10 @@
                     </v-row>
                 </v-carousel-item>
 
-                  <v-carousel-item>
+                  <v-carousel-item class="mt-13">
                     <v-row class="mx-auto margin_img2 justify-center" >
                            
-                            <v-img src="/images/carrousel2.svg" max-width="350" height="200"></v-img>
+                            <v-img src="/images/carrousel2.svg" max-width="300" height="170"></v-img>
 
                     </v-row>
 
@@ -137,7 +137,6 @@
 
     .v-btn {
         color: white;
-        font-weight: lighter;
         z-index: 3;
     }
 

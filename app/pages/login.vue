@@ -53,7 +53,7 @@
                     
             
 
-                            <a href="/olvidar_contraseña"> <p class="text-right" style="color: gray; font-size: 13px"> ¿Olvidaste tu contraseña? </p> </a>
+                            <a href="/olvidar_contraseña"> <p class="text-right mr-2" style="color: gray; font-size: 13px"> ¿Olvidaste tu contraseña? </p> </a>
 
                                 <div class="text-center mb-8 mt-8">
                                     <h4> Inicia sesión con: </h4>

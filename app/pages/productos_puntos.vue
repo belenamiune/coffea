@@ -3,15 +3,20 @@
       <navbar />
         <v-row justify="center" class="text-center">
 
+          <v-row class="sin_margin justify-center align-center text-center">
+             <div style="margin-top: 2em; margin-bottom: 1em">
               <v-chip
                 class="ma-2"
                 color="primary"
                 text-color="white"
                 :to="'/categorias'"
+                small
               >
                   {{ header }}
               </v-chip>
             
+            </div>
+          </v-row>
 
         <v-col
           v-for="(producto, i) in productos"
@@ -20,7 +25,7 @@
           class="text-center"
         >
           
-          <v-card :to="producto.to"> 
+          <v-card :to="producto.to" class=" ma-1 color_card" elevation="0"> 
             <div class="d-flex flex-no-wrap">
               <div>
                 
@@ -31,44 +36,49 @@
                       size="160"
                       tile
                     >
-                      <v-img :src="require(`../static/images/productos/canje_puntos/${producto.image}`)" max-height="120px" max-width="130px"></v-img>
+                      <v-img :src="require(`../static/images/productos/canje_puntos/${producto.image}`)" class="imagen_promo"></v-img>
                     </v-avatar>
                   </v-col>
 
                   <v-col cols="8">
    
                       <v-card-title
-                        class="headline"
+                        class="headline black--text"
                         v-text="producto.title"
                       ></v-card-title>
 
-                      <v-card-subtitle>{{ producto.description }}</v-card-subtitle>
-                      <v-rating
-                        :value="producto.star"
-                        color="primary"
-                        dense
-                        half-increments
-                        readonly
-                        size="10"
-                      ></v-rating>
+                      <v-card-subtitle class="black--text">{{ producto.description }}</v-card-subtitle>
+                       <v-row>
+                        <v-col cols="6">
+                            <v-rating
+                              :value="producto.star"
+                              color="primary"
+                              dense
+                              half-increments
+                              readonly
+                              size="12"
+                            ></v-rating>
+                          </v-col>
 
-               
-                         <p class="grey--text solo-numeros">{{producto.comments}} </p>
+                          <v-col cols="6">
+                            <p class="black--text solo-numeros">{{producto.comments}} </p>
+                          </v-col>
+
+                      </v-row>
+
+                      <v-card-text class="justify-end">
+                            <h2 class="text-right" style="font-size:24px;"><span style="color: #F8744E" >$</span>{{producto.precio}}</h2>
+                     </v-card-text>
                     </v-col>
                 </v-row>
 
-                        <div>
-                 
-                
-                 </div>
+                       
               </div>
                  
                </div>
 
 
-               <v-row justify="end">
-                <h2 class="solo-numeros"><span style="color: #F8744E">$</span>{{producto.precio}}</h2>
-               </v-row>
+               
           </v-card>
             
         
@@ -140,7 +150,7 @@ import Navbar from '../components/navbar.vue'
 <style scoped>
 
 * {
-        font-family: 'Raleway', sans-serif;
+       font-family: 'rawline', sans-serif !important;  
     }
 
 .v-card__title  {
@@ -168,14 +178,20 @@ h2 {
 
 .v-rating {
     max-width: 65% !important;
+     margin-left: 1em !important;
 }
 
 .solo-numeros {
-    font-family: 'Montserrat', sans-serif;
+   margin-top: -10px;
 }
  
+.color_card{
+    background-color:#EFEFEF !important;  
+}
 
-
+.v-sheet.v-card{
+    border-radius:10px;
+}
 
  @media screen and (min-width: 320px) {
     
@@ -190,19 +206,19 @@ h2 {
     }
 
     h2 {
-      margin-right: 1em !important;
-      margin-top: -1em !important;
+      margin-right: 0em !important;
+      margin-top: -0.5em !important;
     }
 
     .v-rating {
        margin-top: -1em;
        padding: 0 !important;
-       margin-left: -2.3em !important;
+       
     }
 
     p {
       text-align: left;
-      margin-left: 1em !important;
+      margin-left: 0em !important;
       margin-right: 1em !important;
     }
 
@@ -218,6 +234,11 @@ h2 {
        max-width: 100% !important;
     }
 
+.imagen_promo{
+    max-height: 120px !important;
+    max-width: 120px !important;
+    margin-left: 10px !important;
+  }
  }
 
 </style>

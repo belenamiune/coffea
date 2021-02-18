@@ -1,6 +1,7 @@
 <template>
     <v-container>
-         <toolbar />
+         <toolbar/>
+        
         <v-card 
             v-for="productos in productos"
             :key="productos.nombre" 
@@ -76,7 +77,7 @@
                   Comprar
         </v-btn>
         </v-row>
-
+    
 
         <v-dialog v-model="dialog" width="500"  transition="dialog-bottom-transition"  class="dialogo mx-0"  overflow-hidden full-screen persistent>
                 <v-card class=" justify-center align-center text-center">
