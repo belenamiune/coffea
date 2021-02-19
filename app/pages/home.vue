@@ -54,12 +54,12 @@
     </v-row>
         <VueSlickCarousel :arrows="true" :dots="true" v-bind="settings" class="mt-0" >
       
-      <v-col  cols="11" class="padding" v-for="(promos,i) in promos"  :key="i" ><v-img  :src="promos.src" max-height="100%" > 
+      <v-col  cols="11" class="padding" v-for="(promos,i) in promos"  :key="i" ><a :href="promos.to"><v-img  :src="promos.src" max-height="100%" > 
             <div class="informacion"> <div class="white--text font-weight-medium rawline largo" >{{ promos.nombre }}</div> 
             <v-chip class="montserrat"  color="primary">
                 {{ promos.precio }}
             </v-chip></div>
-      </v-img></v-col>
+      </v-img></a></v-col>
       
      
     </VueSlickCarousel>
@@ -87,12 +87,12 @@
     </v-row>
         <VueSlickCarousel :arrows="true" :dots="true" v-bind="settings" class="mt-0">
       
-      <v-col  cols="11" class="padding"  v-for="(canje,i) in canje"  :key="i"   ><v-img  :src="canje.src" max-height="100%"> 
+      <v-col  cols="11" class="padding"  v-for="(canje,i) in canje"  :key="i"   ><a :href="canje.to"> <v-img  :src="canje.src" max-height="100%"> 
             <div class="informacion"> <div class="   white--text font-weight-bold">{{ canje.nombre }}</div> 
             <v-chip class="montserrat"  color="primary">
                 {{ canje.precio }}
             </v-chip></div>
-      </v-img></v-col>
+      </v-img></a></v-col>
       
      
     </VueSlickCarousel>
@@ -119,9 +119,9 @@
     </v-row>
         <VueSlickCarousel :arrows="true" :dots="true" v-bind="settings" class="mt-0">
       
-      <v-col  cols="11" class="padding"  v-for="(categorias,i) in categorias"  :key="i"  ><v-img  :src="categorias.src" max-height="100%"> 
+      <v-col  cols="11" class="padding"  v-for="(categorias,i) in categorias"  :key="i"  ><a :href="categorias.to"> <v-img  :src="categorias.src" max-height="100%"> 
             <div class=" informacion  white--text font-weight-bold">{{ categorias.nombre }}</div> 
-      </v-img></v-col>
+      </v-img> </a></v-col>
       
      
     </VueSlickCarousel>
@@ -198,26 +198,31 @@ import { getUserFromCookie, getUserFromSession } from '@/helpers'
           src: '/images/home/promos/cafe_nevado.png',
           nombre:'2 Cafés nevados',
           precio:'$170',
+          to: '/home'
         },
         {
           src: '/images/home/promos/merienda_completa.png',
           nombre:'2 Meriendas completas',
           precio:'$300',
+          to: '/meriendas_completas'
         },
         {
           src: '/images/home/promos/desayuno_americano.png',
           nombre:'Desayuno americano',
           precio:'$200',
+          to: '/home'
         },
         {
           src: '/images/home/promos/tailandes.png',
           nombre:'2 Bowls tailandeses',
           precio:'$180',
+          to: '/home'
         },
         {
           src: '/images/home/promos/panqueques.png',
           nombre:'Panqueques veggie',
           precio:'$150',
+          to: '/home'
         },
         ],
 
@@ -226,31 +231,37 @@ import { getUserFromCookie, getUserFromSession } from '@/helpers'
           src: '/images/home/canje/muffins.png',
           nombre:'Muffins',
           precio:'$45',
+          to: '/home'
         },
         {
           src: '/images/home/canje/croassint.png',
           nombre:'Croissant',
           precio:'$60',
+          to: '/home'
         },
         {
           src: '/images/home/canje/milshakes.png',
           nombre:'Milkshakes',
           precio:'$250',
+          to: '/'
         },
         {
           src: '/images/home/canje/cafe_italiano.png',
           nombre:'Café Italiano',
           precio:'$80',
+          to: '/cafe_italiano'
         },
         {
           src: '/images/home/canje/tostado.png',
           nombre:'Tostado veggie',
           precio:'$100',
+          to: '/tostado_veggie'
         },
         {
           src: '/images/home/canje/cafe_moca.png',
           nombre:'Café Moca',
           precio:'$90',
+          to: '/home'
         },
         
         ],
@@ -259,26 +270,32 @@ import { getUserFromCookie, getUserFromSession } from '@/helpers'
         {
           src: '/images/home/categorias/waffles.png',
           nombre:'Waffles',
+           to: '/home'
         },
          {
           src: '/images/home/categorias/tortas.png',
           nombre:'Tortas',
+           to: '/tortas'
         },
          {
           src: '/images/home/categorias/especialidades.png',
           nombre:'Especialidades',
+           to: '/home'
         },
         {
           src: '/images/home/categorias/sandwiches.png',
           nombre:'Sándwiches',
+           to: '/sandwiches'
         },
         {
           src: '/images/home/categorias/jugos.png',
           nombre:'Jugos',
+           to: '/home'
         },
         {
           src: '/images/home/categorias/ensaladas.png',
           nombre:'Ensaladas',
+          to: '/home'
         },
         ],
     }
