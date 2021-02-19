@@ -91,7 +91,7 @@
     
        mandarPedidos () {
             setTimeout(function(){
-                 window.location.href = 'mis_pedidos';     
+                 window.location.href = 'mis_pedidos2';     
                     }, 3000);
         },
     }

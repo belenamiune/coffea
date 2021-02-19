@@ -119,7 +119,7 @@
                         </v-alert>
                   </v-overlay>
 
-                        <v-dialog v-model="dialog" width="500"  transition="dialog-bottom-transition"  class="dialogo mx-0"  overflow-hidden full-screen persistent>
+                        <v-dialog v-model="dialog" width="500"  transition="dialog-bottom-transition"  class="dialogo mx-0"  overflow-hidden full-screen>
                              <v-card class=" justify-center align-center text-center">
 
                                  <v-col style="text-align: end">
@@ -180,6 +180,14 @@ export default {
             overlay (val) {
                 val && setTimeout(() => {
                 this.overlay = false
+                
+                }, 4000)
+            },
+        },
+         watch: {
+            overlay2 (val2) {
+                val2 && setTimeout(() => {
+                this.overlay2 = false
                 
                 }, 4000)
             },
