@@ -33,8 +33,7 @@
                                     required
                                     class= "mt-4"
                                     outlined rounded
-                                    @input="$v.name.$touch()"
-                                    @blur="$v.name.$touch()"
+
                                 ></v-text-field>
                             </div>
                             <div class="password">
@@ -45,8 +44,6 @@
                                     label="Contraseña"
                                     class= "mt-4"
                                     outlined rounded
-                                    @input="$v.password.$touch()"
-                                    @blur="$v.password.$touch()"
                                     @click:append="show1 = !show1"
                                 ></v-text-field>
                             </div>
@@ -60,7 +57,7 @@
                                     <div class="mt-5 mb-6">
                                             <a @click="googleSignIn"> <img src="../static/images/iconos/google.png" class="mr-5"> </a>
                                         
-                                            <a href="/home"> <img src="../static/images/iconos/facebook.png"> </a>
+                                            <a @click="googleSignIn"> <img src="../static/images/iconos/facebook.png"> </a>
                                         </div>
                                 </div>
                             <button>
@@ -94,25 +91,18 @@
 </template>
 
 <script>
-    import { validationMixin } from 'vuelidate'
-    import { required, maxLength, minLength,  email, sameAs } from 'vuelidate/lib/validators'
+
     import * as firebase from 'firebase/app'
     import 'firebase/auth'
 
   export default {
-    mixins: [validationMixin],
-
-    validations: {
-      email: { required, email },
-      password: { required },
-    },
 
     data() {
     return {
-        name: '',
         email: '',
         password: '',
         error: '',
+        show1: false,
     }
 },
 

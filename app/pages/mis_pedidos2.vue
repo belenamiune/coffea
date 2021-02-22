@@ -93,56 +93,29 @@
                                 <v-list-item-icon class="mr-4">
                                     <v-img src="/images/iconos/detalle.svg"  ></v-img>
                                 </v-list-item-icon>
+                                <v-list-item-content >
+                                 <a href="detalle_tradicional_delivery">
+                                <v-list-item-title style="color: #184042">Detalle de compra
+                                </v-list-item-title>
+                                </a>
+                                </v-list-item-content>
+
+                            </v-list-item>
+
+
+                             <v-list-item v-if="item.hide == true">
+                                <v-list-item-icon class="mr-4">
+                                    <v-img src="/images/iconos/efectivo.svg"></v-img>
+                                </v-list-item-icon>
                                 
                                 <v-list-item-content >
-                                    <v-expansion-panels>
-                                    <v-expansion-panel >
+                                 <a href="cupon_efectivo_detalle">
+                                <v-list-item-title style="color: #184042">Pago en efectivo </v-list-item-title>
+                                </a>
+                                </v-list-item-content>
 
-                                        <v-expansion-panel-header v-if="item.cupon" >
-
-                                            <template v-slot:actions>
-
-                                            <v-avatar  color="primary" class="ml-2" size="19">
-                                                    <span class="white--text headline font-weight-bold "><v-icon class="icon">$expand</v-icon> </span>
-                                            </v-avatar> 
-
-                                            </template> 
-                                            
-                                            <v-row>
-                                                
-                                            <v-col style="color:#184042"> Detalle de compra</v-col>
-        
-                                            </v-row>
-                                            
-                                        </v-expansion-panel-header>
-                                        
-
-                                        <v-list-item-title v-else style="color:#184042; padding: 0 !important"> Detalle de compra</v-list-item-title>
-
-
-                                        <v-expansion-panel-content>
-                                               
-                                                <v-list-item-title style="margin-top: 1em !important; height: 20px; text-align: center">Cupón pago en efectivo</v-list-item-title>
-                                                
-                                                <v-list-item-subtitle style="text-align: center !important">
-                                                    <v-btn 
-                                                    class="font-weight-semibold primary justify-center align-center  custom-transform-class text-none"  
-                                                    elevation="0" 
-                                                    small
-                                                    rounded
-                                                    style="margin-top: 2em !important; text-align: center !important"
-                                                    to="cupon_efectivo_detalle">Ver cupón 
-                                                    </v-btn>
-                                                    </v-list-item-subtitle>
-                                                
-                                         </v-expansion-panel-content>
-
-
-                                    </v-expansion-panel>
-                                </v-expansion-panels>
-                             </v-list-item-content>
                             </v-list-item>
-                            
+                                                
                             
                             </v-list>
 
@@ -157,9 +130,9 @@
 </template>
 
 <script>
-import toolbar from '../components/toolbar.vue'
+import navbar from '../components/navbar.vue'
 export default {
-  components: { toolbar },
+  components: { navbar },
     data () {
         return {items: [
         {
@@ -169,7 +142,7 @@ export default {
           sucursal: 'Independencia  664',
           direccion:'Espora 2053',
           detalle_de_compra:'',
-          cupon: '/images/qr-code.svg'
+          hide: true
 
         },
         {
@@ -179,6 +152,8 @@ export default {
           sucursal: 'Isabel la católica 123',
           direccion:'Vieytes 1800',
           detalle_de_compra:'',
+          hide: false
+
         },
         {
           nro_pedido:'01',
@@ -187,6 +162,7 @@ export default {
           sucursal: 'Independencia  664',
           direccion:'Yrigoyen 2600',
           detalle_de_compra:'',
+          hide: false
         },
 
         ]
@@ -243,6 +219,10 @@ button.v-expansion-panel-header--active{
 
 .montserrat{
   font-family: 'Montserrat', sans-serif;
+}
+
+.v-application a {
+    text-decoration: none !important
 }
 
 </style>
