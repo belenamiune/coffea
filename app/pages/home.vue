@@ -198,7 +198,7 @@ import { getUserFromCookie, getUserFromSession } from '@/helpers'
           src: '/images/home/promos/cafe_nevado.png',
           nombre:'2 Cafés nevados',
           precio:'$170',
-          to: '/home'
+          to: '/meriendas_completas'
         },
         {
           src: '/images/home/promos/merienda_completa.png',
@@ -210,19 +210,19 @@ import { getUserFromCookie, getUserFromSession } from '@/helpers'
           src: '/images/home/promos/desayuno_americano.png',
           nombre:'Desayuno americano',
           precio:'$200',
-          to: '/home'
+          to: '/meriendas_completas'
         },
         {
           src: '/images/home/promos/tailandes.png',
           nombre:'2 Bowls tailandeses',
           precio:'$180',
-          to: '/home'
+          to: '/meriendas_completas'
         },
         {
           src: '/images/home/promos/panqueques.png',
           nombre:'Panqueques veggie',
           precio:'$150',
-          to: '/home'
+          to: '/meriendas_completas'
         },
         ],
 
@@ -231,19 +231,19 @@ import { getUserFromCookie, getUserFromSession } from '@/helpers'
           src: '/images/home/canje/muffins.png',
           nombre:'Muffins',
           precio:'$45',
-          to: '/home'
+          to: '/cafe_italiano'
         },
         {
           src: '/images/home/canje/croassint.png',
           nombre:'Croissant',
           precio:'$60',
-          to: '/home'
+          to: '/cafe_italiano'
         },
         {
           src: '/images/home/canje/milshakes.png',
           nombre:'Milkshakes',
           precio:'$250',
-          to: '/'
+          to: '/cafe_italiano'
         },
         {
           src: '/images/home/canje/cafe_italiano.png',
@@ -261,7 +261,7 @@ import { getUserFromCookie, getUserFromSession } from '@/helpers'
           src: '/images/home/canje/cafe_moca.png',
           nombre:'Café Moca',
           precio:'$90',
-          to: '/home'
+          to: '/cafe_italiano'
         },
         
         ],
@@ -270,7 +270,7 @@ import { getUserFromCookie, getUserFromSession } from '@/helpers'
         {
           src: '/images/home/categorias/waffles.png',
           nombre:'Waffles',
-           to: '/home'
+           to: '/tortas'
         },
          {
           src: '/images/home/categorias/tortas.png',
@@ -280,7 +280,7 @@ import { getUserFromCookie, getUserFromSession } from '@/helpers'
          {
           src: '/images/home/categorias/especialidades.png',
           nombre:'Especialidades',
-           to: '/home'
+           to: '/tortas'
         },
         {
           src: '/images/home/categorias/sandwiches.png',
@@ -290,12 +290,12 @@ import { getUserFromCookie, getUserFromSession } from '@/helpers'
         {
           src: '/images/home/categorias/jugos.png',
           nombre:'Jugos',
-           to: '/home'
+           to:'/sandwiches'
         },
         {
           src: '/images/home/categorias/ensaladas.png',
           nombre:'Ensaladas',
-          to: '/home'
+          to: '/sandwiches'
         },
         ],
     }

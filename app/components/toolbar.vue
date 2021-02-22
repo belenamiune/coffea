@@ -100,7 +100,7 @@
                             <h6 style="margin-top:2px; font-weight: 400;"> Mis puntos </h6> 
                           </v-col>
                           <v-col cols="12" style="padding:0;" >
-                            <h4 class="mt-n1" style=" font-weight: 600;"> 200 </h4> 
+                            <h4 class="mt-n1" style=" font-weight: 500 !important;"> 200 </h4> 
                           </v-col>
                         </v-div>
                         </v-row>

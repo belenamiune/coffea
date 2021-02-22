@@ -16,7 +16,7 @@
     
        iniciarApp () {
             setTimeout(function(){
-                 window.location.href = 'login';     
+                 window.location.href = 'bienvenida';     
                     }, 4000);
         },
     }

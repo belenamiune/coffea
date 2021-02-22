@@ -126,7 +126,7 @@
                           
 
               
-                       <v-card elevation="0" color="secondary" class="puntos mr-n3">
+                       <v-card elevation="0" color="secondary" class="puntos " style="margin-right:10px !important;">
                           <v-row class="mt-1">
                             <v-div
                               text-color="white"
@@ -152,7 +152,7 @@
                               </v-col>
 
                               <v-col cols="12" style="padding:0;" >
-                                <h4 class="mt-n1" style=" font-weight: 600;"> 200 </h4> 
+                                <h4 class="mt-n1" style=" font-weight: 500 !important;"> 200 </h4> 
                               </v-col>
 
                             </v-div>
