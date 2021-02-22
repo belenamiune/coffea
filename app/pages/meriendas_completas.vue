@@ -8,11 +8,11 @@
                 class="ma-2"
                 color="primary"
                 text-color="white"
-                :to="'/categorias'"
+                :to="'/promociones'"
                 small
               >
         
-                  Categorías
+                  Promociones
               </v-chip>
 
                     <p style="color: orange; font-weigth: 800; display:inline; margin-left: 0 !important"> /  </p>
@@ -21,22 +21,11 @@
                 class="ma-2"
                 color="primary"
                 text-color="white"
-                :to="'/productos_puntos'"
                 small
               >
-                  Café 
+                Meriendas
               </v-chip>
-              <p style="color: orange; font-weigth: 800; display:inline; margin-left: 0 !important"> /  </p>
-
-              <v-chip
-                class="ma-2"
-                color="primary"
-                text-color="white"
-                :to="'/productos_puntos'"
-                small
-              >
-                  Meriendas
-              </v-chip>
+              
             </div>
             <v-col cols="12" :class="`rounded-t-xl` "  class="text-center text-no-wrap secondary margin justify-center align-center"></v-col>
             

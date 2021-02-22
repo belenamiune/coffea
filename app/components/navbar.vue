@@ -109,6 +109,52 @@
                 />
                 <v-spacer></v-spacer>
 
+                  <v-btn
+                        icon
+                        color="secondary"
+                        class="search_icon"
+                        @click="dialog2 = true"
+                      >
+                        <v-icon style="margin-left: 2.5em !important">mdi-magnify</v-icon>
+                      </v-btn>
+
+                   <!--  <template v-slot:activator="{ on, attrs } ">-->
+                       <v-dialog v-model="dialog2" width="500"  transition="dialog-top-transition"  class="dialogo mx-0"  overflow-hidden full-screen >
+                             
+                              <v-card class=" justify-center align-center text-center">
+
+                                  <div class="row">
+                                      <div class="search-wrapper panel-heading col-sm-12 mr-5 ml-5 mt-5 mb-3">
+                                              <input class="form-control input_busqueda" type="text" v-model="searchQuery" placeholder="Búsqueda" />
+                                        </div>
+                                 </div>
+                                      
+                                 <div class="row" style="margin-left: 2.5em">
+                                      <div>
+                                        <table v-if="resources.length" class="table">
+                                            <tbody>
+                                                <tr v-for="item in resultQuery">
+                                                    <td>
+                                                      <v-avatar 
+                                                        size="32" 
+                                                        color="primary" 
+                                                        class="miavatar">
+                                                        <v-img :src="require(`../static/images/categorias/${item.icon}`)"
+                                                        > 
+                                                        </v-img>
+                                                        
+                                                      </v-avatar>
+                                                        <a class="pt-1" v-bind:href="item.uri"  target="_self">{{item.title}}</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                 </div>
+
+                              </v-card>
+
+                            </v-dialog>  
+
                 
         
                           <v-tab to="carrito">
@@ -175,6 +221,19 @@
       rightDrawer: false,
       dialog: false,
       overlay: false,
+      dialog2: false,
+      searchQuery: null,
+        resources:[
+            {title:"Promociones",uri:"/promociones",category:"d",icon: 'cafe.png'},
+            {title:"Especialidades",uri:"/especialidades",category:"d",icon: 'especialidades.png'},
+            {title:"Café", uri:"/cafe", category:"a", icon: 'cafe.png'},
+            {title:"Jugos",uri:"/jugos",category:"a",icon: 'jugos.png'},
+            {title:"Sándwiches",uri:"/sandwiches",category:"a",icon: 'sandwiches.png'},
+            {title:"Tortas",uri:"/tortas",category:"b",icon: 'tortas.png'},
+            {title:"Ensaladas",uri:"/ensaladas",category:"b",icon: 'ensaladas.png'},
+            {title:"Waffles",uri:"/waffles",category:"b",icon: 'waffles.png'},
+            {title:"Muffins",uri:"/muffins",category:"c",icon: 'muffins.png'},
+        ],
       items: [
         {
           icon: 'mdi-home',
@@ -205,6 +264,17 @@
      
     }
     
+  },
+  computed: {
+    resultQuery(){
+      if(this.searchQuery){
+      return this.resources.filter((item)=>{
+        return this.searchQuery.toLowerCase().split(' ').every(v => item.title.toLowerCase().includes(v))
+      })
+      }else{
+        return this.resources;
+      }
+    }
   },
     
      watch: {
@@ -272,6 +342,65 @@
     .theme--light.v-chip:not(.v-chip--active) {
       height: 40px;
     }
+
+    .input_busqueda {
+      border: 1px solid lightgray;
+      border-radius: 20em;
+      width: 90%;
+      height: 40px;
+    }
+
+    td {
+      text-align: left;
+      width: 250px;
+      border-radius: 20px;
+      height: 40px;
+      padding-top: 8px;
+      /*border: 1px solid #184042;*/
+    }
+
+    table {
+      border-collapse: separate;
+      border-spacing: 5px;
+    }
+
+    a {
+      text-decoration: none;
+      padding: 1em;
+    }
+
+    ::placeholder {
+      padding: 1em;
+    }
+
+   tr {
+     width: 230px;
+     border-radius: 8px;
+     background-color: #eeecec;
+     
+   }
+
+   
+  .v-dialog > .v-card{
+        border-radius: 0px 0px 30px 30px;
+        position: absolute;
+        left:0;
+        top: 0;
+        right: 0;
+        height: 65%;
+    }
+
+  .v-dialog > .v-card > .v-card__title {
+        word-break: normal; 
+        font-size: 20px;
+    }
+
+  .v-card__actions > .v-btn.v-btn{
+        width: 80%;
+        border-radius: 10px;
+        height: 45px;
+  }
+
 
 @media screen and (min-width: 320px) {
     

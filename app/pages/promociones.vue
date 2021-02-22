@@ -1,22 +1,10 @@
 <template>
     <v-container>
-      <navbar />
+      <toolbar />
         <v-row justify="center" class="text-center">
 
           <v-row class="sin_margin justify-center align-center text-center">
-             <div style="margin-top: 2em; margin-bottom: 1em">
              
-              <v-chip
-                class="ma-2 "
-                color="primary"
-                text-color="white"
-                :to="'/categorias'"
-                small
-              >
-                  {{ header }}
-              </v-chip>
-
-             </div>
           </v-row>
             
 
@@ -24,7 +12,7 @@
           v-for="(producto, i) in productos"
           :key="i"
           cols="12"
-          class="text-center"
+          class="text-center mt-8"
         >
           
           <v-card :to="producto.to" class="ma-1 color_card" elevation="0"> 
