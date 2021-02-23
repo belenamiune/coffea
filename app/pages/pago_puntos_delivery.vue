@@ -104,7 +104,8 @@
                                     normal
                                     rounded 
                                      elevation="0"
-                                    class="text-center primary custom-transform-class text-none font-weight-normal  ma-1"> 
+                                    class="text-center primary custom-transform-class text-none font-weight-normal  ma-1"
+                                     to="carrito"> 
                                          Si
                                 </v-btn>
                             </v-row>

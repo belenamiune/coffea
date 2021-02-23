@@ -18,18 +18,16 @@
                                     <v-label>Barrio</v-label>
                                         <v-select
                                             v-model="select"
-                                            :hint="`${select.state}`"
                                             :items="items"
                                             item-text="state"
                                             label="Rosedal"
-                                            persistent-hint
                                             return-object
                                             single-line
                                             solo
                                             ></v-select>
                                 </v-col>
 
-                                <v-col cols="12" class="mt-n6">
+                                <v-col cols="12" class="mt-n8">
                                     <v-label>Calle</v-label>
                                         <v-text-field
                                             label="Espora"
@@ -286,7 +284,10 @@ input{
     height: 45px;
 }
 
-
+.theme--light.v-messages {
+    display: none !important;
+    color: red !important;
+}
 @media screen and (min-width: 375px) {
     .v-img{
         max-height: 200px;

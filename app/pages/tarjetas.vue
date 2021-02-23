@@ -47,7 +47,7 @@
                                 <v-label>Tipo de tarjeta</v-label>
                                     <v-select
                                       v-model="select"
-                                      :hint="`${select.state}`"
+                                      
                                       :items="items"
                                       item-text="state"
                                       label="Visa"
@@ -125,9 +125,9 @@
         items: [
                 { state: 'Visa'},
                 { state: 'Mastercard'},
-                { state: 'Cabal'},
-                { state: 'Naranja'},
-                { state: 'Galicia'},
+               // { state: 'Cabal'},
+               // { state: 'Naranja'},
+               // { state: 'Galicia'},
              ],
        }
 

@@ -32,7 +32,6 @@
                 class="ma-2"
                 color="primary"
                 text-color="white"
-                :to="'/sandwiches'"
                 small
               >
                   Veggie
