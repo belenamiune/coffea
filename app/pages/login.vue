@@ -28,7 +28,7 @@
                          <div class="login">
                                  <v-text-field
                                     v-model="email"
-                                    label="Nombre de usuario"
+                                    label="Correo electrónico o usuario"
                                     type="email"
                                     required
                                     class= "mt-4"

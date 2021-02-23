@@ -6,7 +6,7 @@
           <v-row class="sin_margin justify-center align-center text-center">
              
           </v-row>
-        <v-row class="mt-8">
+        <v-row class="mt-8 mx-1">
         <v-col
           v-for="(producto, i) in productos"
           :key="i"
@@ -14,7 +14,7 @@
           class="text-center"
         >
           
-          <v-card :to="producto.to" class=" ma-1 color_card" elevation="0"> 
+          <v-card :to="producto.to" class="  color_card" elevation="0"> 
             <div class="d-flex flex-no-wrap">
               <div>
                 

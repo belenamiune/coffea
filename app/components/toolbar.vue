@@ -3,7 +3,7 @@
     <v-container fluid>
       <v-row class="child-flex">
         <div>
-          <v-toolbar  dense fixed >
+          <v-toolbar height="48">
             <v-btn
               icon
                onClick="history.go(-1);"
@@ -76,7 +76,7 @@
                     </v-tab>
                   
 
-                  <v-card elevation="0" color="secondary" class="puntos mr-n3">
+                  <v-card elevation="0" color="secondary" class="puntos" >
                     <v-row class="mt-1">
                     <v-div
                       text-color="white"
@@ -85,9 +85,9 @@
                         <v-avatar
                           left
                           class="secondary darken-4  "
-                          size="44"
+                          size="41"
                           color="white"
-                          style="margin-right:5px; margin-top:-4px;"
+                          style="margin-right:5px; margin-top:-5px;"
                           @click="toMyAccount()"
                           
                         >
@@ -194,7 +194,7 @@ data() {
     }
  
     .carrito{
-      min-width: 70px !important;
+      min-width: 50px !important;
     }
     
     div.container{
@@ -202,7 +202,7 @@ data() {
     }
 
     .search_icon {
-      margin-right: 1em;
+      margin-right: 0.2em !important;
     }
 
     span {
@@ -228,9 +228,9 @@ data() {
 
     
     .puntos{
-        border-radius: 20px 10px 10px 20px ;
+        border-radius: 20px 10px 10px 20px  !important;
         width: 35%;
-        height: 90%;
+        height: 99% !important;
         margin-right: 1px !important;
     }
 
@@ -313,7 +313,7 @@ td {
     .puntos{
         border-radius: 20px 10px 10px 20px ;
         width: 30%;
-        height: 90%;
+        height: 99%;
         margin-right: 1px !important;
     }
 

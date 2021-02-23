@@ -54,7 +54,7 @@
                                         <v-btn 
                                         small
                                         rounded 
-                                        to="mis_puntos"
+                                        to="mis_puntos1"
                                         class="text-center primary text-capitalize font-weight-normal justify-content-right button_alert mt-4"> 
                                          <img src="../static/images/iconos/puntos_blanco.svg" width="20px" class="mr-1"> 
                                         Ver puntos
@@ -92,7 +92,7 @@
        mandarPedidos () {
             setTimeout(function(){
                  window.location.href = 'mis_pedidos2';     
-                    }, 3000);
+                    }, 8000);
         },
     }
     }
@@ -165,7 +165,7 @@
         }
 
         .button_alert {
-            margin-left: 10em;
+            margin-left: 9em;
         
         
         }
