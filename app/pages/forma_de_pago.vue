@@ -116,7 +116,7 @@ export default {
                   location.href ="/formulario_efectivo";
               }
               if (optionText == 2) {
-                  location.href = "/mercado_pago";
+                  location.href = "/tarjetas";
               }
               if (event.target.value == 3) {
                    location.href = "/tarjetas";

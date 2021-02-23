@@ -92,7 +92,8 @@
                                     normal
                                     rounded 
                                     elevation="0"
-                                    class="text-center primary custom-transform-class text-none font-weight-normal  ma-1"> 
+                                    class="text-center primary custom-transform-class text-none font-weight-normal  ma-1"
+                                     to="carrito"> 
                                          Si
                                 </v-btn>
                             </v-row>
@@ -146,7 +147,7 @@
                                 
                                  
                                     <v-card-actions class=" justify-center align-center text-center"> 
-                                        <v-btn color="secondary" class="secondary custom-transform-class text-none" to="detalles_puntos"> 
+                                        <v-btn color="secondary" class="secondary custom-transform-class text-none" to="forma_de_pago"> 
                                             <v-img src="/images/iconos/en_mano.svg" class="mr-2" max-width="20"></v-img>
                                            Si, quiero completar
                                         </v-btn>

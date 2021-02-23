@@ -1,6 +1,6 @@
 <template >
 <v-container fluid>
-    <navbar />
+    <toolbar />
     
             <v-col cols="12" :class="`rounded-t-xl` "  class=" text-center text-no-wrap primary margin " >
             
@@ -174,10 +174,12 @@
 </template>
 
 <script>
+import Toolbar from '../components/toolbar.vue';
 export default {
     data () {
         
-      
+ 
+        Toolbar     
       return {
         overlay: false,
         alert: true,
