@@ -7,12 +7,12 @@
              
           </v-row>
             
-
+        <v-row class="mt-8">
         <v-col
           v-for="(producto, i) in productos"
           :key="i"
           cols="12"
-          class="text-center mt-8"
+          class="text-center"
         >
           
           <v-card :to="producto.to" class="ma-1 color_card" elevation="0"> 
@@ -75,6 +75,7 @@
         
         </v-col>
       </v-row>
+        </v-row>
     </v-container>
 
 </template>

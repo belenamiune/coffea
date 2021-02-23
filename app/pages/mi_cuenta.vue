@@ -1,6 +1,6 @@
 <template>
     <v-container fluid>
-        <toolbar />
+        <navbar />
 
        <v-row class="justify-center align-center mt-16">
            <v-avatar size="205" color="#EFEFEF">

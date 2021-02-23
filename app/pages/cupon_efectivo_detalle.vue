@@ -30,7 +30,7 @@
                                             @click="submit"
                                             color="primary"
                                             rounded
-                                            to="/mis_pedidos"
+                                            to="/mis_pedidos2"
                                         >
                                             
                                           Ver pedido

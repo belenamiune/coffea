@@ -88,6 +88,8 @@
                           size="44"
                           color="white"
                           style="margin-right:5px; margin-top:-4px;"
+                          @click="toMyAccount()"
+                          
                         >
                         
                         <v-img src="https://randomuser.me/api/portraits/women/26.jpg"></v-img>
@@ -144,7 +146,16 @@ data() {
         return this.resources;
       }
     }
-  }
+  },
+
+  methods:{
+    
+      toMyAccount () {
+           
+                 window.location.href = 'mi_cuenta';     
+                
+        },
+    } 
 }
 
 </script>
@@ -305,6 +316,16 @@ td {
         height: 90%;
         margin-right: 1px !important;
     }
+
+}
+
+@media screen and (min-height: 644px){
+
+  
+  .v-dialog > .v-card{
+        height: 80% !important;
+    }
+
 
 }
 </style>
