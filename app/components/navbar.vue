@@ -124,17 +124,18 @@
                       </v-btn>
 
                   
-                       <v-dialog v-model="dialog2" width="500"  transition="dialog-top-transition"  class="dialogo mx-0"  overflow-hidden full-screen >
+                       <v-dialog v-model="dialog2" width="500"  transition="dialog-top-transition"  class="dialogo mx-0"  overflow-hidden full-screen id="dos">
                              
-                              <v-card class=" justify-center align-center text-center">
+                              <v-card class=" justify-center align-center text-center"  
+                              style=" border-radius: 0px 0px 30px 30px;position: absolute; left:0; top: 0; right: 0; height: 65%;">
 
-                                  <div class="row">
+                                  <div class="row"  >
                                       <div class="search-wrapper panel-heading col-sm-12 mr-5 ml-5 mt-5 mb-3">
                                               <input class="form-control input_busqueda" type="text" v-model="searchQuery" placeholder="Búsqueda" />
                                         </div>
                                  </div>
                                       
-                                 <div class="row" style="margin-left: 2.5em">
+                                 <div class="row" style="margin-left: 2.5em" id="dos"> 
                                       <div>
                                         <table v-if="resources.length" class="table">
                                             <tbody>
@@ -398,7 +399,7 @@
     }
 
 
-   .v-dialog > .v-card{
+    #dos .v-dialog > .v-card{
         border-radius: 0px 0px 30px 30px;
         position: absolute;
         left:0;
@@ -407,12 +408,12 @@
         height: 65%;
     }
 
-    .v-dialog > .v-card > .v-card__title {
+     #dos .v-dialog > .v-card > .v-card__title {
         word-break: normal; 
         font-size: 20px;
     }
 
-    .v-card__actions > .v-btn.v-btn{
+    #dos .v-card__actions > .v-btn.v-btn{
         width: 80%;
         border-radius: 10px;
         height: 45px;
