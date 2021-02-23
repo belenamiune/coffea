@@ -117,13 +117,13 @@
                 <v-btn
                         icon
                         color="secondary"
-                        class="search_icon"
                         @click="dialog2 = true"
+                        id="boton"
                       >
                         <v-icon>mdi-magnify</v-icon>
                       </v-btn>
 
-                   <!--  <template v-slot:activator="{ on, attrs } ">-->
+                  
                        <v-dialog v-model="dialog2" width="500"  transition="dialog-top-transition"  class="dialogo mx-0"  overflow-hidden full-screen >
                              
                               <v-card class=" justify-center align-center text-center">
@@ -162,18 +162,17 @@
 
                 
         
-                          <v-tab to="carrito">
+                          <v-btn icon  @click="toCart()">
                               <v-badge
                                 color="primary"
                                 content="3"
                                 class="font-weight-bold "
                                 overlap
                                 bottom
-                              
                               >
                                 <v-icon style="color: #184042 !important" class="color_cart_outside"> mdi-cart-outline </v-icon>
                               </v-badge>
-                            </v-tab>
+                            </v-btn>
                           
 
               
@@ -298,6 +297,11 @@
                  window.location.href = 'mi_cuenta';     
                 
         },
+
+      toCart () {
+                 window.location.href = 'carrito';     
+                
+        },
     } 
 
   }
@@ -414,12 +418,16 @@
         height: 45px;
     }
 
-    
-@media screen and (min-width: 320px) {
-    
-    
+   span.v-btn__content {
+     margin-left: -3em !important;
+   }
 
-    
+   span.v-badge.font-weight-bold.v-badge--bottom.v-badge--overlap.theme--light {
+     margin-left: -3em !important
+   }
+
+
+@media screen and (min-width: 320px) {
     .puntos{
         border-radius: 20px 10px 10px 20px !important;
         width: 35%;
