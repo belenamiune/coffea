@@ -9,19 +9,24 @@
                 app
                 color="secondary"
         >
-
+          
+      
               <template v-slot:prepend>
                   <v-list-item two-line>
                     <v-list-item-avatar>
-                      <img src="https://randomuser.me/api/portraits/women/26.jpg">
+                    <img src="https://randomuser.me/api/portraits/women/26.jpg">
                     </v-list-item-avatar>
-
+        
                     <v-list-item-content>
                       <v-list-item-title>Sofía Benza</v-list-item-title>
                       <v-list-item-subtitle>200 puntos</v-list-item-subtitle>
                     </v-list-item-content>
+                    
+                
                   </v-list-item>
+                     
                 </template>
+       
 
                 <v-divider color ="#FDF7F7"></v-divider>
 
@@ -109,16 +114,16 @@
                 />
                 <v-spacer></v-spacer>
 
-                  <v-btn
+                <v-btn
                         icon
                         color="secondary"
-                        class="search_icon"
                         @click="dialog2 = true"
+                        id="boton"
                       >
-                        <v-icon style="margin-left: 2.5em !important">mdi-magnify</v-icon>
+                        <v-icon>mdi-magnify</v-icon>
                       </v-btn>
 
-                   <!--  <template v-slot:activator="{ on, attrs } ">-->
+                  
                        <v-dialog v-model="dialog2" width="500"  transition="dialog-top-transition"  class="dialogo mx-0"  overflow-hidden full-screen >
                              
                               <v-card class=" justify-center align-center text-center">
@@ -144,7 +149,7 @@
                                                         </v-img>
                                                         
                                                       </v-avatar>
-                                                        <a class="pt-1" v-bind:href="item.uri"  target="_self">{{item.title}}</a></td>
+                                                        <a class="pt-1" style=" padding: 1em; color: black !important" v-bind:href="item.uri"  target="_self">{{item.title}}</a></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -157,18 +162,17 @@
 
                 
         
-                          <v-tab to="carrito">
+                          <v-btn icon  @click="toCart()">
                               <v-badge
                                 color="primary"
                                 content="3"
                                 class="font-weight-bold "
                                 overlap
                                 bottom
-                              
                               >
                                 <v-icon style="color: #184042 !important" class="color_cart_outside"> mdi-cart-outline </v-icon>
                               </v-badge>
-                            </v-tab>
+                            </v-btn>
                           
 
               
@@ -184,6 +188,7 @@
                                 size="44"
                                 color="white"
                                 style="margin-right:5px; margin-top:-4px;"
+                                @click="toMyAccount()"
                               >
                               
                               <v-img src="https://randomuser.me/api/portraits/women/26.jpg"></v-img>
@@ -260,9 +265,10 @@
           title: 'Sucursales',
           to: '/sucursales_menu'
         },
-      ]
+      ],
      
     }
+    
     
   },
   computed: {
@@ -284,7 +290,19 @@
         }, 2000)
       },
     },
+
+     methods:{
     
+      toMyAccount () {
+                 window.location.href = 'mi_cuenta';     
+                
+        },
+
+      toCart () {
+                 window.location.href = 'carrito';     
+                
+        },
+    } 
 
   }
 </script>
@@ -365,23 +383,22 @@
     }
 
     a {
-      text-decoration: none;
-      padding: 1em;
-    }
-
-    ::placeholder {
-      padding: 1em;
-    }
-
-   tr {
+          text-decoration: none;
+         
+      }
+    tr {
      width: 230px;
      border-radius: 8px;
      background-color: #eeecec;
      
    }
 
-   
-  .v-dialog > .v-card{
+   ::placeholder {
+      padding: 1em;
+    }
+
+
+   .v-dialog > .v-card{
         border-radius: 0px 0px 30px 30px;
         position: absolute;
         left:0;
@@ -390,23 +407,27 @@
         height: 65%;
     }
 
-  .v-dialog > .v-card > .v-card__title {
+    .v-dialog > .v-card > .v-card__title {
         word-break: normal; 
         font-size: 20px;
     }
 
-  .v-card__actions > .v-btn.v-btn{
+    .v-card__actions > .v-btn.v-btn{
         width: 80%;
         border-radius: 10px;
         height: 45px;
-  }
+    }
+
+   span.v-btn__content {
+     margin-left: -3em !important;
+   }
+
+   span.v-badge.font-weight-bold.v-badge--bottom.v-badge--overlap.theme--light {
+     margin-left: -3em !important
+   }
 
 
 @media screen and (min-width: 320px) {
-    
-    
-
-    
     .puntos{
         border-radius: 20px 10px 10px 20px !important;
         width: 35%;
@@ -424,6 +445,16 @@
         height: 90%;
         margin-right: 1px !important;
     }
+
+}
+
+@media screen and (min-height: 644px){
+
+  
+  .v-dialog > .v-card{
+        height: 80% !important;
+    }
+
 
 }
 </style>

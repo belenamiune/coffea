@@ -15,7 +15,7 @@
                     <h2 >PUNTOS DISPONIBLES</h2>
                 </v-row>
 
-                <v-btn class="font-weight-semibold secondary custom-transform-class text-none margin_puntos " elevation="0" rounded to="productos_puntos"> 
+                <v-btn class="font-weight-semibold secondary custom-transform-class text-none margin_puntos btn_style " elevation="0" rounded to="productos_puntos"> 
                   Canjear puntos
                 </v-btn>
 
@@ -75,6 +75,16 @@ div.container{
 
 .montserrat{
   font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (min-height: 644px){
+
+  
+  .btn_style{
+        margin-top: 7em !important;
+    }
+
+
 }
 
 </style>

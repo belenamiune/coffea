@@ -22,7 +22,6 @@
                     class="ma-2 ml-n1"
                     color="primary"
                     text-color="white"
-                    :to="'/categorias'"
                     small
                   >
                       {{ header }}
