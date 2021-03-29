@@ -22,7 +22,9 @@
                 justify="center"
                 >
                 <div class="carousel_img">
-                  <v-img  :src="slides.src" > <div class="carousel_text white--text font-weight-bold rawline" >{{ slides.text }}</div></v-img>
+                  <v-img  :src="slides.src" > 
+                 
+                  </v-img>
                 </div>
                 </v-row>
             </v-sheet>
@@ -148,7 +150,7 @@ import { getUserFromCookie, getUserFromSession } from '@/helpers'
     if (process.server) {
       console.log('server', req.headers)
       const user = getUserFromCookie(req)
-      //   console.log('b', getUserFromCookie(req))
+   
       if (!user) {
         console.log('redirecting server')
         redirect('/login')
@@ -158,7 +160,7 @@ import { getUserFromCookie, getUserFromSession } from '@/helpers'
       if (!user) {
         redirect('/login')
       }
-      //   console.log($nuxt.$router)
+      
     }
   },
 
@@ -167,18 +169,14 @@ import { getUserFromCookie, getUserFromSession } from '@/helpers'
         
         slides: [
           {
-            src: '/images/home/carousel/slide1-1.png',
-            text: 'Pedí tu café por $80',
-            
+            src: '/images/home/carousel/flyer_1.png', 
           },
           {
-            src: '/images/home/carousel/slide2-2.jpg',
-            text: 'Disfruta con amigos',
+            src: '/images/home/carousel/flyer_3.png'
           },
           {
-            src: '/images/home/carousel/slide3.jpg',
-            text: 'Promociones increíbles',
-            color: 'black',
+            src: '/images/home/carousel/flyer_4.png'
+           
           },
           
         ],
@@ -363,6 +361,13 @@ import { getUserFromCookie, getUserFromSession } from '@/helpers'
   margin-top: 70px;
   margin-left: 70px;
   font-size: 24pt;
+  width: 50%;
+}
+
+.carousel_subtext{
+  margin-top: 70px;
+  margin-left: 70px;
+  font-size: 18pt;
   width: 50%;
 }
 
