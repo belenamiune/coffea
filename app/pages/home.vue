@@ -169,13 +169,13 @@ import { getUserFromCookie, getUserFromSession } from '@/helpers'
         
         slides: [
           {
-            src: '/images/home/carousel/flyer_1.png', 
+            src: '/images/home/carousel/img1.png', 
           },
           {
-            src: '/images/home/carousel/flyer_3.png'
+            src: '/images/home/carousel/img2.png'
           },
           {
-            src: '/images/home/carousel/flyer_4.png'
+            src: '/images/home/carousel/img3.png'
            
           },
           
