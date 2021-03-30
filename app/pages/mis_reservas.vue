@@ -147,13 +147,13 @@ export default {
         return {
         items: [
             {
-            nro_pedido: '03',
+            nro_pedido: '01',
             personas:'3',
-            fecha: '25 de marzo del 2021',
+            fecha: '10 de abril del 2021',
             hora: '16:30',
             sucursal: 'Independencia  664',
             },
-            {
+            /**{
             nro_pedido: '02',
             personas:'8',
             fecha: '6 de enero del 2021',
@@ -166,7 +166,7 @@ export default {
             fecha: '28 de diciembre del 2020',
             hora: '10:00',
             sucursal: 'Independencia  664',
-            },
+            },**/
 
         ],
          dialog: false,}
