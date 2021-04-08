@@ -180,15 +180,19 @@
          padding-top: 10px;
     }
 
-    .cerrar{
+    .cerrar {
      margin-left: 47px;
 }
 
-.puntos_img {
-  max-width: 23px;
- position: relative;
- left: 39%;
+    .puntos_img {
+    max-width: 23px;
+    position: relative;
+    left: 39%;
+ }
 
+ .cerrar1{
+   position: absolute;
+   right: 1px;
 }
 }
 </style>

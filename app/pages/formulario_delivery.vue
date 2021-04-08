@@ -11,7 +11,7 @@
             
             
             <v-row>
-                <v-form class="margin_img justify-center align-center mt-6">
+                <v-form class="margin_img justify-center align-center mt-6 r1">
                     <v-container>
                             <v-row>
                                 <v-col cols="12" class="mt-n6">
@@ -299,7 +299,11 @@ input{
 
     .cerrar{
      margin-left: 47px;
-}
+}   
+
+    .r1 {
+      width: 90% !important
+    }
 
 }
 

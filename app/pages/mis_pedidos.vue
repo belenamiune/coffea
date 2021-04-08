@@ -77,7 +77,7 @@
                                 </v-list-item>
 
 
-                                <v-list-item>
+                                <v-list-item  v-if="item.direccion_value == true">
                                     <v-list-item-icon class="mr-4">
                                         <v-img src="/images/iconos/direccion.svg" ></v-img>
                                     </v-list-item-icon>
@@ -142,7 +142,8 @@ export default {
           sucursal: 'Independencia  664',
           direccion:'Espora 2053',
           detalle_de_compra:'',
-          hide: true
+          hide: false,
+          direccion_value: false
 
         },
         {
@@ -152,7 +153,8 @@ export default {
           sucursal: 'Isabel la católica 123',
           direccion:'Vieytes 1800',
           detalle_de_compra:'',
-          hide: false
+          hide: true,
+          direccion_value: true
 
         },
         {
@@ -162,7 +164,8 @@ export default {
           sucursal: 'Independencia  664',
           direccion:'Yrigoyen 2600',
           detalle_de_compra:'',
-          hide: false
+          hide: false,
+          direccion_value: true
         },
 
         ]
